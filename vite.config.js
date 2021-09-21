@@ -6,5 +6,10 @@ export default defineConfig({
   server: {
     open: true,
   },
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.esm-bundler.js',
+    },
+  },
   plugins: [vue()],
 });
