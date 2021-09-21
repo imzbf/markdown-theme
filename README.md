@@ -1,7 +1,15 @@
-# Vue 3 + Vite
+# markdown theme
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[md-editor-v3](https://github.com/imzbf/md-editor-v3)系列预览`markdown`内容主题。
 
-## Recommended IDE Setup
+- 默认主题
+- vuepress 风格
+- github 风格
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## 安装
+
+```shell
+yarn add @vavt/markdown-theme
+```
+
+## 使用

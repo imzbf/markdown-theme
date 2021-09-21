@@ -1,5 +1,5 @@
 {
-  "name": "markdown-theme",
+  "name": "@vavt/markdown-theme",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
