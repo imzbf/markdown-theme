@@ -1,9 +1,9 @@
 import { createApp, h } from 'vue';
 import MdEditor from 'md-editor-v3';
 
-import '../themes/default/index.scss';
-import '../themes/vuepress/index.scss';
-import '../themes/github/index.scss';
+import './themes/default/index.scss';
+import './themes/vuepress/index.scss';
+import './themes/github/index.scss';
 
 createApp({
   components: { MdEditor },
