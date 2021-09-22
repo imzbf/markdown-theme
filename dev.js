@@ -17,5 +17,7 @@ createApp({
       localStorage.setItem('markdown-theme-dev-text', mdText);
     },
   },
-  template: `<MdEditor editorId="md-editor" editorClass="vuepress-theme" previewOnly previewTheme="vuepress" v-model="text" @onSave="saveText" />`,
+  template: `<div class="md-dark-">
+  <MdEditor editorId="md-editor" editorClass="default-theme" previewOnly previewTheme="vuepress" v-model="text" @onSave="saveText" />
+  </div>`,
 }).mount('#app');

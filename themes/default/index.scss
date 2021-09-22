@@ -1,9 +1,8 @@
-@import '../vars';
+@import '../common';
 
 $codeBkColor: #282c34;
 $codeBkColorDark: #1a1a1a;
 
-// 代码样式
 .default-theme {
   h1,
   h2,
@@ -97,7 +96,7 @@ $codeBkColorDark: #1a1a1a;
     &::before {
       content: '';
       display: block;
-      background: url(../../imgs/pre.png);
+      background: url(../../pre.png);
       height: 32px;
       width: 100%;
       background-size: 40px;
@@ -146,8 +145,10 @@ $codeBkColorDark: #1a1a1a;
   }
 }
 
-.dark {
+.#{$darkClass} {
   .default-theme {
+    color: $colorDark;
+
     img {
       border-color: $borderColorDark;
     }
