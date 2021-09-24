@@ -164,7 +164,7 @@ $borderColor: #d9dee4;
   }
 }
 
-.dark {
+.#{$darkClass} {
   .github-theme {
     color: #c9d1d9;
 

@@ -9,15 +9,20 @@ createApp({
   components: { MdEditor },
   data() {
     return {
-      text: localStorage.getItem('markdown-theme-dev-text') || '',
+      theme: 'light',
+      text: '',
     };
   },
-  methods: {
-    saveText(mdText) {
-      localStorage.setItem('markdown-theme-dev-text', mdText);
-    },
+  mounted() {
+    fetch('/demo.md').then(async (res) => {
+      this.text = await res.text();
+    });
   },
-  template: `<div class="md-dark-">
-  <MdEditor editorId="md-editor" editorClass="default-theme" previewOnly previewTheme="vuepress" v-model="text" @onSave="saveText" />
+  template: `
+  <div class="app" :style="{background: theme === 'dark' ? '#000' : '#fff' }">
+    <button @click="theme = theme === 'dark' ? 'light' : 'dark'">切换</button>
+    <div :class="['container', theme === 'dark' ? 'md-dark' : '']">
+      <MdEditor editorId="md-editor" editorClass="github-theme" previewOnly previewTheme="vuepress" v-model="text"  />
+    </div>
   </div>`,
 }).mount('#app');
