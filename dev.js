@@ -10,6 +10,7 @@ createApp({
   data() {
     return {
       theme: 'light',
+      previewTheme: 'default',
       text: '',
     };
   },
@@ -21,8 +22,11 @@ createApp({
   template: `
   <div class="app" :style="{background: theme === 'dark' ? '#000' : '#fff' }">
     <button @click="theme = theme === 'dark' ? 'light' : 'dark'">切换</button>
+    <button @click="previewTheme = 'default'">默认</button>
+    <button @click="previewTheme = 'github'">github</button>
+    <button @click="previewTheme = 'vuepress'">vuepress</button>
     <div :class="['container', theme === 'dark' ? 'md-dark' : '']">
-      <MdEditor editorId="md-editor" editorClass="github-theme" previewOnly previewTheme="vuepress" v-model="text"  />
+      <MdEditor editorId="md-editor" :editorClass="previewTheme + '-theme'" previewOnly previewTheme="vuepress" v-model="text"  />
     </div>
   </div>`,
 }).mount('#app');
