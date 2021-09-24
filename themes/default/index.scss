@@ -4,6 +4,8 @@ $codeBkColor: #282c34;
 $codeBkColorDark: #1a1a1a;
 
 .default-theme {
+  @include codeStyle;
+
   h1,
   h2,
   h3,
@@ -48,7 +50,7 @@ $codeBkColorDark: #1a1a1a;
 
     code {
       color: #3594f7;
-      background: RGBA(59, 170, 250, 0.1);
+      background-color: #edf6fe;
       display: inline-block;
       padding: 0 4px;
       border-radius: 2px;

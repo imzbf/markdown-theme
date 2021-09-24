@@ -9,6 +9,8 @@ $borderColor: #d9dee4;
 .github-theme {
   line-height: 1.5;
 
+  @include codeStyle;
+
   h1,
   h2,
   h3,
@@ -122,7 +124,6 @@ $borderColor: #d9dee4;
       position: relative;
       display: block;
       padding: 1em;
-      font-size: 85%;
       line-height: 1.45;
       margin-bottom: 0;
       word-break: normal;
@@ -167,6 +168,7 @@ $borderColor: #d9dee4;
 .#{$darkClass} {
   .github-theme {
     color: #c9d1d9;
+    background-color: #0e1116;
 
     h1,
     h2 {

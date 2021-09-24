@@ -28,12 +28,14 @@ $primaryColor: #73d13d;
 
 $darkClass: 'md-dark';
 
-pre,
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  font-size: 14px;
-  color: rgb(36, 41, 47);
+@mixin codeStyle {
+  pre,
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+    font-size: 14px;
+    color: rgb(36, 41, 47);
+  }
 }
 
 .#{$darkClass} {

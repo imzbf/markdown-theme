@@ -10,6 +10,8 @@ $fontColorDark: #999;
 .vuepress-theme {
   color: $fontColor;
 
+  @include codeStyle;
+
   h1,
   h2,
   h3,
