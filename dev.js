@@ -20,7 +20,7 @@ createApp({
     });
   },
   template: `
-  <div class="app" :style="{background: theme === 'dark' ? '#000' : '#fff' }">
+  <div class="app" :style="{background: theme === 'dark' ? previewTheme === 'github' ? '#0E1116' : '#000' : '#fff' }">
     <button @click="theme = theme === 'dark' ? 'light' : 'dark'">切换</button>
     <button @click="previewTheme = 'default'">默认</button>
     <button @click="previewTheme = 'github'">github</button>
