@@ -8,6 +8,7 @@ $fontColorDark: #999;
 
 // 代码样式
 .vuepress-theme {
+  font-size: $baseSize;
   color: $fontColor;
 
   @include codeStyle;
@@ -17,30 +18,27 @@ $fontColorDark: #999;
   h3,
   h4,
   h5,
-  h6,
-  strong {
+  h6 {
     font-weight: 600;
     color: #273849;
+    line-height: 1.45;
+    position: relative;
+    margin-top: 1em;
   }
 
   h1 {
-    margin: 0 0 1em;
+    font-size: 2.2em;
+    margin: 1em 0;
   }
 
   h2 {
-    margin: 45px 0 0.8em;
-    padding-bottom: 0.7em;
-    border-bottom: 1px solid #ddd;
+    font-size: 1.65em;
+    padding-bottom: 0.3 * $baseSize;
+    border-bottom: 1px solid #eaecef;
   }
 
   h3 {
-    margin: 52px 0 1.2em;
-    line-height: 1.2;
-    position: relative;
-  }
-
-  h4 {
-    margin: 1.3em 0;
+    line-height: 1.35em;
   }
 
   a {

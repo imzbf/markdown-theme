@@ -1,4 +1,4 @@
-import { createApp, h } from 'vue';
+import { createApp } from 'vue';
 import MdEditor from 'md-editor-v3';
 
 import './themes/default/index.scss';
@@ -21,10 +21,12 @@ createApp({
   },
   template: `
   <div class="app" :style="{background: theme === 'dark' ? previewTheme === 'github' ? '#0E1116' : '#000' : '#fff' }">
-    <button @click="theme = theme === 'dark' ? 'light' : 'dark'">切换</button>
-    <button @click="previewTheme = 'default'">默认</button>
-    <button @click="previewTheme = 'github'">github</button>
-    <button @click="previewTheme = 'vuepress'">vuepress</button>
+    <div style="position: fixed; left: 0;">
+      <button @click="theme = theme === 'dark' ? 'light' : 'dark'">切换</button>
+      <button @click="previewTheme = 'default'">默认</button>
+      <button @click="previewTheme = 'github'">github</button>
+      <button @click="previewTheme = 'vuepress'">vuepress</button>
+    </div>
     <div :class="['container', theme === 'dark' ? 'md-dark' : '']">
       <MdEditor editorId="md-editor" :editorClass="previewTheme + '-theme'" previewOnly previewTheme="vuepress" v-model="text"  />
     </div>
