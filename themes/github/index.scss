@@ -90,14 +90,11 @@ $borderColor: #d9dee4;
     margin-bottom: 16px;
   }
 
-  p {
-    code {
-      padding: 0.2em 0.4em;
-      margin: 0;
-      font-size: 85%;
-      background-color: #eff1f2;
-      border-radius: 6px;
-    }
+  code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    background-color: #eff1f2;
+    border-radius: 6px;
   }
 
   blockquote {
@@ -185,11 +182,9 @@ $borderColor: #d9dee4;
       background-color: initial;
     }
 
-    p {
-      code {
-        background-color: #2d3339;
-        color: #c9d1d9;
-      }
+    code {
+      background-color: #2d3339;
+      color: #c9d1d9;
     }
 
     pre {

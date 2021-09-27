@@ -28,7 +28,13 @@ createApp({
       <button @click="previewTheme = 'vuepress'">vuepress</button>
     </div>
     <div :class="['container', theme === 'dark' ? 'md-dark' : '']">
-      <MdEditor editorId="md-editor" :editorClass="previewTheme + '-theme'" previewOnly previewTheme="vuepress" v-model="text"  />
+      <MdEditor
+        editorId="md-editor"
+        :editorClass="previewTheme + '-theme'"
+        previewOnly
+        previewTheme="vuepress"
+        v-model="text"
+        showCodeRowNumber />
     </div>
   </div>`,
 }).mount('#app');

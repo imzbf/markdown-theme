@@ -47,16 +47,15 @@ $codeBkColorDark: #1a1a1a;
   p {
     line-height: 1.6;
     padding: 0.5rem 0;
+  }
 
-    code {
-      color: #3594f7;
-      background-color: #edf6fe;
-      display: inline-block;
-      padding: 0 4px;
-      border-radius: 2px;
-      height: 21px;
-      line-height: 22px;
-    }
+  code {
+    color: #3594f7;
+    background-color: rgba(59, 170, 250, 0.1);
+    display: inline-block;
+    padding: 0 4px;
+    border-radius: 2px;
+    line-height: 22px;
   }
 
   blockquote {

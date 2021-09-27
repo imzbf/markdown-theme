@@ -1,14 +1,46 @@
-# 1、一级标题
+# API
 
-## 2、二级标题
+## 全局配置
 
-### 3、三级标题
+`Vue.config` 是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改下列 property：
 
-#### 4、四级标题
+### silent
 
-##### 5、五级标题
+- 类型：`boolean`
+- 默认值：`false`
+- 用法：
 
-###### 6、六级标题
+```js
+Vue.config.silent = true;
+```
+
+取消 Vue 所有的日志与警告。
+
+### optionMergeStrategies
+
+- 类型：`{ [key: string]: Function }`
+- 默认值：`{}`
+- 用法：
+
+```js
+Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {
+  return child + 1;
+};
+
+const Profile = Vue.extend({
+  _my_option: 1,
+});
+
+// Profile.options._my_option = 2
+```
+
+自定义合并策略的选项。
+
+合并策略选项分别接收在父实例和子实例上定义的该选项的值作为第一个和第二个参数，Vue 实例上下文被作为第三个参数传入。
+
+- 参考 [自定义选项的混入策略](自定义选项的混入策略)
+
+<hr>
 
 ## md-editor-v3
 
