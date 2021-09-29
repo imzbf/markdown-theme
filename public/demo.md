@@ -1,10 +1,34 @@
-# [API](123)
+# API
 
 <div inline>
 
-![](https://img.shields.io/github/stars/imzbf/md-editor-v3?style=social)![](https://img.shields.io/npm/dm/md-editor-v3)![](https://img.shields.io/bundlephobia/min/md-editor-v3)![](https://img.shields.io/github/license/imzbf/md-editor-v3)![](https://img.shields.io/github/package-json/v/imzbf/md-editor-v3)
+![](https://img.shields.io/github/stars/imzbf/md-editor-v3?style=social)![](https://img.shields.io/npm/dw/md-editor-v3)![](https://img.shields.io/bundlephobia/min/md-editor-v3)![](https://img.shields.io/github/license/imzbf/md-editor-v3)![](https://img.shields.io/github/package-json/v/imzbf/md-editor-v3)
 
 </div>
+
+```
+async onUploadImg(files: FileList, callback: (urls: string[]) => void) {
+  const res = await Promise.all(
+    Array.from(files).map((file) => {
+      return new Promise((rev, rej) => {
+        const form = new FormData();
+        form.append('file', file);
+
+        axios
+          .post('/api/img/upload', form, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            }
+          })
+          .then((res) => rev(res))
+          .catch((error) => rej(error));
+      });
+    })
+  );
+
+  callback(res.map((item: any) => item.data.url));
+}
+```
 
 ## 全局配置
 
@@ -29,7 +53,7 @@ Vue.config.silent = true;
 - 用法：
 
 ```js
-Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {
+Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {
   return child + 1;
 };
 

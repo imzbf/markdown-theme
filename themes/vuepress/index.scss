@@ -123,7 +123,7 @@ $fontColorDark: #999;
       overflow-x: auto;
       color: #747384;
       white-space: pre;
-      padding: 1em 1.4em;
+      padding: 1em;
       font-size: 0.85rem;
       line-height: 1.6rem;
       display: block;
@@ -136,6 +136,13 @@ $fontColorDark: #999;
       top: 9px;
       right: 10px;
       cursor: pointer;
+      display: none;
+    }
+
+    &:hover {
+      .copy-button {
+        display: initial;
+      }
     }
   }
 

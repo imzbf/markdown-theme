@@ -114,15 +114,6 @@ $borderColor: #d9dee4;
     border-radius: 6px;
     position: relative;
 
-    .copy-button {
-      color: $colorDark;
-      position: absolute;
-      font-size: 12px;
-      top: 9px;
-      right: 10px;
-      cursor: pointer;
-    }
-
     code {
       position: relative;
       display: block;
@@ -132,6 +123,22 @@ $borderColor: #d9dee4;
       word-break: normal;
       letter-spacing: 1px;
       overflow: auto;
+    }
+
+    .copy-button {
+      color: $colorDark;
+      position: absolute;
+      font-size: 12px;
+      top: 9px;
+      right: 10px;
+      cursor: pointer;
+      display: none;
+    }
+
+    &:hover {
+      .copy-button {
+        display: initial;
+      }
     }
   }
 
@@ -198,6 +205,7 @@ $borderColor: #d9dee4;
       background-color: #2d333b;
       code {
         color: #a9b7c6;
+        background-color: #161b22;
       }
 
       .copy-button {
