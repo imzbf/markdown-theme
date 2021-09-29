@@ -97,6 +97,12 @@ $darkClass: 'md-dark';
   }
 }
 
+@mixin commonDarkStyle {
+  hr {
+    border-color: $borderColorDark;
+  }
+}
+
 .#{$darkClass} {
   background-color: $bkColorDark;
 }

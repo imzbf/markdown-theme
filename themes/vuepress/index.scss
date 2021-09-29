@@ -182,6 +182,7 @@ $fontColorDark: #999;
 
 .#{$darkClass} {
   .vuepress-theme {
+    @include commonDarkStyle;
     color: $fontColorDark;
 
     h1,

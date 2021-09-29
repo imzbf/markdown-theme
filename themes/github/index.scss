@@ -170,6 +170,7 @@ $borderColor: #d9dee4;
 
 .#{$darkClass} {
   .github-theme {
+    @include commonDarkStyle;
     color: #c9d1d9;
     background-color: #0e1116;
 

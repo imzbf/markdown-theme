@@ -162,6 +162,7 @@ $codeBkColorDark: #1a1a1a;
 
 .#{$darkClass} {
   .default-theme {
+    @include commonDarkStyle;
     color: $colorDark;
 
     img {
