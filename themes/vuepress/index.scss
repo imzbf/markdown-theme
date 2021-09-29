@@ -33,7 +33,7 @@ $fontColorDark: #999;
 
   h2 {
     font-size: 1.65em;
-    padding-bottom: 0.3 * $baseSize;
+    padding-bottom: 0.3em;
     border-bottom: 1px solid #eaecef;
   }
 
@@ -71,10 +71,11 @@ $fontColorDark: #999;
 
   figure {
     margin: 0;
+
     figcaption {
       color: #888;
       text-align: center;
-      font-size: 0.875px;
+      font-size: 0.875em;
       margin-top: 5px;
     }
   }

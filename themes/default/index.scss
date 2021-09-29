@@ -30,7 +30,6 @@ $codeBkColorDark: #1a1a1a;
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 5px;
     border: 1px solid $borderColor;
@@ -43,7 +42,7 @@ $codeBkColorDark: #1a1a1a;
     figcaption {
       color: #888;
       text-align: center;
-      font-size: 0.875px;
+      font-size: 0.875em;
       margin-top: 5px;
     }
   }
@@ -95,6 +94,8 @@ $codeBkColorDark: #1a1a1a;
       color: #a9b7c6;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
 
     .copy-button {

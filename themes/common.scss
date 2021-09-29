@@ -87,6 +87,12 @@ $darkClass: 'md-dark';
     color: rgb(36, 41, 47);
   }
 
+  pre {
+    code {
+      display: flex;
+    }
+  }
+
   hr {
     height: 1px;
     margin: 10px 0;
@@ -150,14 +156,6 @@ $darkClass: 'md-dark';
 }
 
 @mixin commonDarkStyle {
-  hr {
-    border-color: $borderColorDark;
-  }
-}
-
-.#{$darkClass} {
-  background-color: $bkColorDark;
-
   ::-webkit-scrollbar-corner,
   ::-webkit-scrollbar-track {
     background-color: rgb(15, 15, 15);
@@ -173,5 +171,9 @@ $darkClass: 'md-dark';
 
   ::-webkit-scrollbar-thumb:vertical:active {
     background-color: rgb(58, 58, 58);
+  }
+
+  hr {
+    border-color: $borderColorDark;
   }
 }
