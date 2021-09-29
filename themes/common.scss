@@ -33,6 +33,24 @@ $primaryColor: #73d13d;
 $darkClass: 'md-dark';
 
 @mixin commonStyle {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+
   pre,
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
