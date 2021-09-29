@@ -89,7 +89,13 @@ $darkClass: 'md-dark';
 
   pre {
     code {
-      display: flex;
+      display: block;
+
+      .code-block {
+        display: inline-block;
+        width: 100%;
+        overflow: auto;
+      }
     }
   }
 
@@ -144,12 +150,6 @@ $darkClass: 'md-dark';
     pre {
       code {
         padding-left: 3.5em !important;
-
-        .code-block {
-          display: inline-block;
-          width: 100%;
-          overflow: auto;
-        }
       }
     }
   }
