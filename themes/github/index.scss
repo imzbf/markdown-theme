@@ -9,7 +9,7 @@ $borderColor: #d9dee4;
 .github-theme {
   line-height: 1.5;
 
-  @include codeStyle;
+  @include commonStyle;
 
   h1,
   h2,
@@ -73,7 +73,7 @@ $borderColor: #d9dee4;
     figcaption {
       color: #888;
       text-align: center;
-      font-size: 0.875px;
+      font-size: 0.875em;
       margin-top: 5px;
     }
   }
@@ -88,6 +88,12 @@ $borderColor: #d9dee4;
   details {
     margin-top: 0;
     margin-bottom: 16px;
+  }
+
+  p {
+    &:empty {
+      display: none;
+    }
   }
 
   code {
@@ -108,6 +114,15 @@ $borderColor: #d9dee4;
     border-radius: 6px;
     position: relative;
 
+    code {
+      position: relative;
+      padding: 1em;
+      line-height: 1.45;
+      margin-bottom: 0;
+      word-break: normal;
+      letter-spacing: 1px;
+    }
+
     .copy-button {
       color: $colorDark;
       position: absolute;
@@ -115,17 +130,13 @@ $borderColor: #d9dee4;
       top: 9px;
       right: 10px;
       cursor: pointer;
+      display: none;
     }
 
-    code {
-      position: relative;
-      display: block;
-      padding: 1em;
-      line-height: 1.45;
-      margin-bottom: 0;
-      word-break: normal;
-      letter-spacing: 1px;
-      overflow: auto;
+    &:hover {
+      .copy-button {
+        display: initial;
+      }
     }
   }
 
@@ -164,8 +175,8 @@ $borderColor: #d9dee4;
 
 .#{$darkClass} {
   .github-theme {
+    @include commonDarkStyle;
     color: #c9d1d9;
-    background-color: #0e1116;
 
     h1,
     h2 {
@@ -191,6 +202,7 @@ $borderColor: #d9dee4;
       background-color: #2d333b;
       code {
         color: #a9b7c6;
+        background-color: #161b22;
       }
 
       .copy-button {

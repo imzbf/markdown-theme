@@ -11,7 +11,7 @@ $fontColorDark: #999;
   font-size: $baseSize;
   color: $fontColor;
 
-  @include codeStyle;
+  @include commonStyle;
 
   h1,
   h2,
@@ -33,7 +33,7 @@ $fontColorDark: #999;
 
   h2 {
     font-size: 1.65em;
-    padding-bottom: 0.3 * $baseSize;
+    padding-bottom: 0.3em;
     border-bottom: 1px solid #eaecef;
   }
 
@@ -51,16 +51,33 @@ $fontColorDark: #999;
     max-width: 100%;
   }
 
+  // 包裹的图片按照行显示
+  div[inline] {
+    & > figure {
+      display: inline-block;
+      padding-right: 0.5em;
+
+      img {
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+
   em {
     color: #4f5959;
     padding: 0 6px 0 4px;
   }
 
-  figcaption {
-    color: #888;
-    text-align: center;
-    font-size: 0.875px;
-    margin-top: 5px;
+  figure {
+    margin: 0;
+
+    figcaption {
+      color: #888;
+      text-align: center;
+      font-size: 0.875em;
+      margin-top: 5px;
+    }
   }
 
   code {
@@ -73,6 +90,10 @@ $fontColorDark: #999;
 
   p {
     word-spacing: 0.05em;
+
+    &:empty {
+      display: none;
+    }
   }
 
   blockquote {
@@ -103,10 +124,9 @@ $fontColorDark: #999;
       overflow-x: auto;
       color: #747384;
       white-space: pre;
-      padding: 1em 1.4em;
+      padding: 1em;
       font-size: 0.85rem;
       line-height: 1.6rem;
-      display: block;
     }
 
     .copy-button {
@@ -116,6 +136,13 @@ $fontColorDark: #999;
       top: 9px;
       right: 10px;
       cursor: pointer;
+      display: none;
+    }
+
+    &:hover {
+      .copy-button {
+        display: initial;
+      }
     }
   }
 
@@ -162,6 +189,7 @@ $fontColorDark: #999;
 
 .#{$darkClass} {
   .vuepress-theme {
+    @include commonDarkStyle;
     color: $fontColorDark;
 
     h1,

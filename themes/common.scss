@@ -32,7 +32,53 @@ $primaryColor: #73d13d;
 
 $darkClass: 'md-dark';
 
-@mixin codeStyle {
+@mixin commonStyle {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-track {
+    background-color: #e2e2e2;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  ::-webkit-scrollbar-button:vertical {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+
   pre,
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -40,43 +86,94 @@ $darkClass: 'md-dark';
     font-size: 14px;
     color: rgb(36, 41, 47);
   }
-}
 
-// show code row numer，显示代码行号
-.#{$prefix}-scrn {
-  span[rn-wrapper] {
-    position: absolute;
-    pointer-events: none;
-    top: 1em;
-    font-size: 100%;
-    left: 0;
-    width: 3em;
-    letter-spacing: -1px;
-    user-select: none;
-    counter-reset: linenumber;
-
-    & > span {
+  pre {
+    code {
       display: block;
-      pointer-events: none;
-      counter-increment: linenumber;
 
-      &::before {
-        color: #999;
-        display: block;
-        padding-right: 0.5em;
-        text-align: right;
-        content: counter(linenumber);
+      .code-block {
+        display: inline-block;
+        width: 100%;
+        overflow: auto;
       }
     }
   }
 
-  pre {
-    code {
-      padding-left: 3.5em !important;
+  hr {
+    height: 1px;
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #eaecef;
+  }
+
+  // 包裹的图片按照行显示
+  div[inline] {
+    & > figure {
+      display: inline-block;
+      padding-right: 0.5em;
+
+      img {
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+
+  // show code row numer，显示代码行号
+  .#{$prefix}-scrn {
+    span[rn-wrapper] {
+      position: absolute;
+      pointer-events: none;
+      top: 1em;
+      font-size: 100%;
+      left: 0;
+      width: 3em;
+      letter-spacing: -1px;
+      user-select: none;
+      counter-reset: linenumber;
+
+      & > span {
+        display: block;
+        pointer-events: none;
+        counter-increment: linenumber;
+
+        &::before {
+          color: #999;
+          display: block;
+          padding-right: 0.5em;
+          text-align: right;
+          content: counter(linenumber);
+        }
+      }
+    }
+
+    pre {
+      code {
+        padding-left: 3.5em !important;
+      }
     }
   }
 }
 
-.#{$darkClass} {
-  background-color: $bkColorDark;
+@mixin commonDarkStyle {
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-track {
+    background-color: rgb(15, 15, 15);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $borderColorDark;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: rgb(58, 58, 58);
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background-color: rgb(58, 58, 58);
+  }
+
+  hr {
+    border-color: $borderColorDark;
+  }
 }

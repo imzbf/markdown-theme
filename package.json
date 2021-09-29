@@ -1,10 +1,13 @@
 {
   "name": "@vavt/markdown-theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "vite",
     "build": "node ./build"
   },
+  "files": [
+    "css"
+  ],
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.6.1",
     "@vue/compiler-sfc": "^3.2.6",
