@@ -11,7 +11,7 @@ $fontColorDark: #999;
   font-size: $baseSize;
   color: $fontColor;
 
-  @include codeStyle;
+  @include commonStyle;
 
   h1,
   h2,
@@ -45,13 +45,6 @@ $fontColorDark: #999;
     text-decoration: none;
     color: #42b983;
     font-weight: 600;
-  }
-
-  hr {
-    height: 1px;
-    margin: 10px 0;
-    border: none;
-    border-top: 1px solid #eaecef;
   }
 
   img {

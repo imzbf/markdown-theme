@@ -32,7 +32,7 @@ $primaryColor: #73d13d;
 
 $darkClass: 'md-dark';
 
-@mixin codeStyle {
+@mixin commonStyle {
   pre,
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -40,39 +40,59 @@ $darkClass: 'md-dark';
     font-size: 14px;
     color: rgb(36, 41, 47);
   }
-}
 
-// show code row numer，显示代码行号
-.#{$prefix}-scrn {
-  span[rn-wrapper] {
-    position: absolute;
-    pointer-events: none;
-    top: 1em;
-    font-size: 100%;
-    left: 0;
-    width: 3em;
-    letter-spacing: -1px;
-    user-select: none;
-    counter-reset: linenumber;
+  hr {
+    height: 1px;
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #eaecef;
+  }
 
-    & > span {
-      display: block;
-      pointer-events: none;
-      counter-increment: linenumber;
+  // 包裹的图片按照行显示
+  div[inline] {
+    & > figure {
+      display: inline-block;
+      padding-right: 0.5em;
 
-      &::before {
-        color: #999;
-        display: block;
-        padding-right: 0.5em;
-        text-align: right;
-        content: counter(linenumber);
+      img {
+        padding: 0;
+        border: none;
       }
     }
   }
 
-  pre {
-    code {
-      padding-left: 3.5em !important;
+  // show code row numer，显示代码行号
+  .#{$prefix}-scrn {
+    span[rn-wrapper] {
+      position: absolute;
+      pointer-events: none;
+      top: 1em;
+      font-size: 100%;
+      left: 0;
+      width: 3em;
+      letter-spacing: -1px;
+      user-select: none;
+      counter-reset: linenumber;
+
+      & > span {
+        display: block;
+        pointer-events: none;
+        counter-increment: linenumber;
+
+        &::before {
+          color: #999;
+          display: block;
+          padding-right: 0.5em;
+          text-align: right;
+          content: counter(linenumber);
+        }
+      }
+    }
+
+    pre {
+      code {
+        padding-left: 3.5em !important;
+      }
     }
   }
 }

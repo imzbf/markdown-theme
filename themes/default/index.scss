@@ -4,7 +4,7 @@ $codeBkColor: #282c34;
 $codeBkColorDark: #1a1a1a;
 
 .default-theme {
-  @include codeStyle;
+  @include commonStyle;
 
   h1,
   h2,
@@ -26,13 +26,6 @@ $codeBkColorDark: #1a1a1a;
     }
   }
 
-  hr {
-    height: 1px;
-    margin: 10px 0;
-    border: none;
-    border-top: 1px solid #eaecef;
-  }
-
   img {
     display: block;
     margin: 0 auto;
@@ -42,19 +35,6 @@ $codeBkColorDark: #1a1a1a;
     padding: 5px;
     border: 1px solid $borderColor;
     border-radius: 3px;
-  }
-
-  // 包裹的图片按照行显示
-  div[inline] {
-    & > figure {
-      display: inline-block;
-      padding-right: 0.5em;
-
-      img {
-        padding: 0;
-        border: none;
-      }
-    }
   }
 
   figure {

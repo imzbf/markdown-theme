@@ -9,7 +9,7 @@ $borderColor: #d9dee4;
 .github-theme {
   line-height: 1.5;
 
-  @include codeStyle;
+  @include commonStyle;
 
   h1,
   h2,
@@ -61,30 +61,10 @@ $borderColor: #d9dee4;
     }
   }
 
-  hr {
-    height: 1px;
-    margin: 10px 0;
-    border: none;
-    border-top: 1px solid #eaecef;
-  }
-
   img {
     max-width: 100%;
     box-sizing: content-box;
     background-color: $bkColor;
-  }
-
-  // 包裹的图片按照行显示
-  div[inline] {
-    & > figure {
-      display: inline-block;
-      padding-right: 0.5em;
-
-      img {
-        padding: 0;
-        border: none;
-      }
-    }
   }
 
   figure {
