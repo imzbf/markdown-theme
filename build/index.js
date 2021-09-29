@@ -19,6 +19,7 @@ themeEntryList.forEach((themeName) => {
 
   const result = sass.renderSync({
     file: path.resolve(__dirname, `../themes/${themeName}/index.scss`),
+    includePaths: [path.resolve(__dirname, '../themes/public.scss')],
   });
 
   //
