@@ -26,6 +26,13 @@ $codeBkColorDark: #1a1a1a;
     }
   }
 
+  hr {
+    height: 1px;
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #eaecef;
+  }
+
   img {
     display: block;
     margin: 0 auto;
@@ -37,16 +44,38 @@ $codeBkColorDark: #1a1a1a;
     border-radius: 3px;
   }
 
-  figcaption {
-    color: #888;
-    text-align: center;
-    font-size: 0.875px;
-    margin-top: 5px;
+  // 包裹的图片按照行显示
+  div[inline] {
+    & > figure {
+      display: inline-block;
+      padding-right: 0.5em;
+
+      img {
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+
+  figure {
+    margin: 0;
+
+    figcaption {
+      color: #888;
+      text-align: center;
+      font-size: 0.875px;
+      margin-top: 5px;
+    }
   }
 
   p {
     line-height: 1.6;
+    margin: 0;
     padding: 0.5rem 0;
+
+    &:empty {
+      display: none;
+    }
   }
 
   code {
@@ -65,6 +94,10 @@ $codeBkColorDark: #1a1a1a;
     background-color: $bbkColor;
     border-left: 5px solid #35b378;
     display: block;
+
+    p {
+      padding: 0;
+    }
   }
 
   pre {
@@ -142,6 +175,7 @@ $codeBkColorDark: #1a1a1a;
 
     li {
       line-height: 1.6;
+      margin: 0.5em 0;
     }
   }
 }

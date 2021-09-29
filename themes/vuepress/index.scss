@@ -47,8 +47,28 @@ $fontColorDark: #999;
     font-weight: 600;
   }
 
+  hr {
+    height: 1px;
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #eaecef;
+  }
+
   img {
     max-width: 100%;
+  }
+
+  // 包裹的图片按照行显示
+  div[inline] {
+    & > figure {
+      display: inline-block;
+      padding-right: 0.5em;
+
+      img {
+        padding: 0;
+        border: none;
+      }
+    }
   }
 
   em {
@@ -56,11 +76,14 @@ $fontColorDark: #999;
     padding: 0 6px 0 4px;
   }
 
-  figcaption {
-    color: #888;
-    text-align: center;
-    font-size: 0.875px;
-    margin-top: 5px;
+  figure {
+    margin: 0;
+    figcaption {
+      color: #888;
+      text-align: center;
+      font-size: 0.875px;
+      margin-top: 5px;
+    }
   }
 
   code {
@@ -73,6 +96,10 @@ $fontColorDark: #999;
 
   p {
     word-spacing: 0.05em;
+
+    &:empty {
+      display: none;
+    }
   }
 
   blockquote {

@@ -1,5 +1,11 @@
 # API
 
+<div inline>
+
+![](https://img.shields.io/github/stars/imzbf/md-editor-v3?style=social)![](https://img.shields.io/npm/dm/md-editor-v3)![](https://img.shields.io/bundlephobia/min/md-editor-v3)![](https://img.shields.io/github/license/imzbf/md-editor-v3)![](https://img.shields.io/github/package-json/v/imzbf/md-editor-v3)
+
+</div>
+
 ## 全局配置
 
 `Vue.config` 是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改下列 property：
