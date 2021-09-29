@@ -33,6 +33,33 @@ $primaryColor: #73d13d;
 $darkClass: 'md-dark';
 
 @mixin commonStyle {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-track {
+    background-color: #e2e2e2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  ::-webkit-scrollbar-button:vertical {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+
   h1,
   h2,
   h3,
@@ -123,4 +150,21 @@ $darkClass: 'md-dark';
 
 .#{$darkClass} {
   background-color: $bkColorDark;
+
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-track {
+    background-color: rgb(15, 15, 15);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $borderColorDark;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: rgb(58, 58, 58);
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background-color: rgb(58, 58, 58);
+  }
 }
