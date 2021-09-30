@@ -1,10 +1,23 @@
 {
   "name": "@vavt/markdown-theme",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "Some markdown preview styles",
   "scripts": {
     "dev": "vite",
     "build": "node ./build"
   },
+  "author": {
+    "name": "zbf",
+    "url": "https://imbf.cc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imzbf/markdown-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imzbf/markdown-theme/issues"
+  },
+  "license": "MIT",
   "files": [
     "css"
   ],
