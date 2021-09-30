@@ -17,9 +17,13 @@ themeEntryList.forEach((themeName) => {
     return false;
   }
 
+  const scssCode = fs.readFileSync(
+    path.resolve(__dirname, `../themes/${themeName}/index.scss`)
+  );
+
   const result = sass.renderSync({
-    file: path.resolve(__dirname, `../themes/${themeName}/index.scss`),
-    includePaths: [path.resolve(__dirname, '../themes/public.scss')],
+    data: `@import "themes/common.scss";@import "themes/public.scss";${scssCode}`,
+    includePaths: [path.resolve(__dirname, '../')],
   });
 
   //
