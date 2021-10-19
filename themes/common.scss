@@ -68,6 +68,7 @@ $darkClass: 'md-dark';
   h5,
   h6 {
     position: relative;
+    word-break: break-all;
 
     a {
       color: inherit;
