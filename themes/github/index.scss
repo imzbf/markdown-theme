@@ -166,6 +166,16 @@ $borderColor: #d9dee4;
     color: #c9d1d9;
 
     h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      color: #c9d1d9;
+    }
+
+    h1,
     h2 {
       border-bottom: 1px solid #373e47;
     }

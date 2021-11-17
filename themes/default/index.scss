@@ -151,6 +151,16 @@ $codeBkColorDark: #1a1a1a;
     @include commonDarkStyle;
     color: $colorDark;
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      color: $colorDark;
+    }
+
     img {
       border-color: $borderColorDark;
     }
