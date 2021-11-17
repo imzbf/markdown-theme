@@ -30,7 +30,7 @@ createApp({
         editorId="md-editor"
         :editorClass="previewTheme + '-theme'"
         previewOnly
-        previewTheme="vuepress"
+        :previewTheme="previewTheme"
         v-model="text"
         showCodeRowNumber />
     </div>
