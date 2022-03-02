@@ -26,15 +26,20 @@ async onUploadImg(files: FileList, callback: (urls: string[]) => void) {
 }
 ```
 
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+- 哈哈哈
+
 ## 全局配置
 
 `Vue.config` 是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改下列 property：
 
 ### silent
 
-- 类型：`boolean`
-- 默认值：`false`
-- 用法：
+1. 类型：`boolean`
+2. 默认值：`false`
+3. 用法：
 
 ```js
 Vue.config.silent = true;

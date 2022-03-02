@@ -80,6 +80,30 @@ $darkClass: 'md-dark';
     }
   }
 
+  ol {
+    li {
+      list-style: decimal;
+    }
+  }
+
+  ul {
+    li {
+      list-style: disc;
+    }
+  }
+
+  ol,
+  ul {
+    .li-task {
+      list-style-type: none;
+
+      input {
+        margin-left: -1.5em;
+        margin-right: 0.1em;
+      }
+    }
+  }
+
   pre,
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
