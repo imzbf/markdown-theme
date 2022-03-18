@@ -106,11 +106,61 @@ export default defineComponent({
 });
 ```
 
+```js
+import { defineComponent, ref } from 'vue';
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+
+export default defineComponent({
+  name: 'MdEditor',
+  setup() {
+    const text = ref('');
+    return () => (
+      <MdEditor
+        modelValue={text.value}
+        onChange={(v: string) => (text.value = v)}
+      />
+    );
+  },
+});
+```
+
 ## 文本演示
 
 依照普朗克长度这项单位，目前可观测的宇宙的直径估计值（直径约 930 亿光年，即 8.8 × 10<sup>26</sup> 米）即为 5.4 × 10<sup>61</sup>倍普朗克长度。而可观测宇宙体积则为 8.4 × 10<sup>184</sup>立方普朗克长度（普朗克体积）。
 
 ## 表格演示
+
+哈哈哈
+
+---
+
+<https://markdown.com.cn>
+
+---
+
+[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn)
+[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn)
+[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn)
+
+---
+
+表格 A
+| 昵称 | 猿龄（年） | 来自 |
+| ---- | ---------- | --------- |
+| 之间 | 3 | 中国-重庆 |
+| 之间 | 3 | 中国-重庆 |
+| 之间 | 3 | 中国-重庆 |
+| 之间 | 3 | 中国-重庆 |
+| 之间 | 3 | 中国-重庆 |
+
+| 昵称 | 猿龄（年） | 来自      |
+| ---- | ---------- | --------- |
+| 之间 | 3          | 中国-重庆 |
+| 之间 | 3          | 中国-重庆 |
+| 之间 | 3          | 中国-重庆 |
+| 之间 | 3          | 中国-重庆 |
+| 之间 | 3          | 中国-重庆 |
 
 | 昵称 | 猿龄（年） | 来自      |
 | ---- | ---------- | --------- |
