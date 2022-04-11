@@ -115,6 +115,7 @@ $darkClass: 'md-dark';
   pre {
     code {
       display: block;
+      overflow: auto;
 
       .code-block {
         display: inline-block;
