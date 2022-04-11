@@ -1,6 +1,6 @@
 {
   "name": "@vavt/markdown-theme",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Some markdown preview styles",
   "scripts": {
     "dev": "vite",
