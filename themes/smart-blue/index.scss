@@ -1,0 +1,199 @@
+.smart-blue-theme {
+  @include commonStyle;
+
+  padding: 16px;
+  color: #595959;
+  font-size: 15px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
+    PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  background-image: linear-gradient(
+      90deg,
+      rgba(60, 10, 30, 0.04) 3%,
+      rgba(0, 0, 0, 0) 3%
+    ),
+    linear-gradient(360deg, rgba(60, 10, 30, 0.04) 3%, rgba(0, 0, 0, 0) 3%);
+  background-size: 20px 20px;
+  background-position: center center;
+  p {
+    color: #595959;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 400;
+    & + p {
+      margin-top: 16px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 30px 0;
+    margin: 0;
+    color: #135ce0;
+
+    a {
+      border: none;
+    }
+  }
+
+  h1 {
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    margin: 50px 0;
+  }
+  h2 {
+    position: relative;
+    font-size: 20px;
+    border-left: 4px solid;
+    padding: 0 0 0 10px;
+    margin: 30px 0;
+  }
+  h3 {
+    font-size: 16px;
+  }
+
+  ul {
+    list-style: disc outside;
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+  li {
+    line-height: 2;
+    color: #595959;
+    margin-bottom: 0;
+    list-style: inherit;
+  }
+  img {
+    max-width: 100%;
+    &.loaded {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  blockquote {
+    background: #fff9f9;
+    margin: 2em 0;
+    padding: 2px 20px;
+    border-left: 4px solid #b2aec5;
+    p {
+      color: #666;
+      line-height: 2;
+    }
+  }
+  a {
+    color: #036aca;
+    // border-bottom: 1px solid rgba(3, 106, 202, 0.8);
+    font-weight: 400;
+    text-decoration: none;
+  }
+  strong {
+    color: #036aca;
+  }
+  em {
+    strong {
+      color: #036aca;
+    }
+  }
+  hr {
+    border-top: 1px solid #135ce0;
+  }
+  pre {
+    overflow: auto;
+    & > code {
+      font-size: 12px;
+      padding: 15px 12px;
+      margin: 0;
+      word-break: normal;
+      display: block;
+      overflow-x: auto;
+      color: #333;
+      background: #f8f8f8;
+    }
+
+    .copy-button {
+      color: $colorDark;
+      position: absolute;
+      font-size: 12px;
+      top: 9px;
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+  code {
+    word-break: break-word;
+    border-radius: 2px;
+    overflow-x: auto;
+    background-color: #fff5f5;
+    color: #ff502c;
+    font-size: 0.87em;
+    padding: 0.065em 0.4em;
+  }
+  table {
+    background-color: #fff;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    overflow-x: auto;
+    tr {
+      border-top: 1px solid #dfe2e5;
+      &:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+    }
+  }
+}
+
+/* 一级标题 */
+/* 一级标题前缀，用来放背景图，支持透明度控制 */
+// {
+//   .smart-blue-theme {
+//     h1 {
+//       &:before {
+//         //   position: absolute;
+//         //   content: '';
+//         //   top: -10px;
+//         //   left: 50%;
+//         //   width: 32px;
+//         //   height: 32px;
+//         //   transform: translateX(-50%);
+//         //   background-size: 100% 100%;
+//         //   opacity: 0.36;
+//         //   background-repeat: no-repeat;
+//       }
+//     }
+//   }
+// }
+/* 二级标题 */
+/* 三级标题 */
+/* 无序列表 */
+/* 无序列表内容 */
+/* 已加载图片 */
+/* 引用 */
+/* 引用文字 */
+/* 链接 */
+/* 加粗 */
+/* 加粗斜体 */
+/* 分隔线 */
+/* 代码 */
+.smart-blue-theme pre,
+.smart-blue-theme code {
+  overflow: auto;
+  position: relative;
+  line-height: 1.75;
+  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+}
+/* 表格 */
+.smart-blue-theme table th,
+.smart-blue-theme table td {
+  border: 1px solid #dfe2e5;
+  padding: 0.6em 1em;
+}
+
+.smart-blue-theme {
+  .md-scrn span[rn-wrapper] {
+    top: 15px;
+  }
+}

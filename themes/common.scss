@@ -75,7 +75,6 @@ $darkClass: 'md-dark';
 
       &:hover {
         color: inherit;
-        text-decoration: none;
       }
     }
   }
@@ -102,6 +101,10 @@ $darkClass: 'md-dark';
         margin-right: 0.1em;
       }
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 
   pre,

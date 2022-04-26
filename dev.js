@@ -8,7 +8,7 @@ createApp({
   data() {
     return {
       theme: 'light',
-      previewTheme: 'default',
+      previewTheme: 'smart-blue',
       text: '',
     };
   },
