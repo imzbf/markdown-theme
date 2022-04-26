@@ -7,7 +7,7 @@ createApp({
   components: { MdEditor },
   data() {
     return {
-      theme: 'light',
+      theme: 'dark',
       previewTheme: 'smart-blue',
       text: '',
     };
@@ -29,6 +29,7 @@ createApp({
       <MdEditor
         editorId="md-editor"
         :editorClass="previewTheme + '-theme'"
+        highlightCss="https://cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/atom-one-dark.css"
         previewOnly
         :previewTheme="previewTheme"
         v-model="text"

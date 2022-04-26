@@ -15,7 +15,6 @@
   background-size: 20px 20px;
   background-position: center center;
   p {
-    color: #595959;
     font-size: 15px;
     line-height: 2;
     font-weight: 400;
@@ -58,12 +57,10 @@
 
   ul {
     list-style: disc outside;
-    margin-left: 2em;
     margin-top: 1em;
   }
   li {
     line-height: 2;
-    color: #595959;
     margin-bottom: 0;
     list-style: inherit;
   }
@@ -104,8 +101,8 @@
   pre {
     overflow: auto;
     & > code {
-      font-size: 12px;
-      padding: 15px 12px;
+      font-size: 0.85rem;
+      padding: 22px 12px 15px;
       margin: 0;
       word-break: normal;
       display: block;
@@ -118,7 +115,7 @@
       color: $colorDark;
       position: absolute;
       font-size: 12px;
-      top: 9px;
+      top: 7px;
       right: 10px;
       cursor: pointer;
     }
@@ -133,7 +130,6 @@
     padding: 0.065em 0.4em;
   }
   table {
-    background-color: #fff;
     border-collapse: collapse;
     margin: 1rem 0;
     overflow-x: auto;
@@ -146,38 +142,6 @@
   }
 }
 
-/* 一级标题 */
-/* 一级标题前缀，用来放背景图，支持透明度控制 */
-// {
-//   .smart-blue-theme {
-//     h1 {
-//       &:before {
-//         //   position: absolute;
-//         //   content: '';
-//         //   top: -10px;
-//         //   left: 50%;
-//         //   width: 32px;
-//         //   height: 32px;
-//         //   transform: translateX(-50%);
-//         //   background-size: 100% 100%;
-//         //   opacity: 0.36;
-//         //   background-repeat: no-repeat;
-//       }
-//     }
-//   }
-// }
-/* 二级标题 */
-/* 三级标题 */
-/* 无序列表 */
-/* 无序列表内容 */
-/* 已加载图片 */
-/* 引用 */
-/* 引用文字 */
-/* 链接 */
-/* 加粗 */
-/* 加粗斜体 */
-/* 分隔线 */
-/* 代码 */
 .smart-blue-theme pre,
 .smart-blue-theme code {
   overflow: auto;
@@ -194,6 +158,65 @@
 
 .smart-blue-theme {
   .md-scrn span[rn-wrapper] {
-    top: 15px;
+    top: 22px;
+  }
+}
+
+.#{$darkClass} {
+  .smart-blue-theme {
+    @include commonDarkStyle;
+    color: $fontColorDark;
+    background-image: linear-gradient(
+        90deg,
+        rgba(207, 207, 207, 0.04) 3%,
+        rgba(255, 255, 255, 0) 3%
+      ),
+      linear-gradient(
+        360deg,
+        rgba(207, 207, 207, 0.04) 3%,
+        rgba(255, 255, 255, 0) 3%
+      );
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #1460ec;
+    }
+
+    blockquote {
+      background-color: #1a1a1a;
+      border-color: $borderColorDark;
+
+      p {
+        color: $fontColorDark;
+      }
+    }
+
+    pre {
+      code {
+        color: $fontColorDark;
+        background-color: #1a1a1a;
+      }
+    }
+
+    code {
+      background-color: $codeBkColorDark;
+    }
+
+    table {
+      tr {
+        th,
+        td {
+          border-color: $borderColorDark;
+        }
+
+        &:nth-child(2n) {
+          background-color: #0c0c0c;
+        }
+      }
+    }
   }
 }
