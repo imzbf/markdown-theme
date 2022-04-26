@@ -7,8 +7,8 @@ createApp({
   components: { MdEditor },
   data() {
     return {
-      theme: 'dark',
-      previewTheme: 'smart-blue',
+      theme: 'light',
+      previewTheme: 'cyanosis',
       text: '',
     };
   },
