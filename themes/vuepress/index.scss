@@ -50,8 +50,7 @@ $fontColorDark: #999;
 
   // 包裹的图片按照行显示
   div[inline] {
-    & > figure {
-      display: inline-block;
+    & > .figure {
       padding-right: 0.5em;
 
       img {
