@@ -117,9 +117,16 @@ $fontColorDark: #999;
       color: $colorDark;
       position: absolute;
       font-size: 12px;
-      top: 7px;
+      top: 9px;
       right: 10px;
       cursor: pointer;
+      display: none;
+    }
+
+    &:hover {
+      .copy-button {
+        display: initial;
+      }
     }
   }
   code {

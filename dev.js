@@ -8,7 +8,7 @@ createApp({
   data() {
     return {
       theme: 'light',
-      previewTheme: 'mk-cute',
+      previewTheme: 'default',
       text: '',
     };
   },
@@ -24,6 +24,9 @@ createApp({
       <button @click="previewTheme = 'default'">默认</button>
       <button @click="previewTheme = 'github'">github</button>
       <button @click="previewTheme = 'vuepress'">vuepress</button>
+      <button @click="previewTheme = 'smart-blue'">smart-blue</button>
+      <button @click="previewTheme = 'cyanosis'">cyanosis</button>
+      <button @click="previewTheme = 'mk-cute'">mk-cute</button>
     </div>
     <div :class="['container', theme === 'dark' ? 'md-dark' : '']">
       <MdEditor
