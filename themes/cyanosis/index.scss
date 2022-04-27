@@ -354,7 +354,7 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
 
   table {
     display: inline-block !important;
-    font-size: 12px;
+    // font-size: 14px;
     width: auto;
     max-width: 100%;
     overflow: auto;
@@ -365,7 +365,6 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
     thead {
       color: #000;
       text-align: left;
-      font-size: 14px;
       background: #f6f6f6;
     }
 

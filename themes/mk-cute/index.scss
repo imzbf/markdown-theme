@@ -220,7 +220,7 @@ $spin-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd
 
   table {
     display: inline-block !important;
-    font-size: 12px;
+    // font-size: 14px;
     width: auto;
     max-width: 100%;
     overflow: auto;
@@ -327,11 +327,11 @@ $spin-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd
       border-color: #1c1c1c;
     }
     thead {
-      background-color: #1c1c1c;
+      background-color: #1c1c1ca1;
       color: inherit;
     }
     tr:nth-child(2n) {
-      background-color: #1c1c1c;
+      background-color: #1c1c1ca1;
     }
 
     blockquote {
