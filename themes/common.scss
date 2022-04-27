@@ -125,18 +125,6 @@ $darkClass: 'md-dark';
     }
   }
 
-  figure {
-    margin: 0 0 1em 0;
-    display: inline-block;
-
-    figcaption {
-      color: #888;
-      text-align: center;
-      font-size: 0.875em;
-      margin-top: 5px;
-    }
-  }
-
   hr {
     height: 1px;
     margin: 10px 0;
@@ -146,14 +134,26 @@ $darkClass: 'md-dark';
 
   // 包裹的图片按照行显示
   div[inline] {
-    & > figure {
-      display: inline-block;
+    & > .figure {
       padding-right: 0.5em;
 
       img {
         padding: 0;
         border: none;
       }
+    }
+  }
+
+  .figure {
+    margin: 0 0 1em 0;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+
+    .figcaption {
+      color: #888;
+      font-size: 0.875em;
+      margin-top: 5px;
     }
   }
 }
