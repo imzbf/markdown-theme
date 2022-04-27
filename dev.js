@@ -30,6 +30,7 @@ createApp({
     </div>
     <div :class="['container', theme === 'dark' ? 'md-dark' : '']">
       <MdEditor
+        style="font-size: 14px"
         editorId="md-editor"
         :editorClass="previewTheme + '-theme'"
         highlightCss="https://cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/atom-one-dark.css"
