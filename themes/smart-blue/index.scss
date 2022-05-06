@@ -103,15 +103,20 @@ $fontColorDark: #999;
   }
   pre {
     overflow: auto;
-    & > code {
+
+    code {
       // font-size: 0.85rem;
-      padding: 22px 12px 15px;
+      padding: 22px 12px;
       margin: 0;
       word-break: normal;
       display: block;
       overflow-x: auto;
       color: #333;
       background: #f8f8f8;
+
+      > * {
+        line-height: 1.6;
+      }
     }
 
     .copy-button {

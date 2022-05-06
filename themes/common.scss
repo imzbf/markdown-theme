@@ -118,12 +118,13 @@ $darkClass: 'md-dark';
   pre {
     code {
       display: block;
-      overflow: auto;
+      line-height: 1;
 
       .code-block {
         display: inline-block;
         width: 100%;
         overflow: auto;
+        vertical-align: text-bottom;
       }
     }
   }

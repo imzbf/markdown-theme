@@ -69,7 +69,6 @@ $codeBkColorDark: #1a1a1a;
     margin: 20px 0;
     border-radius: 5px;
     box-shadow: #00000055 0px 2px 2px;
-    line-height: 1.6;
 
     code {
       position: relative;
@@ -80,6 +79,10 @@ $codeBkColorDark: #1a1a1a;
       border-bottom-right-radius: 5px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+
+      > * {
+        line-height: 1.6;
+      }
     }
 
     .copy-button {

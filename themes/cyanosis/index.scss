@@ -267,12 +267,9 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
 
   pre {
     font-family: $monospace-font;
-    overflow: auto;
     position: relative;
-    line-height: 1.75;
 
     > code {
-      display: block;
       padding: 16px 12px;
       margin: 0;
       // font-size: 12px;
@@ -280,6 +277,10 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
       word-break: normal;
       overflow-x: auto;
       background: var(--cyanosis-code-pre-color);
+
+      > * {
+        line-height: 1.75;
+      }
 
       &::-webkit-scrollbar {
         width: 4px;

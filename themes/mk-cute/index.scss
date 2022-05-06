@@ -171,8 +171,8 @@ $spin-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd
   pre {
     overflow: auto;
     position: relative;
-    line-height: 1.75;
-    > code {
+
+    code {
       font-family: $monospace-font;
       // font-size: 12px;
       border-radius: 10px;
@@ -183,6 +183,10 @@ $spin-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd
       overflow-x: auto;
       color: $code-color;
       background: $code-bg-color;
+
+      > * {
+        line-height: 1.75;
+      }
 
       span[rn-wrapper] {
         top: 15px;

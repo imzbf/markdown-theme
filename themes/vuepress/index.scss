@@ -111,7 +111,10 @@ $fontColorDark: #999;
       white-space: pre;
       padding: 1em;
       // font-size: 0.85rem;
-      line-height: 1.6rem;
+
+      > * {
+        line-height: 1.6;
+      }
     }
 
     .copy-button {
