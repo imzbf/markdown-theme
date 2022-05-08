@@ -121,6 +121,7 @@ $darkClass: 'md-dark';
     code {
       display: block;
       line-height: 1;
+      overflow: auto;
 
       .code-block {
         display: inline-block;
