@@ -598,6 +598,7 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
 
 .#{$darkClass} {
   .cyanosis-theme {
+    @include commonDarkStyle;
     @include LightAndDark(true);
   }
 }

@@ -319,6 +319,7 @@ $spin-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd
 
 .#{$darkClass} {
   .mk-cute-theme {
+    @include commonDarkStyle;
     background-image: linear-gradient(
         90deg,
         rgb(50 58 66 / 25%) 3%,
