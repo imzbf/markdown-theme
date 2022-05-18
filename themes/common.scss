@@ -80,13 +80,13 @@ $darkClass: 'md-dark';
   }
 
   ol {
-    li {
+    > li {
       list-style: decimal;
     }
   }
 
   ul {
-    li {
+    > li {
       list-style: disc;
     }
   }
