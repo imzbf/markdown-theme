@@ -115,6 +115,10 @@ $fontColorDark: #999;
       > * {
         line-height: 1.6;
       }
+
+      span[rn-wrapper] {
+        top: 22px;
+      }
     }
 
     .copy-button {
