@@ -1,10 +1,10 @@
-name: Npm Latest Publish
+name: Npm Beta Publish
 
 on:
   push:
-    branches: [master]
+    branches: [beta]
   pull_request:
-    branches: [master]
+    branches: [beta]
 
 jobs:
   publish:
@@ -21,16 +21,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install
-        uses: borales/actions-yarn@v2.3.0
+        uses: borales/actions-yarn@v3.0.0
         with:
           cmd: install
 
       - name: Build
-        uses: borales/actions-yarn@v2.3.0
+        uses: borales/actions-yarn@v3.0.0
         with:
           cmd: build
 
       - name: Publish
-        run: npm publish --access public
+        run: npm publish --tag beta
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
