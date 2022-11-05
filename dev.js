@@ -28,7 +28,7 @@ createApp({
       <button @click="previewTheme = 'cyanosis'">cyanosis</button>
       <button @click="previewTheme = 'mk-cute'">mk-cute</button>
     </div>
-    <div :class="['container', theme === 'dark' ? 'md-dark' : '']">
+    <div :class="['container', theme === 'dark' ? 'md-editor-dark' : '']">
       <MdEditor
         style="font-size: 14px"
         editorId="md-editor"

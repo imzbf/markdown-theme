@@ -159,7 +159,7 @@ $spin-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd
 
   code {
     font-family: $monospace-font;
-    word-break: break-word;
+    // word-break: break-word;
     border-radius: 2px;
     overflow-x: auto;
     background-color: $code-bg-color;
