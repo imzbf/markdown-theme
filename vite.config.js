@@ -1,23 +1,18 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import mdImport from './vitePlugins/markdownImport';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    open: true,
+    open: true
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData:
-          '@import "./themes/common.scss";@import "./themes/public.scss";',
-      },
-    },
+        additionalData: '@import "./themes/common.scss";@import "./themes/public.scss";'
+      }
+    }
   },
-  resolve: {
-    alias: {
-      vue: 'vue/dist/vue.esm-bundler.js',
-    },
-  },
-  plugins: [vue()],
+  plugins: [vue(), mdImport()]
 });

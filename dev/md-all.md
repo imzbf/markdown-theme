@@ -100,13 +100,8 @@ export default defineComponent({
   name: 'MdEditor',
   setup() {
     const text = ref('');
-    return () => (
-      <MdEditor
-        modelValue={text.value}
-        onChange={(v: string) => (text.value = v)}
-      />
-    );
-  },
+    return () => <MdEditor modelValue={text.value} onChange={(v: string) => (text.value = v)} />;
+  }
 });
 ```
 
@@ -119,13 +114,8 @@ export default defineComponent({
   name: 'MdEditor',
   setup() {
     const text = ref('');
-    return () => (
-      <MdEditor
-        modelValue={text.value}
-        onChange={(v: string) => (text.value = v)}
-      />
-    );
-  },
+    return () => <MdEditor modelValue={text.value} onChange={(v: string) => (text.value = v)} />;
+  }
 });
 ```
 
@@ -143,20 +133,11 @@ export default defineComponent({
 
 ---
 
-[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn)
-[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn)
-[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn)
+[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn) [![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn) [![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg 'Shiprock')](https://markdown.com.cn)
 
 ---
 
-表格 A
-| 昵称 | 猿龄（年） | 来自 |
-| ---- | ---------- | --------- |
-| 之间 | 3 | 中国-重庆 |
-| 之间 | 3 | 中国-重庆 |
-| 之间 | 3 | 中国-重庆 |
-| 之间 | 3 | 中国-重庆 |
-| 之间 | 3 | 中国-重庆 |
+表格 A | 昵称 | 猿龄（年） | 来自 | | ---- | ---------- | --------- | | 之间 | 3 | 中国-重庆 | | 之间 | 3 | 中国-重庆 | | 之间 | 3 | 中国-重庆 | | 之间 | 3 | 中国-重庆 | | 之间 | 3 | 中国-重庆 |
 
 | 昵称 | 猿龄（年） | 来自      |
 | ---- | ---------- | --------- |
