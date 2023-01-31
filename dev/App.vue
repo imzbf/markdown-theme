@@ -24,7 +24,7 @@
 import { reactive } from 'vue';
 import MdEditor from 'md-editor-v3';
 import mdAll from './md-all.md';
-const state = reactive({ theme: 'dark', previewTheme: 'default', text: mdAll });
+const state = reactive({ theme: 'light', previewTheme: 'default', text: mdAll });
 
 const changeTheme = () => (state.theme = state.theme === 'dark' ? 'light' : 'dark');
 </script>
@@ -61,4 +61,36 @@ const changeTheme = () => (state.theme = state.theme === 'dark' ? 'light' : 'dar
   padding: 50px 0;
 }
 </style>
-<style src="../themes/all/index.scss" lang="scss"></style>
+<!-- 
+<style>
+.md-editor {
+  --bg-color: rgba(224, 224, 224, 0.1);
+  --blue: #37b2ff;
+  --yellow: #feea1e;
+  --orange: orange;
+  --purple: #e699e6;
+  --green: #a7ecad;
+  --text: #333;
+  --area: #f8f8f8;
+  --line: #adb0b8;
+  --border: rgb(245, 245, 247);
+  --border-blue: #37b2ff;
+  --table-bg-color: #fff;
+}
+
+.md-editor-dark {
+  --bg-color: rgba(224, 224, 224, 0.1);
+  --blue: #37b2ff;
+  --yellow: #feea1e;
+  --orange: orange;
+  --purple: #e699e6;
+  --green: #a7ecad;
+  --text: #c9d1d9;
+  --area: #1a1a1a;
+  --line: #75787e;
+  --border: rgb(78 78 78);
+  --border-blue: #2781b9;
+  --table-bg-color: var(--area);
+}
+</style> -->
+<style src="../src/themes/default/index.scss" lang="scss"></style>

@@ -1,0 +1,18 @@
+@import '../scss-vars.scss';
+
+.#{$theme-name} {
+  ol,
+  ul {
+    margin: 0.6em 0;
+    padding-left: 1.6em;
+
+    li {
+      line-height: 1.6;
+      margin: 0.5em 0;
+
+      p {
+        padding: 0;
+      }
+    }
+  }
+}

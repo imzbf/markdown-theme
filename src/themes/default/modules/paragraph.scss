@@ -1,0 +1,13 @@
+@import '../scss-vars.scss';
+
+.#{$theme-name} {
+  p {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0.5rem 0;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

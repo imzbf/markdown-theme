@@ -1,0 +1,12 @@
+@import '../scss-vars.scss';
+
+.#{$theme-name} {
+  a {
+    color: var(--md-theme-link-color);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--md-theme-link-hover-color);
+    }
+  }
+}

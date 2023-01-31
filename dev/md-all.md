@@ -1,12 +1,129 @@
-# API
+# 一级标题
+
+## 二级标题
+
+### 三级标题
+
+#### 四级标题
+
+##### 五级标题
+
+###### 六级标题
+
+## 标题中的[链接](https://imzbf.github.io/markdown-theme)
+
+## 标题中的`code`
+
+这是一级标题下的段落。
+
+普通的段落，普通的段落。
+
+## 基本演示
+
+段落中文字**加粗**，<u>下划线</u>，_斜体_，~删除线~，上标<sup>26</sup>，下标<sub>26</sub>，`inline code`，[超链接](https://imzbf.github.io/markdown-theme)
+
+> 引用：这是一段引用，引用中的文字**加粗**，<u>下划线</u>，_斜体_，~删除线~，上标<sup>26</sup>，下标<sub>26</sub>，`inline code`，[超链接](https://imzbf.github.io/markdown-theme)
+
+这是一个普通段落
+
+> 多段落引用
+>
+> 引用中的图片
+>
+> ![图片的描述](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif)
+>
+> 引用中的列表
+>
+> 1. 类型
+> 2. 默认值
+>
+> - 类型
+> - 默认值
+>
+> - [x] 打开冰箱门
+> - [ ] 把大象放进去
+> - [ ] 关闭冰箱
+>
+> 引用中的标题
+>
+> | 昵称 | 性别   | 来自      |
+> | ---- | ------ | --------- |
+> | 之间 | 外星人 | 中国-重庆 |
+> | 之间 | 外星人 | 中国-重庆 |
+> | 之间 | 外星人 | 中国-重庆 |
+> | 之间 | 外星人 | 中国-重庆 |
+>
+> | 昵称 | 性别   | 来自      |
+> | ---- | ------ | --------- |
+> | 之间 | 外星人 | 中国-重庆 |
+> | 之间 | 外星人 | 中国-重庆 |
+> | 之间 | 外星人 | 中国-重庆 |
+> | 之间 | 外星人 | 中国-重庆 |
+>
+> 引用中的代码
+>
+> ```js
+> const a = 1;
+> ```
+>
+> 引用中的数学公式
+>
+> 行内 $x+y^{2x}$
+>
+> 块级
+>
+> $$
+> \sqrt[3]{x}
+> $$
+>
+> 引用中的图表
+>
+> ```mermaid
+> ---
+> title: Example Git diagram
+> ---
+> gitGraph
+>    commit
+>    commit
+>    branch develop
+>    checkout develop
+>    commit
+>    commit
+>    checkout main
+>    merge develop
+>    commit
+>    commit
+> ```
+>
+> 引用中的提示
+>
+> !!! note 支持的类型
+>
+> note、abstract、info、tip、success、question、warning
+>
+> failure、danger、bug、example、quote、hint、caution、error、attention
+>
+> !!!
+>
+> 我是普通的引用文字
+
+## 图片
+
+![图片的描述](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif)
+
+## 一行多图
+
+图片都是行内元素显示：
 
 ![](https://img.shields.io/github/stars/imzbf/md-editor-v3?style=social) ![](https://img.shields.io/npm/dw/md-editor-v3) ![](https://img.shields.io/bundlephobia/min/md-editor-v3) ![](https://img.shields.io/github/license/imzbf/md-editor-v3) ![](https://img.shields.io/github/package-json/v/imzbf/md-editor-v3)
+
+## 块级代码
 
 ```js
 const a = '1';
 ```
 
-```
+```js
 async onUploadImg(files: FileList, callback: (urls: string[]) => void) {
   const res = await Promise.all(
     Array.from(files).map((file) => {
@@ -39,7 +156,7 @@ async onUploadImg(files: FileList, callback: (urls: string[]) => void) {
 
 `Vue.config` 是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改下列 property：
 
-### silent
+###
 
 1. 类型：`boolean`
 2. 默认值：`false`
@@ -81,14 +198,6 @@ const Profile = Vue.extend({
 
 Markdown 编辑器，基于 vue3，使用 jsx 和 typescript 语法开发，支持切换主题、prettier 美化文本等。
 
-## 基本演示
-
-**加粗**，<u>下划线</u>，_斜体_，~删除线~，上标<sup>26</sup>，下标<sub>[1]</sub>，`inline code`，[超链接](https://imbf.cc)
-
-> 引用：这是一段引用
-
-![ddd](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d93b5ac7338479fb7fd0b94ba6e003a~tplv-k3u1fbpfcp-watermark.image)
-
 ## 代码演示
 
 ```js
@@ -123,8 +232,6 @@ export default defineComponent({
 
 依照普朗克长度这项单位，目前可观测的宇宙的直径估计值（直径约 930 亿光年，即 8.8 × 10<sup>26</sup> 米）即为 5.4 × 10<sup>61</sup>倍普朗克长度。而可观测宇宙体积则为 8.4 × 10<sup>184</sup>立方普朗克长度（普朗克体积）。
 
-## 表格演示
-
 哈哈哈
 
 ---
@@ -137,22 +244,163 @@ export default defineComponent({
 
 ---
 
-表格 A | 昵称 | 猿龄（年） | 来自 | | ---- | ---------- | --------- | | 之间 | 3 | 中国-重庆 | | 之间 | 3 | 中国-重庆 | | 之间 | 3 | 中国-重庆 | | 之间 | 3 | 中国-重庆 | | 之间 | 3 | 中国-重庆 |
+## 表格演示
 
-| 昵称 | 猿龄（年） | 来自      |
-| ---- | ---------- | --------- |
-| 之间 | 3          | 中国-重庆 |
-| 之间 | 3          | 中国-重庆 |
-| 之间 | 3          | 中国-重庆 |
-| 之间 | 3          | 中国-重庆 |
-| 之间 | 3          | 中国-重庆 |
+| 昵称 | 性别   | 来自      |
+| ---- | ------ | --------- |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
 
-| 昵称 | 猿龄（年） | 来自      |
-| ---- | ---------- | --------- |
-| 之间 | 3          | 中国-重庆 |
-| 之间 | 3          | 中国-重庆 |
-| 之间 | 3          | 中国-重庆 |
-| 之间 | 3          | 中国-重庆 |
-| 之间 | 3          | 中国-重庆 |
+| 昵称 | 性别   | 来自      |
+| ---- | ------ | --------- |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
 
-## 占个坑@！
+| 昵称 | 性别   | 来自      |
+| ---- | ------ | --------- |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+| 之间 | 外星人 | 中国-重庆 |
+
+---
+
+## 🐷 数学公式
+
+有两种模式
+
+### 🐽 行内
+
+$x+y^{2x}$
+
+### 🐸 块级
+
+$$
+\sqrt[3]{x}
+$$
+
+---
+
+## 🐵 图表
+
+```mermaid
+---
+title: Example Git diagram
+---
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit
+```
+
+## 🙈 提示
+
+!!! note 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! abstract 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! info 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! tip 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! success 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! question 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! warning 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! failure 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! danger 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! bug 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! example 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! quote 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! hint 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! caution 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! error 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!
+
+!!! attention 支持的类型
+
+note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, hint, caution, error, attention
+
+!!!

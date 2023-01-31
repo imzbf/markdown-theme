@@ -1,0 +1,112 @@
+@import './scss-vars.scss';
+@import './css-vars.scss';
+
+@import './modules/scrollbar.scss';
+@import './modules/scrn.scss';
+@import './modules/alert.scss';
+
+@mixin common-style {
+  color: var(--md-theme-color);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    word-break: break-all;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  ol {
+    > li {
+      list-style: decimal;
+    }
+  }
+
+  ul {
+    > li {
+      list-style: disc;
+    }
+  }
+
+  ol,
+  ul {
+    .li-task {
+      list-style-type: none;
+
+      input {
+        margin-left: -1.5em;
+        margin-right: 0.1em;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  pre,
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 14px;
+    // color: rgb(36, 41, 47);
+  }
+
+  pre {
+    margin: 20px 0;
+
+    code {
+      display: block;
+      line-height: 1;
+      overflow: auto;
+
+      .code-block {
+        display: inline-block;
+        width: 100%;
+        overflow: auto;
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid var(--md-theme-border-color);
+  }
+
+  // 包裹的图片按照行显示
+  div[inline] {
+    & > .figure {
+      padding-right: 0.5em;
+
+      img {
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+
+  .figure {
+    margin: 0 0 1em 0;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+
+    .figcaption {
+      color: var(--md-theme-color);
+      font-size: 0.875em;
+      margin-top: 5px;
+    }
+  }
+}
