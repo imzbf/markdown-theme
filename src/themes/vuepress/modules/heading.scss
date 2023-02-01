@@ -1,0 +1,43 @@
+@mixin heading-vars($isDark) {
+  .#{$theme-name} {
+    --vuepress-theme-heading-color: #{if($isDark, #999, #273849)};
+  }
+}
+
+.#{$prefix} {
+  @include heading-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include heading-vars(true);
+}
+
+.#{$theme-name} {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.45;
+    position: relative;
+    margin-top: 1em;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    margin: 1em 0;
+  }
+
+  h2 {
+    font-size: 1.65em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--vuepress-theme-border-color);
+  }
+
+  h3 {
+    line-height: 1.35em;
+  }
+}

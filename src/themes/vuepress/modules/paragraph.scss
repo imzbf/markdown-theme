@@ -1,0 +1,12 @@
+.#{$theme-name} {
+  p {
+    word-spacing: 0.05em;
+    line-height: 1.6em;
+    margin: 1.2em 0;
+    position: relative;
+
+    &:empty {
+      display: none;
+    }
+  }
+}
