@@ -1,9 +1,7 @@
-@import '../scss-vars.scss';
-
 @mixin theme-table-vars($isDark) {
   .#{$theme-name} {
     // 斑马条纹
-    --table-stripe-color: #{if($isDark, #0c0c0c, #fafafa)};
+    --default-theme-table-stripe-color: #{if($isDark, #0c0c0c, #fafafa)};
   }
 }
 
@@ -36,7 +34,7 @@
     tbody {
       tr {
         &:nth-child(2n) {
-          background-color: var(--table-stripe-color);
+          background-color: var(--default-theme-table-stripe-color);
         }
 
         &:hover {

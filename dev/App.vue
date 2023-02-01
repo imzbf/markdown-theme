@@ -24,7 +24,7 @@
 import { reactive } from 'vue';
 import MdEditor from 'md-editor-v3';
 import mdAll from './md-all.md';
-const state = reactive({ theme: 'light', previewTheme: 'vuepress', text: mdAll });
+const state = reactive({ theme: 'light', previewTheme: 'default', text: mdAll });
 
 const changeTheme = () => (state.theme = state.theme === 'dark' ? 'light' : 'dark');
 </script>
@@ -93,4 +93,4 @@ const changeTheme = () => (state.theme = state.theme === 'dark' ? 'light' : 'dar
   --table-bg-color: var(--area);
 }
 </style> -->
-<style src="../src/themes/vuepress/index.scss" lang="scss" />
+<style src="../src/themes/all/index.scss" lang="scss" />

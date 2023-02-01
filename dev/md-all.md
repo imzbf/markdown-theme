@@ -2,6 +2,11 @@
 
 ## 二级标题
 
+```mermaid
+flowchart TD
+  Start --> Stop
+```
+
 ### 三级标题
 
 #### 四级标题

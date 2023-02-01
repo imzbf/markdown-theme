@@ -1,21 +1,19 @@
-@import '../scss-vars.scss';
-
-@mixin theme-code-vars($isDark) {
+@mixin code-vars($isDark) {
   .#{$theme-name} {
-    --code-block-color: #a9b7c6;
+    --default-theme-code-block-color: #a9b7c6;
     // 代码背景
-    --code-bg-color: #{if($isDark, #1a1a1a, #282c34)};
+    --default-theme-code-bg-color: #{if($isDark, #1a1a1a, #282c34)};
     // 顶部背景
-    --code-before-bg-color: var(--code-bg-color);
+    --default-theme-code-before-bg-color: var(--default-theme-code-bg-color);
   }
 }
 
 .#{$prefix} {
-  @include theme-code-vars(false);
+  @include code-vars(false);
 }
 
 .#{$prefix}-dark {
-  @include theme-code-vars(true);
+  @include code-vars(true);
 }
 
 .#{$theme-name} {
@@ -36,8 +34,8 @@
     code {
       position: relative;
       padding: 1em;
-      background-color: var(--code-bg-color);
-      color: var(--code-block-color);
+      background-color: var(--default-theme-code-bg-color);
+      color: var(--default-theme-code-block-color);
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       border-top-left-radius: 0;
@@ -49,7 +47,7 @@
     }
 
     .copy-button {
-      color: var(--code-block-color);
+      color: var(--default-theme-code-block-color);
       position: absolute;
       font-size: 12px;
       top: 9px;
@@ -65,7 +63,7 @@
       width: 100%;
       background-size: 40px;
       background-repeat: no-repeat;
-      background-color: var(--code-before-bg-color);
+      background-color: var(--default-theme-code-before-bg-color);
       margin-bottom: 0;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
