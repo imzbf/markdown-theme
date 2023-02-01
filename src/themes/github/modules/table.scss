@@ -1,0 +1,43 @@
+@mixin table-vars($isDark) {
+  .#{$theme-name} {
+    // 斑马条纹
+    --github-theme-table-stripe-color: #{if($isDark, #161b22, #f7f8fa)};
+
+    --github-theme-table-tr-bg-color: #{if($isDark, transparent, #fff)};
+    --github-theme-table-tr-border-color: #{if($isDark, #808080, #d8dee4)};
+    --github-theme-table-td-border-color: #{if($isDark, #30363d, #d0d7de)};
+  }
+}
+
+.#{$prefix} {
+  @include table-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include table-vars(true);
+}
+
+.#{$theme-name} {
+  table {
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    tr {
+      background-color: var(--github-theme-table-tr-bg-color);
+      border-top: 1px solid var(--github-theme-table-tr-border-color);
+
+      th,
+      td {
+        padding: 6px 13px;
+        border: 1px solid var(--github-theme-table-td-border-color);
+      }
+
+      &:nth-child(2n) {
+        background-color: var(--github-theme-table-stripe-color);
+      }
+    }
+  }
+}

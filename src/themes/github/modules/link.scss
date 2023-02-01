@@ -1,0 +1,9 @@
+.#{$theme-name} {
+  a {
+    color: #539bf5;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

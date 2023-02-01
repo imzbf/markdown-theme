@@ -1,0 +1,46 @@
+@import './scss-vars.scss';
+
+@import './modules/code.scss';
+@import './modules/heading.scss';
+@import './modules/image.scss';
+@import './modules/link.scss';
+@import './modules/list.scss';
+@import './modules/paragraph.scss';
+@import './modules/quote.scss';
+@import './modules/table.scss';
+
+@mixin theme-vars($isDark) {
+  .#{$theme-name} {
+    --github-theme-color: #{if($isDark, #c9d1d9, #222)};
+  }
+}
+
+// 亮模式
+.#{$prefix} {
+  @include theme-vars(false);
+}
+
+// 暗模式
+.#{$prefix}-dark {
+  @include theme-vars(true);
+}
+
+// 从github上copy的部分样式
+.#{$theme-name} {
+  @include common-style;
+
+  line-height: 1.5;
+  color: var(--github-theme-color);
+
+  p,
+  blockquote,
+  ul,
+  ol,
+  dl,
+  table,
+  pre,
+  details {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}

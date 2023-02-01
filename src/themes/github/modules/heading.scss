@@ -1,0 +1,59 @@
+@mixin heading-vars($isDark) {
+  .#{$theme-name} {
+    --github-theme-heading-color: #{if($isDark, #c9d1d9, inherit)};
+    --github-theme-heading-6-color: #{if($isDark, #768390, #2d3339)};
+    --github-theme-heading-border-color: #{if($isDark, #373e47, #d9dee4)};
+  }
+}
+
+.#{$prefix} {
+  @include heading-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include heading-vars(true);
+}
+
+.#{$theme-name} {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--github-theme-heading-color);
+  }
+
+  h1 {
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    border-bottom: 1px solid var(--github-theme-heading-border-color);
+  }
+
+  h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--github-theme-heading-border-color);
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  h5 {
+    font-size: 0.875em;
+  }
+
+  h6 {
+    font-size: 0.85em;
+    color: var(--github-theme-heading-6-color);
+  }
+}

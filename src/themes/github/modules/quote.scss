@@ -1,0 +1,22 @@
+@mixin quote-vars($isDark) {
+  .#{$theme-name} {
+    --github-theme-quote-color: #{if($isDark, #8b949e, #57606a)};
+    --github-theme-quote-border-color: #{if($isDark, #444c56, #d0d7de)};
+  }
+}
+
+.#{$prefix} {
+  @include quote-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include quote-vars(true);
+}
+
+.#{$theme-name} {
+  blockquote {
+    padding: 0 1em;
+    color: var(--github-theme-quote-color);
+    border-left: 0.25em solid var(--github-theme-quote-border-color);
+  }
+}

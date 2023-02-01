@@ -21,12 +21,23 @@
   </div>
 </template>
 <script setup>
-import { reactive } from 'vue';
+import { reactive, watch } from 'vue';
 import MdEditor from 'md-editor-v3';
 import mdAll from './md-all.md';
-const state = reactive({ theme: 'light', previewTheme: 'default', text: mdAll });
+const state = reactive({
+  theme: 'light',
+  previewTheme: localStorage.getItem('preview-theme') || 'default',
+  text: mdAll
+});
 
 const changeTheme = () => (state.theme = state.theme === 'dark' ? 'light' : 'dark');
+
+watch(
+  () => state.previewTheme,
+  () => {
+    localStorage.setItem('preview-theme', state.previewTheme);
+  }
+);
 </script>
 
 <style lang="scss">
