@@ -1,0 +1,12 @@
+.#{$theme-name} {
+  p {
+    line-height: inherit;
+    margin-top: $line-space;
+    margin-bottom: $line-space;
+
+    &::selection {
+      color: var(--cyanosis-slct-text-color);
+      background-color: var(--cyanosis-slct-bg-color);
+    }
+  }
+}

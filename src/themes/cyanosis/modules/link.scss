@@ -1,0 +1,36 @@
+.#{$theme-name} {
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cyanosis-link-color);
+    border-bottom: 1px solid var(--cyanosis-border-color);
+
+    &:hover {
+      color: var(--cyanosis-linkh-color);
+      border-bottom-color: var(--cyanosis-linkh-color);
+    }
+
+    &:active {
+      color: var(--cyanosis-linkh-color);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 100%;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      border-bottom: 1px solid var(--cyanosis-border-color);
+      transition: top 0.3s, opacity 0.3s;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:hover::after {
+      top: 0;
+      opacity: 1;
+      border-bottom-color: var(--cyanosis-linkh-color);
+    }
+  }
+}

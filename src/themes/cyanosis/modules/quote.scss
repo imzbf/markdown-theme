@@ -1,0 +1,24 @@
+.#{$theme-name} {
+  blockquote {
+    color: var(--cyanosis-blockquote-color);
+    border-left: 4px solid var(--cyanosis-strong-color);
+    background-color: var(--cyanosis-blockquote-bg-color);
+    padding: 1px 20px;
+    margin: 22px 0;
+    @include transitionColor();
+
+    &::after {
+      display: block;
+      content: '';
+    }
+
+    & > p {
+      margin: 10px 0;
+    }
+
+    & > b,
+    & > strong {
+      color: var(--cyanosis-strong-color);
+    }
+  }
+}

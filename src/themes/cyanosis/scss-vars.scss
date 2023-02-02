@@ -1,0 +1,116 @@
+$theme-name: 'cyanosis-theme';
+
+$monospace-font: Menlo, Monaco, Consolas, 'Courier New', monospace;
+$line-space: 16px;
+$id: '--cyanosis';
+
+$l-baseColor: #353535;
+$l-titleColor: #005bb7;
+$l-strongColor: #2196f3;
+$l-emColor: #4fc3f7;
+$l-delColor: #ccc;
+$l-linkColor: #3da8f5;
+$l-linkhColor: #007fff;
+$l-borderColor: #bedcff;
+$l-borderColor2: #ececec;
+$l-bgColor: #fff;
+$l-blockquoteColor: #8c8c8c;
+$l-blockquoteBgColor: #f0fdff;
+$l-codeColor: #c2185b;
+$l-codeBgColor: #fff4f4;
+$l-codePreColor: #f8f8f8;
+$l-tableBorderColor: #c3e0fd;
+$l-tableThColor: #dff0ff;
+$l-tableThtColor: $l-titleColor;
+$l-tableTrNcColor: #f7fbff;
+$l-tableTrhColor: #e0edf7;
+$l-selectionTextColor: #c80000;
+$l-selectionBgColor: rgba(175, 207, 247, 0.25);
+$l-selectionTitleColor: $l-titleColor;
+$l-selectionTitlebgColor: $l-selectionBgColor;
+$l-selectionDelColor: #999;
+$l-selectionElBgColor: #e8ebec;
+$l-selectionCodeBgColor: #ffeaeb;
+$l-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
+
+$d-baseColor: #cacaca;
+$d-titleColor: #ddd;
+$d-strongColor: #fe9900;
+$d-emColor: #ffd28e;
+$d-delColor: #ccc;
+$d-linkColor: #ffb648;
+$d-linkhColor: $d-strongColor;
+$d-borderColor: #ffe3ba;
+$d-borderColor2: #ffcb7b;
+$d-bgColor: #2f2f2f;
+$d-blockquoteColor: #c7c7c7;
+$d-blockquoteBgColor: rgba(255, 199, 116, 0.1);
+$d-codeColor: #000;
+$d-codeBgColor: $d-borderColor2;
+$d-codePreColor: rgb(30 25 18 / 50%);
+$d-tableBorderColor: $d-strongColor;
+$d-tableThColor: $d-linkColor;
+$d-tableThtColor: $d-codeColor;
+$d-tableTrNcColor: #6d5736;
+$d-tableTrhColor: #947443;
+$d-selectionTextColor: #00c888;
+$d-selectionBgColor: rgba(175, 207, 247, 0.25);
+$d-selectionTitleColor: $d-codeColor;
+$d-selectionTitlebgColor: $d-strongColor;
+$d-selectionDelColor: #999;
+$d-selectionElBgColor: $d-codeColor;
+$d-selectionCodeBgColor: $d-borderColor2;
+$d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
+
+@mixin theme-vars($isDark: false) {
+  #{$id}-base-color: if($isDark, $d-baseColor, $l-baseColor);
+  #{$id}-title-color: if($isDark, $d-titleColor, $l-titleColor);
+  #{$id}-strong-color: if($isDark, $d-strongColor, $l-strongColor);
+  #{$id}-em-color: if($isDark, $d-emColor, $l-emColor);
+  #{$id}-del-color: if($isDark, $d-delColor, $l-delColor);
+  #{$id}-link-color: if($isDark, $d-linkColor, $l-linkColor);
+  #{$id}-linkh-color: if($isDark, $d-linkhColor, $l-linkhColor);
+  #{$id}-border-color: if($isDark, $d-borderColor, $l-borderColor);
+  #{$id}-border-color-2: if($isDark, $d-borderColor2, $l-borderColor2);
+  #{$id}-bg-color: if($isDark, $d-bgColor, $l-bgColor);
+  #{$id}-blockquote-color: if($isDark, $d-blockquoteColor, $l-blockquoteColor);
+  #{$id}-blockquote-bg-color: if($isDark, $d-blockquoteBgColor, $l-blockquoteBgColor);
+  #{$id}-code-color: if($isDark, $d-codeColor, $l-codeColor);
+  #{$id}-code-bg-color: if($isDark, $d-codeBgColor, $l-codeBgColor);
+  #{$id}-code-pre-color: if($isDark, $d-codePreColor, $l-codePreColor);
+  #{$id}-table-border-color: if($isDark, $d-tableBorderColor, $l-tableBorderColor);
+  #{$id}-table-th-color: if($isDark, $d-tableThColor, $l-tableThColor);
+  #{$id}-table-tht-color: if($isDark, $d-tableThtColor, $l-tableThtColor);
+  #{$id}-table-tr-nc-color: if($isDark, $d-tableTrNcColor, $l-tableTrNcColor);
+  #{$id}-table-trh-color: if($isDark, $d-tableTrhColor, $l-tableTrhColor);
+  #{$id}-slct-title-color: if($isDark, $d-selectionTitleColor, $l-selectionTitleColor);
+  #{$id}-slct-titlebg-color: if($isDark, $d-selectionTitlebgColor, $l-selectionTitlebgColor);
+  #{$id}-slct-text-color: if($isDark, $d-selectionTextColor, $l-selectionTextColor);
+  #{$id}-slct-bg-color: if($isDark, $d-selectionBgColor, $l-selectionBgColor);
+  #{$id}-slct-del-color: if($isDark, $d-selectionDelColor, $l-selectionDelColor);
+  #{$id}-slct-elbg-color: if($isDark, $d-selectionElBgColor, $l-selectionElBgColor);
+  #{$id}-slct-codebg-color: if($isDark, $d-selectionCodeBgColor, $l-selectionCodeBgColor);
+  #{$id}-slct-prebg-color: if($isDark, $d-selectionPreCodeBgColor, $l-selectionPreCodeBgColor);
+}
+
+@mixin transitionColor() {
+  transition: color 0.35s;
+}
+
+@mixin headTitle($padb: 4px, $fontSize: 24px, $mtop: 36px) {
+  padding-bottom: $padb;
+  margin-top: $mtop;
+  margin-bottom: 10px;
+  font-size: $fontSize;
+  line-height: 1.5;
+  color: var(--cyanosis-title-color);
+}
+
+@mixin selectionColor($bgColor: '', $txtColor: '') {
+  @if $bgColor != '' {
+    background-color: var($bgColor);
+  }
+  @if $txtColor != '' {
+    color: var($txtColor);
+  }
+}
