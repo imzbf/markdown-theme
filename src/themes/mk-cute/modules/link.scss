@@ -1,0 +1,13 @@
+.#{$theme-name} {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $link-color;
+    border-bottom: 1px solid $link-color;
+    &:hover,
+    &:active {
+      color: $link-active-color;
+      border-bottom: 1px solid $link-active-color;
+    }
+  }
+}
