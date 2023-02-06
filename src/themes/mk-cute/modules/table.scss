@@ -1,11 +1,11 @@
 @mixin table-vars($isDark) {
   .#{$theme-name} {
-    --mk-cute-theme-table-color: #{if($isDark, inherit, #000)};
+    --#{$theme-name}-table-color: #{if($isDark, inherit, #000)};
     // 边框
-    --mk-cute-theme-table-border-color: #{if($isDark, #1c1c1c, #f6f6f6)};
-    --mk-cute-theme-table-thead-bg-color: #{if($isDark, #1c1c1ca1, #f6f6f6)};
+    --#{$theme-name}-table-border-color: #{if($isDark, #1c1c1c, #f6f6f6)};
+    --#{$theme-name}-table-thead-bg-color: #{if($isDark, #1c1c1ca1, #f6f6f6)};
     // 斑马条纹
-    --mk-cute-theme-table-stripe-color: #{if($isDark, #1c1c1ca1, #fcfcfc)};
+    --#{$theme-name}-table-stripe-color: #{if($isDark, #1c1c1ca1, #fcfcfc)};
   }
 }
 
@@ -24,15 +24,15 @@
     width: auto;
     max-width: 100%;
     overflow: auto;
-    border: solid 1px var(--mk-cute-theme-table-border-color);
+    border: solid 1px var(--#{$theme-name}-table-border-color);
   }
   thead {
-    background-color: var(--mk-cute-theme-table-thead-bg-color);
-    color: var(--mk-cute-theme-table-color);
+    background-color: var(--#{$theme-name}-table-thead-bg-color);
+    color: var(--#{$theme-name}-table-color);
     text-align: left;
   }
   tr:nth-child(2n) {
-    background-color: var(--mk-cute-theme-table-stripe-color);
+    background-color: var(--#{$theme-name}-table-stripe-color);
   }
   th,
   td {

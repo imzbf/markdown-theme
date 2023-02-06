@@ -1,10 +1,10 @@
 @mixin code-vars($isDark) {
   .#{$theme-name} {
-    --default-theme-code-block-color: #a9b7c6;
+    --#{$theme-name}-code-block-color: #a9b7c6;
     // 代码背景
-    --default-theme-code-bg-color: #{if($isDark, #1a1a1a, #282c34)};
+    --#{$theme-name}-code-bg-color: #{if($isDark, #1a1a1a, #282c34)};
     // 顶部背景
-    --default-theme-code-before-bg-color: var(--default-theme-code-bg-color);
+    --#{$theme-name}-code-before-bg-color: var(--#{$theme-name}-code-bg-color);
   }
 }
 
@@ -34,8 +34,8 @@
     code {
       position: relative;
       padding: 1em;
-      background-color: var(--default-theme-code-bg-color);
-      color: var(--default-theme-code-block-color);
+      background-color: var(--#{$theme-name}-code-bg-color);
+      color: var(--#{$theme-name}-code-block-color);
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       border-top-left-radius: 0;
@@ -47,7 +47,7 @@
     }
 
     .copy-button {
-      color: var(--default-theme-code-block-color);
+      color: var(--#{$theme-name}-code-block-color);
       position: absolute;
       font-size: 12px;
       top: 9px;
@@ -63,7 +63,7 @@
       width: 100%;
       background-size: 40px;
       background-repeat: no-repeat;
-      background-color: var(--default-theme-code-before-bg-color);
+      background-color: var(--#{$theme-name}-code-before-bg-color);
       margin-bottom: 0;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;

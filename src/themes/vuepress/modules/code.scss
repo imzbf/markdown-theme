@@ -1,13 +1,13 @@
 @mixin code-vars($isDark) {
   .#{$theme-name} {
     // 行内
-    --vuepress-theme-code-inline-color: #{if($isDark, #e06c75, #d63200)};
-    --vuepress-theme-code-inline-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
+    --#{$theme-name}-code-inline-color: #{if($isDark, #e06c75, #d63200)};
+    --#{$theme-name}-code-inline-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
 
     // 块
-    --vuepress-theme-code-block-color: #{if($isDark, #999, #747384)};
+    --#{$theme-name}-code-block-color: #{if($isDark, #999, #747384)};
     // 背景
-    --vuepress-theme-code-block-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
+    --#{$theme-name}-code-block-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
   }
 }
 
@@ -21,11 +21,11 @@
 
 .#{$theme-name} {
   code {
-    color: var(--vuepress-theme-code-inline-color);
+    color: var(--#{$theme-name}-code-inline-color);
     padding: 3px 5px;
     margin: 0 2px;
     border-radius: 2px;
-    background-color: var(--vuepress-theme-code-inline-bg-color);
+    background-color: var(--#{$theme-name}-code-inline-bg-color);
     // white-space: nowrap;
   }
 
@@ -34,15 +34,15 @@
     position: relative;
     font-size: 0.875em;
     margin: 1em 0;
-    background-color: var(--vuepress-theme-code-block-bg-color);
+    background-color: var(--#{$theme-name}-code-block-bg-color);
 
     code {
       overflow-x: auto;
-      color: var(--vuepress-theme-code-block-color);
+      color: var(--#{$theme-name}-code-block-color);
       white-space: pre;
       padding: 1em;
       // font-size: 0.85rem;
-      background-color: var(--vuepress-theme-code-block-bg-color);
+      background-color: var(--#{$theme-name}-code-block-bg-color);
 
       > * {
         line-height: 1.6;

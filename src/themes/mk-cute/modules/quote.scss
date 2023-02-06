@@ -1,9 +1,9 @@
 @mixin quote-vars($isDark) {
   .#{$theme-name} {
-    --mk-cute-theme-quote-color: #{if($isDark, inherit, #fff)};
+    --#{$theme-name}-quote-color: #{if($isDark, inherit, #fff)};
     // 边框
-    --mk-cute-theme-quote-border-color: #{if($isDark, #265d97, $secondary-color)};
-    --mk-cute-theme-quote-bg-color: #{if($isDark, rgb(18 80 108 / 75%), rgba(54, 172, 225, 0.75))};
+    --#{$theme-name}-quote-border-color: #{if($isDark, #265d97, $secondary-color)};
+    --#{$theme-name}-quote-bg-color: #{if($isDark, rgb(18 80 108 / 75%), rgba(54, 172, 225, 0.75))};
   }
 }
 
@@ -19,9 +19,9 @@
   blockquote {
     position: relative;
     padding: 8px 26px;
-    background-color: var(--mk-cute-theme-quote-bg-color);
+    background-color: var(--#{$theme-name}-quote-bg-color);
     margin: 16px 0;
-    border-left: 4px solid var(--mk-cute-theme-quote-border-color);
+    border-left: 4px solid var(--#{$theme-name}-quote-border-color);
     border-radius: 5px;
 
     &::before {
@@ -46,7 +46,7 @@
     }
 
     & > p {
-      color: var(--mk-cute-theme-quote-color);
+      color: var(--#{$theme-name}-quote-color);
     }
   }
 }

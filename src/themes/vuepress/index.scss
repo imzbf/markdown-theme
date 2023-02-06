@@ -11,7 +11,7 @@
 
 @mixin theme-vars($isDark) {
   .#{$theme-name} {
-    --vuepress-theme-color: #{if($isDark, #999, #304455)};
+    --#{$theme-name}-color: #{if($isDark, #999, #304455)};
   }
 }
 
@@ -28,7 +28,7 @@
 .#{$theme-name} {
   @include common-style;
   font-size: 16px;
-  color: var(--vuepress-theme-color);
+  color: var(--#{$theme-name}-color);
 
   em {
     color: #4f5959;

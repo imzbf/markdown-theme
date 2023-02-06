@@ -2,7 +2,7 @@ $theme-name: 'cyanosis-theme';
 
 $monospace-font: Menlo, Monaco, Consolas, 'Courier New', monospace;
 $line-space: 16px;
-$id: '--cyanosis';
+$id: '--#{$theme-name}';
 
 $l-baseColor: #353535;
 $l-titleColor: #005bb7;
@@ -103,7 +103,7 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
   margin-bottom: 10px;
   font-size: $fontSize;
   line-height: 1.5;
-  color: var(--cyanosis-title-color);
+  color: var(--#{$theme-name}-title-color);
 }
 
 @mixin selectionColor($bgColor: '', $txtColor: '') {

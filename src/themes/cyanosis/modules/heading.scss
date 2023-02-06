@@ -9,7 +9,7 @@
     padding-left: 10px;
     padding-right: 10px;
     @include headTitle(10px, 24px);
-    border-bottom: 1px solid var(--cyanosis-border-color-2);
+    border-bottom: 1px solid var(--#{$theme-name}-border-color-2);
     @include transitionColor();
 
     &::before {
@@ -36,7 +36,7 @@
     &::before {
       content: '»';
       padding-right: 6px;
-      color: var(--cyanosis-strong-color);
+      color: var(--#{$theme-name}-strong-color);
     }
   }
 
@@ -67,8 +67,8 @@
   h6 {
     &::selection {
       @include selectionColor();
-      color: var(--cyanosis-slct-title-color);
-      background-color: var(--cyanosis-slct-titlebg-color);
+      color: var(--#{$theme-name}-slct-title-color);
+      background-color: var(--#{$theme-name}-slct-titlebg-color);
     }
   }
 

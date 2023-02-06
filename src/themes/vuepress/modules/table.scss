@@ -1,9 +1,9 @@
 @mixin table-vars($isDark) {
   .#{$theme-name} {
     // 边框
-    --vuepress-theme-table-border-color: #{if($isDark, #2d2d2d, #dfe2e5)};
+    --#{$theme-name}-table-border-color: #{if($isDark, #2d2d2d, #dfe2e5)};
     // 斑马条纹
-    --vuepress-theme-table-bg-color: #{if($isDark, #0c0c0c, #f6f8fa)};
+    --#{$theme-name}-table-bg-color: #{if($isDark, #0c0c0c, #f6f8fa)};
   }
 }
 
@@ -23,16 +23,16 @@
     overflow-x: auto;
 
     tr {
-      border-top: 1px solid var(--vuepress-theme-table-border-color);
+      border-top: 1px solid var(--#{$theme-name}-table-border-color);
 
       th,
       td {
-        border: 1px solid var(--vuepress-theme-table-border-color);
+        border: 1px solid var(--#{$theme-name}-table-border-color);
         padding: 0.6em 1em;
       }
 
       &:nth-child(2n) {
-        background-color: var(--vuepress-theme-table-bg-color);
+        background-color: var(--#{$theme-name}-table-bg-color);
       }
     }
   }

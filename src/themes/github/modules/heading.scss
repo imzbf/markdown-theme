@@ -1,8 +1,8 @@
 @mixin heading-vars($isDark) {
   .#{$theme-name} {
-    --github-theme-heading-color: #{if($isDark, #c9d1d9, inherit)};
-    --github-theme-heading-6-color: #{if($isDark, #768390, #2d3339)};
-    --github-theme-heading-border-color: #{if($isDark, #373e47, #d9dee4)};
+    --#{$theme-name}-heading-color: #{if($isDark, #c9d1d9, inherit)};
+    --#{$theme-name}-heading-6-color: #{if($isDark, #768390, #2d3339)};
+    --#{$theme-name}-heading-border-color: #{if($isDark, #373e47, #d9dee4)};
   }
 }
 
@@ -25,19 +25,19 @@
     margin-bottom: 16px;
     font-weight: 600;
     line-height: 1.25;
-    color: var(--github-theme-heading-color);
+    color: var(--#{$theme-name}-heading-color);
   }
 
   h1 {
     padding-bottom: 0.3em;
     font-size: 2em;
-    border-bottom: 1px solid var(--github-theme-heading-border-color);
+    border-bottom: 1px solid var(--#{$theme-name}-heading-border-color);
   }
 
   h2 {
     padding-bottom: 0.3em;
     font-size: 1.5em;
-    border-bottom: 1px solid var(--github-theme-heading-border-color);
+    border-bottom: 1px solid var(--#{$theme-name}-heading-border-color);
   }
 
   h3 {
@@ -54,6 +54,6 @@
 
   h6 {
     font-size: 0.85em;
-    color: var(--github-theme-heading-6-color);
+    color: var(--#{$theme-name}-heading-6-color);
   }
 }

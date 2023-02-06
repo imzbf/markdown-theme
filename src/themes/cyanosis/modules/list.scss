@@ -30,8 +30,8 @@
   ol li,
   ul li {
     &::selection {
-      color: var(--cyanosis-slct-text-color);
-      background-color: var(--cyanosis-slct-bg-color);
+      color: var(--#{$theme-name}-slct-text-color);
+      background-color: var(--#{$theme-name}-slct-bg-color);
     }
   }
 }

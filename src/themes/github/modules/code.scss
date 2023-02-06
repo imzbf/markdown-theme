@@ -1,10 +1,10 @@
 @mixin code-vars($isDark) {
   .#{$theme-name} {
-    --github-theme-code-inline-color: #{if($isDark, #c9d1d9, inherit)};
-    --github-theme-code-inline-bg-color: #{if($isDark, #2d3339, #eff1f2)};
+    --#{$theme-name}-code-inline-color: #{if($isDark, #c9d1d9, inherit)};
+    --#{$theme-name}-code-inline-bg-color: #{if($isDark, #2d3339, #eff1f2)};
 
-    --github-theme-code-block-color: #{if($isDark, #a9b7c6, inherit)};
-    --github-theme-code-block-bg-color: #{if($isDark, #161b22, #f6f8fa)};
+    --#{$theme-name}-code-block-color: #{if($isDark, #a9b7c6, inherit)};
+    --#{$theme-name}-code-block-bg-color: #{if($isDark, #161b22, #f6f8fa)};
   }
 }
 
@@ -20,8 +20,8 @@
   code {
     padding: 0.2em 0.4em;
     margin: 0;
-    color: var(--github-theme-code-inline-color);
-    background-color: var(--github-theme-code-inline-bg-color);
+    color: var(--#{$theme-name}-code-inline-color);
+    background-color: var(--#{$theme-name}-code-inline-bg-color);
     border-radius: 6px;
   }
 
@@ -35,8 +35,8 @@
       margin-bottom: 0;
       word-break: normal;
       letter-spacing: 1px;
-      color: var(--github-theme-code-block-color);
-      background-color: var(--github-theme-code-block-bg-color);
+      color: var(--#{$theme-name}-code-block-color);
+      background-color: var(--#{$theme-name}-code-block-bg-color);
 
       > * {
         line-height: 1.45;

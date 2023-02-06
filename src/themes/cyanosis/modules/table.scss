@@ -5,7 +5,7 @@
     width: auto;
     max-width: 100%;
     overflow: auto;
-    border: 1px solid var(--cyanosis-table-border-color);
+    border: 1px solid var(--#{$theme-name}-table-border-color);
     border-spacing: 0;
     border-collapse: collapse;
 
@@ -16,23 +16,23 @@
     }
 
     tr:nth-child(2n) {
-      background-color: var(--cyanosis-table-tr-nc-color);
+      background-color: var(--#{$theme-name}-table-tr-nc-color);
     }
 
     tr:hover {
-      background-color: var(--cyanosis-table-trh-color);
+      background-color: var(--#{$theme-name}-table-trh-color);
     }
 
     th,
     td {
       padding: 12px 8px;
       line-height: 24px;
-      border: 1px solid var(--cyanosis-table-border-color);
+      border: 1px solid var(--#{$theme-name}-table-border-color);
     }
 
     th {
-      color: var(--cyanosis-table-tht-color);
-      background-color: var(--cyanosis-table-th-color);
+      color: var(--#{$theme-name}-table-tht-color);
+      background-color: var(--#{$theme-name}-table-th-color);
     }
 
     td {
@@ -48,7 +48,7 @@
     }
     tbody td {
       &::selection {
-        background-color: var(--cyanosis-slct-bg-color);
+        background-color: var(--#{$theme-name}-slct-bg-color);
       }
     }
   }

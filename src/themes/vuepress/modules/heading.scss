@@ -1,6 +1,6 @@
 @mixin heading-vars($isDark) {
   .#{$theme-name} {
-    --vuepress-theme-heading-color: #{if($isDark, #999, #273849)};
+    --#{$theme-name}-heading-color: #{if($isDark, #999, #273849)};
   }
 }
 
@@ -34,7 +34,7 @@
   h2 {
     font-size: 1.65em;
     padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--vuepress-theme-border-color);
+    border-bottom: 1px solid var(--#{$theme-name}-border-color);
   }
 
   h3 {
