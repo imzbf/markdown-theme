@@ -47,6 +47,8 @@ flowchart TD
 > - 类型
 > - 默认值
 >
+> 任务
+>
 > - [x] 打开冰箱门
 > - [ ] 把大象放进去
 > - [ ] 关闭冰箱
@@ -163,7 +165,7 @@ async onUploadImg(files: FileList, callback: (urls: string[]) => void) {
 
 `Vue.config` 是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改下列 property：
 
-###
+### 说明
 
 1. 类型：`boolean`
 2. 默认值：`false`

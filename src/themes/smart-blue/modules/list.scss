@@ -1,0 +1,17 @@
+.#{$theme-name} {
+  ul,
+  ol {
+    margin-top: 1em;
+    padding-left: 1.6em;
+  }
+
+  ul {
+    list-style: disc outside;
+  }
+
+  li {
+    line-height: 2;
+    margin-bottom: 0;
+    list-style: inherit;
+  }
+}
