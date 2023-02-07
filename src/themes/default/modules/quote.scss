@@ -1,0 +1,10 @@
+.#{$theme-name} {
+  blockquote {
+    margin: 20px 0;
+    padding: 0 1.2em;
+    line-height: 2em;
+    background-color: var(--md-theme-bg-color-inset);
+    border-left: 5px solid #35b378;
+    display: block;
+  }
+}

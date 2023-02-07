@@ -1,0 +1,66 @@
+@mixin code-vars($isDark) {
+  .#{$theme-name} {
+    // 行内
+    --#{$theme-name}-code-inline-color: #{if($isDark, #e06c75, #d63200)};
+    --#{$theme-name}-code-inline-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
+
+    // 块
+    --#{$theme-name}-code-block-color: #{if($isDark, #999, #747384)};
+    // 背景
+    --#{$theme-name}-code-block-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
+  }
+}
+
+.#{$prefix} {
+  @include code-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include code-vars(true);
+}
+
+.#{$theme-name} {
+  code {
+    color: var(--#{$theme-name}-code-inline-color);
+    padding: 3px 5px;
+    margin: 0 2px;
+    border-radius: 2px;
+    background-color: var(--#{$theme-name}-code-inline-bg-color);
+    // white-space: nowrap;
+  }
+
+  pre {
+    border-radius: 2px;
+    position: relative;
+    font-size: 0.875em;
+    margin: 1em 0;
+    background-color: var(--#{$theme-name}-code-block-bg-color);
+
+    code {
+      overflow-x: auto;
+      color: var(--#{$theme-name}-code-block-color);
+      white-space: pre;
+      padding: 22px 1em;
+      // font-size: 0.85rem;
+      background-color: var(--#{$theme-name}-code-block-bg-color);
+
+      > * {
+        line-height: 1.6;
+      }
+
+      // 带行号的代码
+      span[rn-wrapper] {
+        top: 22px;
+      }
+    }
+
+    .copy-button {
+      color: #999;
+      position: absolute;
+      font-size: 12px;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+    }
+  }
+}

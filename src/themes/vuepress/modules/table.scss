@@ -1,0 +1,39 @@
+@mixin table-vars($isDark) {
+  .#{$theme-name} {
+    // 边框
+    --#{$theme-name}-table-border-color: #{if($isDark, #2d2d2d, #dfe2e5)};
+    // 斑马条纹
+    --#{$theme-name}-table-bg-color: #{if($isDark, #0c0c0c, #f6f8fa)};
+  }
+}
+
+.#{$prefix} {
+  @include table-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include table-vars(true);
+}
+
+.#{$theme-name} {
+  table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+    display: block;
+    overflow-x: auto;
+
+    tr {
+      border-top: 1px solid var(--#{$theme-name}-table-border-color);
+
+      th,
+      td {
+        border: 1px solid var(--#{$theme-name}-table-border-color);
+        padding: 0.6em 1em;
+      }
+
+      &:nth-child(2n) {
+        background-color: var(--#{$theme-name}-table-bg-color);
+      }
+    }
+  }
+}

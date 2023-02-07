@@ -1,0 +1,55 @@
+.#{$theme-name} {
+  table {
+    display: inline-block !important;
+    // font-size: 14px;
+    width: auto;
+    max-width: 100%;
+    overflow: auto;
+    border: 1px solid var(--#{$theme-name}-table-border-color);
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    thead {
+      color: #000;
+      text-align: left;
+      background: #f6f6f6;
+    }
+
+    tr:nth-child(2n) {
+      background-color: var(--#{$theme-name}-table-tr-nc-color);
+    }
+
+    tr:hover {
+      background-color: var(--#{$theme-name}-table-trh-color);
+    }
+
+    th,
+    td {
+      padding: 12px 8px;
+      line-height: 24px;
+      border: 1px solid var(--#{$theme-name}-table-border-color);
+    }
+
+    th {
+      color: var(--#{$theme-name}-table-tht-color);
+      background-color: var(--#{$theme-name}-table-th-color);
+    }
+
+    td {
+      min-width: 120px;
+    }
+  }
+
+  table {
+    thead th {
+      &::selection {
+        background-color: transparent;
+      }
+    }
+    tbody td {
+      &::selection {
+        background-color: var(--#{$theme-name}-slct-bg-color);
+      }
+    }
+  }
+}

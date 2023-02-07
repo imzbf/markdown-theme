@@ -1,0 +1,66 @@
+.#{$theme-name} {
+  code {
+    padding: 0.065em 0.4em;
+    font-family: $monospace-font;
+    // font-size: 0.87em;
+    color: var(--#{$theme-name}-code-color);
+    // word-break: break-word;
+    overflow-x: auto;
+    background-color: var(--#{$theme-name}-code-bg-color);
+    border-radius: 2px;
+
+    &::selection {
+      background-color: var(--#{$theme-name}-slct-codebg-color);
+    }
+  }
+
+  pre {
+    font-family: $monospace-font;
+    position: relative;
+
+    code {
+      padding: 22px 12px;
+      margin: 0;
+      // font-size: 12px;
+      color: var(--#{$theme-name}-base-color);
+      word-break: normal;
+      overflow-x: auto;
+      background: var(--#{$theme-name}-code-pre-color);
+
+      &::selection {
+        background-color: var(--#{$theme-name}-slct-prebg-color);
+      }
+
+      > * {
+        line-height: 1.75;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: var(--#{$theme-name}-border-color);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--#{$theme-name}-strong-color);
+        border-radius: 10px;
+      }
+
+      span[rn-wrapper] {
+        top: 22px;
+      }
+    }
+
+    .copy-button {
+      color: var(--#{$theme-name}-base-color);
+      position: absolute;
+      font-size: 12px;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+    }
+  }
+}

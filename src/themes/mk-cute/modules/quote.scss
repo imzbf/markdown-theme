@@ -1,0 +1,54 @@
+@mixin quote-vars($isDark) {
+  .#{$theme-name} {
+    --#{$theme-name}-quote-color: #{if($isDark, inherit, #fff)};
+    // 边框
+    --#{$theme-name}-quote-border-color: #{if($isDark, #265d97, $secondary-color)};
+    --#{$theme-name}-quote-bg-color: #{if($isDark, rgb(18 80 108 / 75%), rgba(54, 172, 225, 0.75))};
+  }
+}
+
+.#{$prefix} {
+  @include quote-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include quote-vars(true);
+}
+
+.#{$theme-name} {
+  blockquote {
+    position: relative;
+    padding: 8px 26px;
+    background-color: var(--#{$theme-name}-quote-bg-color);
+    margin: 16px 0;
+    border-left: 4px solid var(--#{$theme-name}-quote-border-color);
+    border-radius: 5px;
+
+    &::before {
+      content: '❝';
+      top: 10px;
+      left: 8px;
+      color: $secondary-color;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 700;
+      position: absolute;
+      opacity: 0.7;
+    }
+    &::after {
+      content: '❞';
+      font-size: 20px;
+      position: absolute;
+      right: 8px;
+      bottom: 0;
+      color: $secondary-color;
+      opacity: 0.7;
+    }
+
+    > p,
+    ul li,
+    ol li {
+      color: var(--#{$theme-name}-quote-color);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+$code-color: #4ec9b0;
+$code-bg-color: #282c34;
+
+.#{$theme-name} {
+  code {
+    font-family: $monospace-font;
+    // word-break: break-word;
+    border-radius: 2px;
+    overflow-x: auto;
+    background-color: $code-bg-color;
+    color: $code-color;
+    padding: 0.14em 0.46em;
+    margin: 0 4px;
+  }
+
+  pre {
+    position: relative;
+
+    code {
+      font-family: $monospace-font;
+      // font-size: 12px;
+      border-radius: 10px;
+      padding: 22px;
+      margin: 0;
+      word-break: normal;
+      display: block;
+      overflow-x: auto;
+      color: $code-color;
+      background: $code-bg-color;
+
+      > * {
+        line-height: 1.75;
+      }
+
+      span[rn-wrapper] {
+        top: 22px;
+      }
+    }
+
+    .copy-button {
+      color: #999;
+      position: absolute;
+      font-size: 12px;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+    }
+  }
+}

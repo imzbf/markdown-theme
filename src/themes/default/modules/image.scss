@@ -1,0 +1,17 @@
+.#{$theme-name} {
+  img {
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid var(--md-theme-border-color);
+    border-radius: 3px;
+  }
+
+  // 引用中的表格
+  blockquote {
+    img {
+      border-color: var(--md-theme-border-color-inset);
+    }
+  }
+}

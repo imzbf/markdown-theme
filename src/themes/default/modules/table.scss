@@ -1,0 +1,73 @@
+@mixin theme-table-vars($isDark) {
+  .#{$theme-name} {
+    // 斑马条纹
+    --#{$theme-name}-table-stripe-color: #{if($isDark, #0c0c0c, #fafafa)};
+  }
+}
+
+.#{$prefix} {
+  @include theme-table-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include theme-table-vars(true);
+}
+
+.#{$theme-name} {
+  table {
+    // width: 100%;
+    // table-layout: fixed;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    margin-top: 1em;
+
+    tr {
+      th,
+      td {
+        word-wrap: break-word;
+        padding: 8px 14px;
+        border: 1px solid var(--md-theme-border-color);
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(2n) {
+          background-color: var(--#{$theme-name}-table-stripe-color);
+        }
+
+        &:hover {
+          background-color: var(--md-theme-color-hover);
+        }
+      }
+    }
+  }
+
+  // 引用中的表格
+  blockquote {
+    table {
+      line-height: initial;
+
+      tr {
+        th,
+        td {
+          border-color: var(--md-theme-border-color-inset);
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(n) {
+            background-color: inherit;
+          }
+
+          &:hover {
+            background-color: var(--md-theme-color-hover-inset);
+          }
+        }
+      }
+    }
+  }
+}

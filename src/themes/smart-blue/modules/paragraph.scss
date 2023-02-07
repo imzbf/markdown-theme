@@ -1,0 +1,11 @@
+.#{$theme-name} {
+  p {
+    // font-size: 15px;
+    line-height: 2;
+    font-weight: 400;
+  }
+
+  * + p {
+    margin-top: 16px;
+  }
+}

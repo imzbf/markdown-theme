@@ -1,0 +1,28 @@
+@mixin quote-vars($isDark) {
+  .#{$theme-name} {
+    --#{$theme-name}-quote-color: #{if($isDark, #999, #666)};
+    --#{$theme-name}-quote-bg-color: #{if($isDark, #2a2a2a, #fff9f9)};
+    --#{$theme-name}-quote-border-color: #{if($isDark, #0063bb, #b2aec5)};
+  }
+}
+
+.#{$prefix} {
+  @include quote-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include quote-vars(true);
+}
+
+.#{$theme-name} {
+  blockquote {
+    background-color: var(--#{$theme-name}-quote-bg-color);
+    margin: 2em 0;
+    padding: 2px 20px;
+    border-left: 4px solid var(--#{$theme-name}-quote-border-color);
+    p {
+      color: var(--#{$theme-name}-quote-color);
+      line-height: 2;
+    }
+  }
+}

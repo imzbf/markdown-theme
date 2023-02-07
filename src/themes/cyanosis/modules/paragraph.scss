@@ -1,0 +1,12 @@
+.#{$theme-name} {
+  p {
+    line-height: inherit;
+    margin-top: $line-space;
+    margin-bottom: $line-space;
+
+    &::selection {
+      color: var(--#{$theme-name}-slct-text-color);
+      background-color: var(--#{$theme-name}-slct-bg-color);
+    }
+  }
+}

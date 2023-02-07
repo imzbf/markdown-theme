@@ -1,0 +1,7 @@
+.#{$theme-name} {
+  p {
+    &:empty {
+      display: none;
+    }
+  }
+}

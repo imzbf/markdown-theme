@@ -1,0 +1,37 @@
+.#{$theme-name} {
+  ol,
+  ul {
+    padding-left: 28px;
+
+    li {
+      margin-bottom: 0;
+      list-style: inherit;
+
+      & .task-list-item {
+        list-style: none;
+
+        ul,
+        ol {
+          margin-top: 0;
+        }
+      }
+    }
+
+    ul,
+    ol {
+      margin-top: 4px;
+    }
+  }
+
+  ol li {
+    padding-left: 6px;
+  }
+
+  ol li,
+  ul li {
+    &::selection {
+      color: var(--#{$theme-name}-slct-text-color);
+      background-color: var(--#{$theme-name}-slct-bg-color);
+    }
+  }
+}

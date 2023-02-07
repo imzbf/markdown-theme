@@ -1,0 +1,22 @@
+@mixin link-vars($isDark) {
+  .#{$theme-name} {
+    --#{$theme-name}-link-color: #{if($isDark, #2d7dc7, #036aca)};
+  }
+}
+
+.#{$prefix} {
+  @include link-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include link-vars(true);
+}
+
+.#{$theme-name} {
+  a {
+    color: var(--#{$theme-name}-link-color);
+    // border-bottom: 1px solid rgba(3, 106, 202, 0.8);
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
