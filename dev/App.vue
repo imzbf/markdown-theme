@@ -105,3 +105,4 @@ watch(
 }
 </style> -->
 <style src="../src/themes/all/index.scss" lang="scss" />
+<!-- <style src="../css/all.css" /> -->

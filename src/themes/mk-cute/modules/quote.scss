@@ -45,7 +45,9 @@
       opacity: 0.7;
     }
 
-    & > p {
+    > p,
+    ul li,
+    ol li {
       color: var(--#{$theme-name}-quote-color);
     }
   }

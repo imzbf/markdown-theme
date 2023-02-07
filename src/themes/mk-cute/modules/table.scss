@@ -19,7 +19,7 @@
 
 .#{$theme-name} {
   table {
-    display: inline-block !important;
+    display: inline-block;
     // font-size: 14px;
     width: auto;
     max-width: 100%;
@@ -41,5 +41,14 @@
   }
   td {
     min-width: 120px;
+  }
+
+  // 引用中的表格
+  blockquote {
+    table {
+      tr {
+        background-color: var(--#{$theme-name}-table-stripe-color);
+      }
+    }
   }
 }

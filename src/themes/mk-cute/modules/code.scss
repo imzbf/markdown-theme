@@ -44,13 +44,6 @@ $code-bg-color: #282c34;
       top: 8px;
       right: 12px;
       cursor: pointer;
-      display: none;
-    }
-
-    &:hover {
-      .copy-button {
-        display: initial;
-      }
     }
   }
 }

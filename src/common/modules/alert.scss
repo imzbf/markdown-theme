@@ -100,7 +100,12 @@
     p {
       margin: 0.5em 0;
       padding: 0;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
     }
+
     & + p:empty,
     & + p:empty + p:empty {
       display: none;
