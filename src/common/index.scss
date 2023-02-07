@@ -3,6 +3,8 @@
 
 @import './modules/scrn.scss';
 @import './modules/alert.scss';
+@import './modules/mermaid.scss';
+@import './modules/katex.scss';
 
 @mixin common-style {
   color: var(--md-theme-color);
