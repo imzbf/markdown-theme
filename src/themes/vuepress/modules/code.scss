@@ -40,12 +40,17 @@
       overflow-x: auto;
       color: var(--#{$theme-name}-code-block-color);
       white-space: pre;
-      padding: 1em;
+      padding: 22px 1em;
       // font-size: 0.85rem;
       background-color: var(--#{$theme-name}-code-block-bg-color);
 
       > * {
         line-height: 1.6;
+      }
+
+      // 带行号的代码
+      span[rn-wrapper] {
+        top: 22px;
       }
     }
 
@@ -53,8 +58,8 @@
       color: #999;
       position: absolute;
       font-size: 12px;
-      top: 9px;
-      right: 10px;
+      top: 8px;
+      right: 12px;
       cursor: pointer;
       display: none;
     }

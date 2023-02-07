@@ -39,6 +39,8 @@
 .#{$prefix}-dark {
   .#{$theme-name} {
     @include theme-mix(true);
+
+    --md-theme-bg-color-scrollbar-thumb: #4d4d4d;
   }
 }
 

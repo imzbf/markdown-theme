@@ -46,7 +46,7 @@
 .#{$theme-name} {
   @include common-style;
 
-  padding: 16px;
+  // padding: 16px;
   color: var(--#{$theme-name}-color);
   // font-size: 15px;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue, PingFang SC,

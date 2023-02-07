@@ -19,7 +19,7 @@
     position: relative;
 
     code {
-      padding: 16px 12px;
+      padding: 22px 12px;
       margin: 0;
       // font-size: 12px;
       color: var(--#{$theme-name}-base-color);
@@ -50,7 +50,7 @@
       }
 
       span[rn-wrapper] {
-        top: 16px;
+        top: 22px;
       }
     }
 
@@ -58,8 +58,8 @@
       color: var(--#{$theme-name}-base-color);
       position: absolute;
       font-size: 12px;
-      top: 9px;
-      right: 10px;
+      top: 8px;
+      right: 12px;
       cursor: pointer;
       display: none;
     }

@@ -31,7 +31,7 @@
 
     code {
       position: relative;
-      padding: 1em;
+      padding: 22px 1em;
       margin-bottom: 0;
       word-break: normal;
       letter-spacing: 1px;
@@ -39,7 +39,12 @@
       background-color: var(--#{$theme-name}-code-block-bg-color);
 
       > * {
-        line-height: 1.45;
+        line-height: 1.6;
+      }
+
+      // 带行号的代码
+      span[rn-wrapper] {
+        top: 22px;
       }
     }
 
@@ -47,8 +52,8 @@
       color: #999;
       position: absolute;
       font-size: 12px;
-      top: 9px;
-      right: 10px;
+      top: 8px;
+      right: 12px;
       cursor: pointer;
       display: none;
     }
