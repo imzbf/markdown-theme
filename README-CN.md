@@ -1,6 +1,6 @@
 # markdown-theme
 
-English \| [中文](https://github.com/imzbf/markdown-theme)
+[English](https://github.com/imzbf/markdown-theme) \| 中文
 
 [md-editor-v3](https://github.com/imzbf/md-editor-v3)系列预览`markdown`内容主题。
 
