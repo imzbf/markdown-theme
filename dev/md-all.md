@@ -175,13 +175,14 @@ async onUploadImg(files: FileList, callback: (urls: string[]) => void) {
 
 ### 说明
 
-1. 类型：`boolean`
-2. 默认值：`false`
-3. 用法：
+- 类型：`boolean`
+- 默认值：`false`
 
-```js
-Vue.config.silent = true;
-```
+  用法：
+
+  ```js
+  Vue.config.silent = true;
+  ```
 
 取消 Vue 所有的日志与警告。
 
@@ -189,23 +190,24 @@ Vue.config.silent = true;
 
 - 类型：`{ [key: string]: Function }`
 - 默认值：`{}`
-- 用法：
 
-```js
-Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {
-  return child + 1;
-};
+  用法：
 
-const Profile = Vue.extend({
-  _my_option: 1,
-});
+  ```js
+  Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {
+    return child + 1;
+  };
 
-// Profile.options._my_option = 2
-```
+  const Profile = Vue.extend({
+    _my_option: 1,
+  });
 
-自定义合并策略的选项。
+  // Profile.options._my_option = 2
+  ```
 
-合并策略选项分别接收在父实例和子实例上定义的该选项的值作为第一个和第二个参数，Vue 实例上下文被作为第三个参数传入。
+  自定义合并策略的选项。
+
+  合并策略选项分别接收在父实例和子实例上定义的该选项的值作为第一个和第二个参数，Vue 实例上下文被作为第三个参数传入。
 
 - 参考 [自定义选项的混入策略](自定义选项的混入策略)
 
