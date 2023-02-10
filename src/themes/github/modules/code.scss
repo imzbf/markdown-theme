@@ -49,12 +49,7 @@
     }
 
     .copy-button {
-      color: #999;
-      position: absolute;
-      font-size: 12px;
-      top: 8px;
-      right: 12px;
-      cursor: pointer;
+      color: var(--#{$theme-name}-code-block-color);
     }
   }
 }

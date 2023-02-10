@@ -107,6 +107,14 @@
     }
   }
 
+  .copy-button {
+    position: absolute;
+    font-size: 12px;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+  }
+
   hr {
     height: 1px;
     margin: 10px 0;
