@@ -32,7 +32,6 @@
     box-shadow: #00000055 0px 2px 2px;
 
     code {
-      position: relative;
       padding: 1em;
       background-color: var(--#{$theme-name}-code-bg-color);
       color: var(--#{$theme-name}-code-block-color);
@@ -43,6 +42,10 @@
 
       > * {
         line-height: 1.6;
+      }
+
+      span[rn-wrapper] {
+        top: calc(1em + 32px);
       }
     }
 
