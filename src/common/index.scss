@@ -112,8 +112,8 @@
         content: attr(language);
         font-size: 12px;
         position: absolute;
-        top: 10px;
-        right: 70px;
+        top: 11px;
+        right: 40px;
         line-height: 1;
       }
     }
@@ -122,10 +122,53 @@
   .copy-button {
     position: absolute;
     font-size: 12px;
-    top: 10px;
-    right: 12px;
+    top: 5px;
+    right: 7px;
     cursor: pointer;
     line-height: 1;
+
+    &::before {
+      content: attr(data-tips);
+      color: var(--md-theme-code-copy-tips-color);
+      background-color: var(--md-theme-code-copy-tips-bg-color);
+      position: absolute;
+      font-size: 12px;
+      font-family: sans-serif;
+      width: max-content;
+      text-align: center;
+      padding: 4px;
+      border-radius: 2px;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+      left: 0;
+      top: 50%;
+      transform: translate(-100%, -50%);
+    }
+
+    &::after {
+      content: '';
+      color: var(--md-theme-code-copy-tips-bg-color);
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-right-width: 0;
+      border-left-color: currentColor;
+      left: -2px;
+      top: 50%;
+      transform: translate(0, -50%);
+      filter: drop-shadow(4px 0 2px rgba(0, 0, 0, 0.2));
+    }
+
+    &::before,
+    &::after {
+      visibility: hidden;
+      transition: 0.3s;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      visibility: visible;
+    }
   }
 
   hr {

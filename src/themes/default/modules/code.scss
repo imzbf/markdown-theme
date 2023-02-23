@@ -5,6 +5,8 @@
     --#{$theme-name}-code-bg-color: #{if($isDark, #1a1a1a, #282c34)};
     // 顶部背景
     --#{$theme-name}-code-before-bg-color: var(--#{$theme-name}-code-bg-color);
+
+    --md-theme-code-copy-tips-color: #{if($isDark, inherit, #141414)};
   }
 }
 
