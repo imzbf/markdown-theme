@@ -71,6 +71,13 @@ watch(
   margin: 0 auto;
   padding: 50px 0;
 }
+
+.md-editor-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  overflow: hidden;
+}
 </style>
 <!-- 
 <style>
