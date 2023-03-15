@@ -1,5 +1,5 @@
 @mixin quote-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     --#{$theme-name}-quote-color: #{if($isDark, #8b949e, #57606a)};
     --#{$theme-name}-quote-border-color: #{if($isDark, #444c56, #d0d7de)};
   }

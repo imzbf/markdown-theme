@@ -1,5 +1,5 @@
 @mixin code-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     --#{$theme-name}-code-inline-color: #{if($isDark, #c9d1d9, inherit)};
     --#{$theme-name}-code-inline-bg-color: #{if($isDark, #2d3339, #eff1f2)};
 

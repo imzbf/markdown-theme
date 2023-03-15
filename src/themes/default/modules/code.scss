@@ -1,5 +1,5 @@
 @mixin code-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     --#{$theme-name}-code-block-color: #a9b7c6;
     // 代码背景
     --#{$theme-name}-code-bg-color: #{if($isDark, #1a1a1a, #282c34)};
