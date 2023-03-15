@@ -23,7 +23,7 @@
   ],
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
-    "md-editor-v3": "^2.7.2",
+    "md-editor-v3": "^2.9.3",
     "sass": "^1.57.1",
     "vite": "^4.0.4",
     "vue": "^3.2.45"
