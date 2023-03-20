@@ -1,5 +1,5 @@
 @mixin table-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     --#{$theme-name}-table-color: #{if($isDark, inherit, #000)};
     // 边框
     --#{$theme-name}-table-border-color: #{if($isDark, #1c1c1c, #f6f6f6)};

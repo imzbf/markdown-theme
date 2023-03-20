@@ -1,5 +1,5 @@
 @mixin table-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     // 斑马条纹
     --#{$theme-name}-table-stripe-color: #{if($isDark, #161b22, #f7f8fa)};
 
