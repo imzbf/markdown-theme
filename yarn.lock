@@ -117,6 +117,11 @@
   resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.16.17.tgz#c5a1a4bfe1b57f0c3e61b29883525c6da3e5c091"
   integrity sha512-y+EHuSchhL7FjHgvQL/0fnnFmO4T1bhvWANX6gcnqTjtnKWbTvUMCpGnv2+t+31d7RzyEAYAd4u2fnIhHL6N/Q==
 
+"@vavt/vite-plugin-import-markdown@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@vavt/vite-plugin-import-markdown/-/vite-plugin-import-markdown-1.0.0.tgz#2d6da8582aa6881cb6fe59e8fa1f4181640a23be"
+  integrity sha512-zBpv4UJAmCdk8/hsNXGi/KrMoASt/8GkmgkwcerD823+HvMJdrEqA43zk81hvYs/dfDSgGBaarepBDqpcDiXcg==
+
 "@vitejs/plugin-vue@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-4.0.0.tgz#93815beffd23db46288c787352a8ea31a0c03e5e"

@@ -22,6 +22,7 @@
     "css"
   ],
   "devDependencies": {
+    "@vavt/vite-plugin-import-markdown": "^1.0.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "md-editor-v3": "^2.7.2",
     "sass": "^1.57.1",
