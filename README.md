@@ -35,22 +35,4 @@ Import all themes:
 import '@vavt/markdown-theme/all.css';
 ```
 
-If you want editor to render article only, import theme which you need like this:
-
-```vue
-<template>
-  <MdEditor
-    v-model="state.text"
-    :theme="state.theme"
-    :previewTheme="state.previewTheme"
-    showCodeRowNumber
-    previewOnly
-  />
-</template>
-
-<script setup>
-import MdEditor from 'md-editor-v3';
-// import theme which you need
-import '@vavt/markdown-theme/all.css';
-</script>
-```
+> Introducing themes separately in `>2.10.0` editors is no longer supported.

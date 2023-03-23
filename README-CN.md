@@ -35,22 +35,4 @@ import '@vavt/markdown-theme/default.css';
 import '@vavt/markdown-theme/all.css';
 ```
 
-如果是编辑器的仅预览模式：
-
-```vue
-<template>
-  <MdEditor
-    v-model="state.text"
-    :theme="state.theme"
-    :previewTheme="state.previewTheme"
-    showCodeRowNumber
-    previewOnly
-  />
-</template>
-
-<script setup>
-import MdEditor from 'md-editor-v3';
-// 仅预览不需要编辑器的样式，只需要引入主题样式即可
-import '@vavt/markdown-theme/all.css';
-</script>
-```
+> 不再支持在`>2.10.0`版本的编辑器中单独引入主题。
