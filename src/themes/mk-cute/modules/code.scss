@@ -38,12 +38,7 @@ $code-bg-color: #282c34;
     }
 
     .copy-button {
-      color: #999;
-      position: absolute;
-      font-size: 12px;
-      top: 8px;
-      right: 12px;
-      cursor: pointer;
+      color: $code-color;
     }
   }
 }

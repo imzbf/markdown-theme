@@ -56,11 +56,6 @@
 
     .copy-button {
       color: var(--#{$theme-name}-base-color);
-      position: absolute;
-      font-size: 12px;
-      top: 8px;
-      right: 12px;
-      cursor: pointer;
     }
   }
 }

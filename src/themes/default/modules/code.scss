@@ -1,10 +1,12 @@
 @mixin code-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     --#{$theme-name}-code-block-color: #a9b7c6;
     // 代码背景
     --#{$theme-name}-code-bg-color: #{if($isDark, #1a1a1a, #282c34)};
     // 顶部背景
     --#{$theme-name}-code-before-bg-color: var(--#{$theme-name}-code-bg-color);
+
+    --md-theme-code-copy-tips-color: #{if($isDark, inherit, #141414)};
   }
 }
 
@@ -32,7 +34,6 @@
     box-shadow: #00000055 0px 2px 2px;
 
     code {
-      position: relative;
       padding: 1em;
       background-color: var(--#{$theme-name}-code-bg-color);
       color: var(--#{$theme-name}-code-block-color);
@@ -44,15 +45,14 @@
       > * {
         line-height: 1.6;
       }
+
+      span[rn-wrapper] {
+        top: calc(1em + 32px);
+      }
     }
 
     .copy-button {
       color: var(--#{$theme-name}-code-block-color);
-      position: absolute;
-      font-size: 12px;
-      top: 8px;
-      right: 12px;
-      cursor: pointer;
     }
 
     &::before {

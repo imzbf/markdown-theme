@@ -1,5 +1,5 @@
 @mixin heading-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     --#{$theme-name}-heading-color: #{if($isDark, #999, #273849)};
   }
 }

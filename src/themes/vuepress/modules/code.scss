@@ -1,5 +1,5 @@
 @mixin code-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     // 行内
     --#{$theme-name}-code-inline-color: #{if($isDark, #e06c75, #d63200)};
     --#{$theme-name}-code-inline-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
@@ -55,12 +55,7 @@
     }
 
     .copy-button {
-      color: #999;
-      position: absolute;
-      font-size: 12px;
-      top: 8px;
-      right: 12px;
-      cursor: pointer;
+      color: var(--md-theme-color);
     }
   }
 }

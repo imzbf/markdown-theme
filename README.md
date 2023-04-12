@@ -1,29 +1,38 @@
-# markdown theme
+# markdown-theme
 
-[md-editor-v3](https://github.com/imzbf/md-editor-v3)系列预览`markdown`内容主题。
+English \| [中文](https://github.com/imzbf/markdown-theme/blob/develop/README-CN.md)
 
-- 默认风格
-- vuepress 风格
-- github 风格
+Themes for [md-editor-v3](https://github.com/imzbf/md-editor-v3) series.
 
-> 该样式不完全与对应站点相同，只是部分复制~
+| Name | Source |
+| --- | --- |
+| default | - |
+| vuepress | - |
+| github | - |
+| cyanosis | [juejin-markdown-theme-cyanosis](https://github.com/linxsbox/juejin-markdown-theme-cyanosis) |
+| mk-cute | [juejin-markdown-theme-mk-cute](https://github.com/Jacky-Summer/juejin-markdown-theme-mk-cute) |
+| smart-blue | [juejin-markdown-theme-smart-blue](https://github.com/cumt-robin/juejin-markdown-theme-smart-blue) |
 
-## 安装
+> The styles are not exactly the same as the original. If you have an excellent suggestion, clone project [md-editor-extension](https://github.com/imzbf/md-editor-extension) and create PR to share your theme.
+
+## Install
 
 ```shell
 yarn add @vavt/markdown-theme
 ```
 
-## 使用
+## Usage
+
+Import some one([name].css):
 
 ```js
 import '@vavt/markdown-theme/default.css';
-import '@vavt/markdown-theme/github.css';
-import '@vavt/markdown-theme/vuepress.css';
 ```
 
-- 默认风格类名：`default-theme`
-- Github 风格类名：`github-theme`
-- Vuepress 风格类名：`vuepress-theme`
+Import all themes:
 
-切换暗黑模式时，在上方类名所在的元素的祖级元素添加`class='md-dark'`
+```js
+import '@vavt/markdown-theme/all.css';
+```
+
+> Introducing themes separately in `>2.10.0` editors is no longer supported.

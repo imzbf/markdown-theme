@@ -1,5 +1,5 @@
 @mixin link-vars($isDark) {
-  .#{$theme-name} {
+  article.#{$theme-name} {
     --#{$theme-name}-link-color: #{if($isDark, #2d7dc7, #036aca)};
   }
 }
