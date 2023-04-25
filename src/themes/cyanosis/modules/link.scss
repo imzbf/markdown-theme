@@ -3,16 +3,16 @@
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: var(--#{$theme-name}-link-color);
-    border-bottom: 1px solid var(--#{$theme-name}-border-color);
+    color: var(--md-theme-link-color);
+    border-bottom: 1px solid var(--md-theme-border-color);
 
     &:hover {
-      color: var(--#{$theme-name}-linkh-color);
-      border-bottom-color: var(--#{$theme-name}-linkh-color);
+      color: var(--md-theme-linkh-color);
+      border-bottom-color: var(--md-theme-linkh-color);
     }
 
     &:active {
-      color: var(--#{$theme-name}-linkh-color);
+      color: var(--md-theme-linkh-color);
     }
 
     &::after {
@@ -22,7 +22,7 @@
       left: 0;
       width: 100%;
       opacity: 0;
-      border-bottom: 1px solid var(--#{$theme-name}-border-color);
+      border-bottom: 1px solid var(--md-theme-border-color);
       transition: top 0.3s, opacity 0.3s;
       transform: translate3d(0, 0, 0);
     }
@@ -30,7 +30,7 @@
     &:hover::after {
       top: 0;
       opacity: 1;
-      border-bottom-color: var(--#{$theme-name}-linkh-color);
+      border-bottom-color: var(--md-theme-linkh-color);
     }
   }
 }

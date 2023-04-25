@@ -11,7 +11,7 @@
 
 @mixin theme-vars($isDark) {
   .#{$theme-name} {
-    --#{$theme-name}-color: #{if($isDark, #c9d1d9, #222)};
+    --md-theme-color: #{if($isDark, #c9d1d9, #222)};
   }
 }
 
@@ -30,7 +30,7 @@
   @include common-style;
 
   line-height: 1.5;
-  color: var(--#{$theme-name}-color);
+  color: var(--md-theme-color);
 
   p,
   blockquote,

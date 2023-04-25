@@ -5,6 +5,7 @@
 @import './modules/admonition.scss';
 @import './modules/mermaid.scss';
 @import './modules/katex.scss';
+@import './modules/codeTabs.scss';
 
 @mixin common-style {
   color: var(--md-theme-color);
@@ -115,17 +116,20 @@
         top: 11px;
         right: 40px;
         line-height: 1;
+        z-index: 1;
       }
     }
   }
 
   .copy-button {
+    color: var(--md-theme-code-block-color);
     position: absolute;
     font-size: 12px;
     top: 5px;
     right: 7px;
-    cursor: pointer;
     line-height: 1;
+    cursor: pointer;
+    z-index: 1;
 
     &::before {
       content: attr(data-tips);
