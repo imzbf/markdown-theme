@@ -1,10 +1,13 @@
 @mixin code-vars($isDark) {
   article.#{$theme-name} {
-    --#{$theme-name}-code-block-color: #a9b7c6;
+    --md-theme-code-inline-color: #3594f7;
+    --md-theme-code-inline-bg-color: rgba(59, 170, 250, 0.1);
+
+    --md-theme-code-block-color: #a9b7c6;
     // 代码背景
-    --#{$theme-name}-code-bg-color: #{if($isDark, #1a1a1a, #282c34)};
+    --md-theme-code-block-bg-color: #{if($isDark, #1a1a1a, #282c34)};
     // 顶部背景
-    --#{$theme-name}-code-before-bg-color: var(--#{$theme-name}-code-bg-color);
+    --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
 
     --md-theme-code-copy-tips-color: #{if($isDark, inherit, #141414)};
   }
@@ -20,12 +23,13 @@
 
 .#{$theme-name} {
   code {
-    color: #3594f7;
-    background-color: rgba(59, 170, 250, 0.1);
+    color: var(--md-theme-code-inline-color);
+    background-color: var(--md-theme-code-inline-bg-color);
     display: inline-block;
     padding: 0 4px;
     border-radius: 2px;
     line-height: 22px;
+    z-index: -1;
   }
 
   pre {
@@ -35,8 +39,8 @@
 
     code {
       padding: 1em;
-      background-color: var(--#{$theme-name}-code-bg-color);
-      color: var(--#{$theme-name}-code-block-color);
+      background-color: var(--md-theme-code-block-bg-color);
+      color: var(--md-theme-code-block-color);
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       border-top-left-radius: 0;
@@ -51,10 +55,6 @@
       }
     }
 
-    .copy-button {
-      color: var(--#{$theme-name}-code-block-color);
-    }
-
     &::before {
       content: '';
       display: block;
@@ -63,11 +63,21 @@
       width: 100%;
       background-size: 40px;
       background-repeat: no-repeat;
-      background-color: var(--#{$theme-name}-code-before-bg-color);
+      background-color: var(--md-theme-code-before-bg-color);
       margin-bottom: 0;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       background-position: 10px 10px;
+    }
+  }
+
+  .code-tabs {
+    pre {
+      code {
+        span[rn-wrapper] {
+          top: 1em;
+        }
+      }
     }
   }
 }

@@ -5,8 +5,8 @@
     margin-bottom: $line-space;
 
     &::selection {
-      color: var(--#{$theme-name}-slct-text-color);
-      background-color: var(--#{$theme-name}-slct-bg-color);
+      color: var(--md-theme-slct-text-color);
+      background-color: var(--md-theme-slct-bg-color);
     }
   }
 }

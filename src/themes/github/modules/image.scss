@@ -1,6 +1,6 @@
 @mixin image-vars($isDark) {
   article.#{$theme-name} {
-    --#{$theme-name}-heading-bg-color: #{if($isDark, #22272e, #fff)};
+    --md-theme-heading-bg-color: #{if($isDark, #22272e, #fff)};
   }
 }
 
@@ -16,7 +16,7 @@
   img {
     max-width: 100%;
     box-sizing: content-box;
-    background-color: var(--#{$theme-name}-heading-bg-color);
+    background-color: var(--md-theme-heading-bg-color);
   }
 
   // // 引用中的表格

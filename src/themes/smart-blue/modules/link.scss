@@ -1,6 +1,6 @@
 @mixin link-vars($isDark) {
   article.#{$theme-name} {
-    --#{$theme-name}-link-color: #{if($isDark, #2d7dc7, #036aca)};
+    --md-theme-link-color: #{if($isDark, #2d7dc7, #036aca)};
   }
 }
 
@@ -14,7 +14,7 @@
 
 .#{$theme-name} {
   a {
-    color: var(--#{$theme-name}-link-color);
+    color: var(--md-theme-link-color);
     // border-bottom: 1px solid rgba(3, 106, 202, 0.8);
     font-weight: 400;
     text-decoration: none;

@@ -2,7 +2,7 @@ $theme-name: 'cyanosis-theme';
 
 $monospace-font: Menlo, Monaco, Consolas, 'Courier New', monospace;
 $line-space: 16px;
-$id: '--#{$theme-name}';
+$id: '--md-theme';
 
 $l-baseColor: #353535;
 $l-titleColor: #005bb7;
@@ -78,7 +78,7 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
     #{$id}-blockquote-bg-color: if($isDark, $d-blockquoteBgColor, $l-blockquoteBgColor);
     #{$id}-code-color: if($isDark, $d-codeColor, $l-codeColor);
     #{$id}-code-bg-color: if($isDark, $d-codeBgColor, $l-codeBgColor);
-    #{$id}-code-pre-color: if($isDark, $d-codePreColor, $l-codePreColor);
+    #{$id}-code-block-bg-color: if($isDark, $d-codePreColor, $l-codePreColor);
     #{$id}-table-border-color: if($isDark, $d-tableBorderColor, $l-tableBorderColor);
     #{$id}-table-th-color: if($isDark, $d-tableThColor, $l-tableThColor);
     #{$id}-table-tht-color: if($isDark, $d-tableThtColor, $l-tableThtColor);

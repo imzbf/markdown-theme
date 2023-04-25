@@ -27,6 +27,7 @@
     // 代码
     --md-theme-code-copy-tips-color: inherit; // 复制文字
     --md-theme-code-copy-tips-bg-color: #{if($isDark, #3a3a3a, #fff)}; // 背景
+    --md-theme-code-active-color: #{if($isDark, #e6c07b, #61aeee)}; // 激活状态
   }
 }
 

@@ -1,6 +1,6 @@
 @mixin heading-vars($isDark) {
   article.#{$theme-name} {
-    --#{$theme-name}-heading-color: #{if($isDark, #999, #273849)};
+    --md-theme-heading-color: #{if($isDark, #999, #273849)};
   }
 }
 
@@ -34,7 +34,7 @@
   h2 {
     font-size: 1.65em;
     padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--#{$theme-name}-border-color);
+    border-bottom: 1px solid var(--md-theme-border-color);
   }
 
   h3 {

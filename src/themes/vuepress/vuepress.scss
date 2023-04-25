@@ -11,7 +11,7 @@
 
 @mixin theme-vars($isDark) {
   .#{$theme-name} {
-    --#{$theme-name}-color: #{if($isDark, #999, #304455)};
+    --md-theme-color: #{if($isDark, #999, #304455)};
   }
 }
 
@@ -28,7 +28,7 @@
 .#{$theme-name} {
   @include common-style;
   font-size: 16px;
-  color: var(--#{$theme-name}-color);
+  color: var(--md-theme-color);
 
   em {
     color: #4f5959;
