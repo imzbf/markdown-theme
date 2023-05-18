@@ -10,7 +10,7 @@
       <li><button @click="state.previewTheme = 'mk-cute'">mk-cute</button></li>
     </ul>
     <div class="container">
-      <MdEditor
+      <MdPreview
         v-model="state.text"
         :theme="state.theme"
         :previewTheme="state.previewTheme"
@@ -22,7 +22,7 @@
 </template>
 <script setup>
 import { reactive, watch } from 'vue';
-import MdEditor from 'md-editor-v3';
+import { MdPreview } from 'md-editor-v3';
 import mdAll from './md-all.md';
 const state = reactive({
   theme: 'light',
