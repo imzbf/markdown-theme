@@ -513,6 +513,11 @@
   resolved "https://registry.npmjs.org/@types/mdurl/-/mdurl-1.0.2.tgz#e2ce9d83a613bacf284c7be7d491945e39e1f8e9"
   integrity sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==
 
+"@vavt/util@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/@vavt/util/-/util-1.1.1.tgz#4a5571bcfb6122ced51d260deaf1f6feb5ede5d6"
+  integrity sha512-0x+Acegd8k6lFJc7SN4kVhO669fBiMtBjq/WqX2C8Uz5mSgS+nRvfXs0BK2aiV67T0rauBoAmEkQfURQjI2+4Q==
+
 "@vavt/vite-plugin-import-markdown@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@vavt/vite-plugin-import-markdown/-/vite-plugin-import-markdown-1.0.0.tgz#2d6da8582aa6881cb6fe59e8fa1f4181640a23be"
@@ -828,14 +833,15 @@ markdown-it@^13.0.1:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
-md-editor-v3@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/md-editor-v3/-/md-editor-v3-4.0.0.tgz#ca4274780fb2f5e82177d68957dd9da79fd91392"
-  integrity sha512-7fOg1jlnpwbmThxBGmLiU3DE9cuj5YNzK8cyDDnzrbu5yK4DSHZjd8xM2a1hTi+Ttke1yf4ZVWbrkPd0m6Yx0w==
+md-editor-v3@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.npmjs.org/md-editor-v3/-/md-editor-v3-4.2.1.tgz#042f04c8b56c1d9adb6ee457c832dbcf9d42652b"
+  integrity sha512-S8thn9XFD/gztASEn4VxyKflvtpNMqHk0AujE1cxpAhxlAHrCsQSmPoPHFNAwb8WG0PfYw+tH8TLt4T6ZYSYDQ==
   dependencies:
     "@codemirror/lang-markdown" "^6.1.1"
     "@codemirror/language-data" "^6.3.0"
     "@types/markdown-it" "^12.2.3"
+    "@vavt/util" "^1.1.1"
     codemirror "^6.0.1"
     copy-to-clipboard "^3.3.3"
     lru-cache "^8.0.4"
@@ -843,6 +849,7 @@ md-editor-v3@^4.0.0:
     markdown-it-image-figures "^2.1.1"
     markdown-it-task-lists "^2.1.1"
     medium-zoom "^1.0.8"
+    punycode "^2.3.0"
 
 mdurl@^1.0.1:
   version "1.0.1"
@@ -887,6 +894,11 @@ postcss@^8.1.10, postcss@^8.4.21:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+punycode@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
+  integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
 
 readdirp@~3.6.0:
   version "3.6.0"

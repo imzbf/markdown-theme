@@ -24,7 +24,7 @@
   "devDependencies": {
     "@vavt/vite-plugin-import-markdown": "^1.0.0",
     "@vitejs/plugin-vue": "^4.0.0",
-    "md-editor-v3": "^4.0.0",
+    "md-editor-v3": "^4.2.1",
     "sass": "^1.57.1",
     "vite": "^4.0.4",
     "vue": "^3.2.45"

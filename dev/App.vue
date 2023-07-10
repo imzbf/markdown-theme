@@ -79,37 +79,39 @@ watch(
   overflow: hidden;
 }
 </style>
-<!-- 
+
 <style>
 .md-editor {
-  --bg-color: rgba(224, 224, 224, 0.1);
-  --blue: #37b2ff;
-  --yellow: #feea1e;
-  --orange: orange;
-  --purple: #e699e6;
-  --green: #a7ecad;
-  --text: #333;
-  --area: #f8f8f8;
-  --line: #adb0b8;
-  --border: rgb(245, 245, 247);
-  --border-blue: #37b2ff;
-  --table-bg-color: #fff;
+  --md-color: #3f4a54;
+  --md-hover-color: #000;
+  --md-bk-color: #fff;
+  --md-bk-color-outstand: #f6f6f6;
+  --md-bk-hover-color: #f5f7fa;
+  --md-border-color: #e6e6e6;
+  --md-border-hover-color: #b9b9b9;
+  --md-border-active-color: #999;
+  --md-modal-mask: #00000073;
+  --md-scrollbar-bg-color: #e2e2e2;
+  --md-scrollbar-thumb-color: #0000004d;
+  --md-scrollbar-thumb-hover-color: #00000059;
+  --md-scrollbar-thumb-active-color: #00000061;
 }
 
 .md-editor-dark {
-  --bg-color: rgba(224, 224, 224, 0.1);
-  --blue: #37b2ff;
-  --yellow: #feea1e;
-  --orange: orange;
-  --purple: #e699e6;
-  --green: #a7ecad;
-  --text: #c9d1d9;
-  --area: #1a1a1a;
-  --line: #75787e;
-  --border: rgb(78 78 78);
-  --border-blue: #2781b9;
-  --table-bg-color: var(--area);
+  --md-color: #999;
+  --md-hover-color: #bbb;
+  --md-bk-color: #000;
+  --md-bk-color-outstand: #111;
+  --md-bk-hover-color: #1b1a1a;
+  --md-border-color: #2d2d2d;
+  --md-border-hover-color: #636262;
+  --md-border-active-color: #777;
+  --md-modal-mask: #00000073;
+  --md-scrollbar-bg-color: #0f0f0f;
+  --md-scrollbar-thumb-color: #2d2d2d;
+  --md-scrollbar-thumb-hover-color: #3a3a3a;
+  --md-scrollbar-thumb-active-color: #3a3a3a;
 }
-</style> -->
+</style>
 <style src="../src/themes/all/index.scss" lang="scss" />
 <!-- <style src="../css/all.css" /> -->
