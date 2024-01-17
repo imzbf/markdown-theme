@@ -1,5 +1,5 @@
 @mixin code-vars($isDark) {
-  article.#{$theme-name} {
+  div.#{$theme-name} {
     --md-theme-code-inline-color: #3594f7;
     --md-theme-code-inline-bg-color: rgba(59, 170, 250, 0.1);
 

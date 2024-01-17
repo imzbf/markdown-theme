@@ -1,5 +1,5 @@
 @mixin image-vars($isDark) {
-  article.#{$theme-name} {
+  div.#{$theme-name} {
     --md-theme-heading-bg-color: #{if($isDark, #22272e, #fff)};
   }
 }

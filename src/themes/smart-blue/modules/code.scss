@@ -1,5 +1,5 @@
 @mixin code-vars($isDark) {
-  article.#{$theme-name} {
+  div.#{$theme-name} {
     // 行内
     --md-theme-code-inline-color: #{if($isDark, #e06c75, #d63200)};
     --md-theme-code-inline-bg-color: #{if($isDark, #1a1a1a, #fff5f5)};
