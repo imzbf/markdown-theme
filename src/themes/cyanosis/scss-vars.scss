@@ -105,7 +105,7 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
   margin-bottom: 10px;
   font-size: $fontSize;
   line-height: 1.5;
-  color: var(--#{$theme-name}-title-color);
+  color: var(--md-theme-heading-color);
 }
 
 @mixin selectionColor($bgColor: '', $txtColor: '') {
