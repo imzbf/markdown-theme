@@ -42,6 +42,7 @@
       color: var(--md-theme-code-block-color);
     }
     input:checked + label {
+      border-bottom: 1px solid;
       color: var(--md-theme-code-active-color);
     }
     ul {
