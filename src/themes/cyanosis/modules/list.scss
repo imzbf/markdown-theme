@@ -34,4 +34,43 @@
       background-color: var(--md-theme-slct-bg-color);
     }
   }
+
+  .task-list-item-checkbox {
+    position: relative;
+  }
+
+  .contains-task-list {
+    input[type='checkbox'] {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: inherit;
+        background: #f0f8ff;
+        border: 1px solid #add6ff;
+        border-radius: 2px;
+        box-sizing: border-box;
+        z-index: 1;
+      }
+
+      &::after {
+        content: '✓';
+        position: absolute;
+        top: -12px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        color: #f55;
+        font-size: 20px;
+        font-weight: 700;
+        z-index: 2;
+      }
+    }
+  }
 }
