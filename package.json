@@ -1,6 +1,6 @@
 {
   "name": "@vavt/markdown-theme",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "Themes for md-editor-v3 series",
   "scripts": {
     "dev": "vite",
