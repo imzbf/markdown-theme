@@ -56,17 +56,18 @@
     }
   }
 
-  ol {
-    > li {
-      list-style: decimal;
-    }
-  }
+  // 保持默认值，嵌套列表有marker区别
+  // ol {
+  //   > li {
+  //     list-style: decimal;
+  //   }
+  // }
 
-  ul {
-    > li {
-      list-style: disc;
-    }
-  }
+  // ul {
+  //   > li {
+  //     list-style: disc;
+  //   }
+  // }
 
   ol,
   ul {
