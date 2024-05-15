@@ -47,6 +47,10 @@
   // 引用中的表格
   blockquote {
     table {
+      tbody {
+        color: var(--md-theme-color);
+      }
+
       tr {
         background-color: var(--md-theme-table-stripe-color);
       }

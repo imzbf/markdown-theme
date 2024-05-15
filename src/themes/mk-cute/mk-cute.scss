@@ -31,6 +31,7 @@
 // 亮模式
 .#{$prefix} {
   .#{$theme-name} {
+    --md-theme-color: #{$theme-color};
     @include theme-mix(false);
   }
 }
@@ -50,7 +51,7 @@
   font-weight: 400;
   // font-size: 15px;
   overflow-x: hidden;
-  color: $theme-color;
+  // color: $theme-color;
   background-size: 20px 20px;
   background-position: center center;
 
