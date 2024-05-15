@@ -26,7 +26,6 @@
 }
 
 .#{$theme-name} {
-  @include common-style;
   font-size: 16px;
   color: var(--md-theme-color);
 

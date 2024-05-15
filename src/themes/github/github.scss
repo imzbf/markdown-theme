@@ -27,8 +27,6 @@
 
 // 从github上copy的部分样式
 .#{$theme-name} {
-  @include common-style;
-
   line-height: 1.5;
   color: var(--md-theme-color);
 

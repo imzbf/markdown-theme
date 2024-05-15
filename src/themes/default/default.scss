@@ -8,7 +8,3 @@
 @import './modules/paragraph.scss';
 @import './modules/quote.scss';
 @import './modules/table.scss';
-
-.#{$theme-name} {
-  @include common-style;
-}

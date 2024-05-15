@@ -1,0 +1,15 @@
+.#{$prefix}-preview {
+  ol,
+  ul {
+    padding-left: 2.35em;
+
+    .task-list-item {
+      list-style-type: none;
+
+      input {
+        margin-left: -1.5em;
+        margin-right: 0.1em;
+      }
+    }
+  }
+}

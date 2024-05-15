@@ -1,0 +1,9 @@
+.#{$prefix}-preview {
+  a {
+    text-decoration: none;
+
+    &:empty::before {
+      content: attr(href);
+    }
+  }
+}

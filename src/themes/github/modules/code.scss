@@ -2,9 +2,15 @@
   div.#{$theme-name} {
     --md-theme-code-inline-color: #{if($isDark, #c9d1d9, inherit)};
     --md-theme-code-inline-bg-color: #{if($isDark, #2d3339, #eff1f2)};
+    // 圆角
+    --md-theme-code-inline-radius: 6px;
 
     --md-theme-code-block-color: #{if($isDark, #a9b7c6, inherit)};
     --md-theme-code-block-bg-color: #{if($isDark, #161b22, #f6f8fa)};
+    // 顶部背景
+    --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
+    // 圆角
+    --md-theme-code-block-radius: 6px;
   }
 }
 
@@ -20,31 +26,14 @@
   code {
     padding: 0.2em 0.4em;
     margin: 0;
-    color: var(--md-theme-code-inline-color);
-    background-color: var(--md-theme-code-inline-bg-color);
-    border-radius: 6px;
   }
 
   pre {
-    border-radius: 6px;
-    position: relative;
-
     code {
       padding: 22px 1em;
       margin-bottom: 0;
       word-break: normal;
       letter-spacing: 1px;
-      color: var(--md-theme-code-block-color);
-      background-color: var(--md-theme-code-block-bg-color);
-
-      > * {
-        line-height: 1.6;
-      }
-
-      // 带行号的代码
-      span[rn-wrapper] {
-        top: 22px;
-      }
     }
   }
 }

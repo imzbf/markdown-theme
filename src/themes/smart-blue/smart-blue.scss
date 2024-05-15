@@ -44,8 +44,6 @@
 }
 
 .#{$theme-name} {
-  @include common-style;
-
   // padding: 16px;
   color: var(--md-theme-color);
   // font-size: 15px;

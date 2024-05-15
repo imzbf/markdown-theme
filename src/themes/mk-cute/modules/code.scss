@@ -4,7 +4,12 @@
     --md-theme-code-inline-bg-color: #282c34;
 
     --md-theme-code-block-color: #4ec9b0;
+    // 代码背景
     --md-theme-code-block-bg-color: #282c34;
+    // 顶部背景
+    --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
+    // 圆角
+    --md-theme-code-block-radius: 10px;
   }
 }
 
@@ -19,45 +24,24 @@
 .#{$theme-name} {
   code {
     font-family: $monospace-font;
-    // word-break: break-word;
-    border-radius: 2px;
     overflow-x: auto;
-    background-color: var(--md-theme-code-block-bg-color);
-    color: var(--md-theme-code-inline-color);
     padding: 0.14em 0.46em;
     margin: 0 4px;
   }
 
-  pre {
-    position: relative;
-
-    code {
-      font-family: $monospace-font;
-      // font-size: 12px;
-      border-radius: 10px;
-      padding: 22px;
-      margin: 0;
-      word-break: normal;
-      display: block;
-      overflow-x: auto;
-      color: var(--md-theme-code-block-color);
-      background: var(--md-theme-code-block-bg-color);
-
-      > * {
+  .#{$prefix}-code {
+    pre {
+      code {
+        font-family: $monospace-font;
+        padding: 22px;
+        margin: 0;
+        word-break: normal;
         line-height: 1.75;
-      }
 
-      span[rn-wrapper] {
-        top: 22px;
+        span[rn-wrapper] {
+          top: 22px;
+        }
       }
-    }
-  }
-
-  .code-tabs {
-    border-radius: 10px;
-    ul {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
     }
   }
 }
