@@ -1,3 +1,17 @@
+@mixin code-vars($isDark) {
+  div.#{$theme-name} {
+    --md-theme-heading-color: $theme-color;
+  }
+}
+
+.#{$prefix} {
+  @include code-vars(false);
+}
+
+// .#{$prefix}-dark {
+//   @include code-vars(true);
+// }
+
 .#{$theme-name} {
   h1,
   h2,
@@ -5,7 +19,6 @@
   h4,
   h5,
   h6 {
-    color: $theme-color;
     &::before {
       content: '';
       display: block;
@@ -15,9 +28,10 @@
       bottom: 0;
       margin: auto;
       background-image: $spin-icon;
-      animation: spin 2s linear 1s infinite;
+      animation: spin 2s linear 0s infinite;
     }
   }
+
   h1 {
     position: relative;
     font-size: 30px;

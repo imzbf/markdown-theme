@@ -4,7 +4,6 @@
     --md-theme-table-stripe-color: #{if($isDark, #161b22, #f7f8fa)};
 
     --md-theme-table-tr-bg-color: #{if($isDark, transparent, #fff)};
-    --md-theme-table-tr-border-color: #{if($isDark, #808080, #d8dee4)};
     --md-theme-table-td-border-color: #{if($isDark, #30363d, #d0d7de)};
   }
 }
@@ -26,17 +25,9 @@
     border-collapse: collapse;
 
     tr {
-      background-color: var(--md-theme-table-tr-bg-color);
-      border-top: 1px solid var(--md-theme-table-tr-border-color);
-
       th,
       td {
         padding: 6px 13px;
-        border: 1px solid var(--md-theme-table-td-border-color);
-      }
-
-      &:nth-child(2n) {
-        background-color: var(--md-theme-table-stripe-color);
       }
     }
   }

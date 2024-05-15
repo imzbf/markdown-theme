@@ -1,6 +1,15 @@
+@mixin link-vars($isDark) {
+  div.#{$theme-name} {
+    --md-theme-link-color: #42b983;
+  }
+}
+
+.#{$prefix} {
+  @include link-vars(false);
+}
+
 .#{$theme-name} {
   a {
-    color: #42b983;
     font-weight: 600;
   }
 }

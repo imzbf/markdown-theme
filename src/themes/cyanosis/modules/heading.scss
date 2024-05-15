@@ -8,9 +8,9 @@
   @include heading-vars(false);
 }
 
-.#{$prefix}-dark {
-  @include heading-vars(true);
-}
+// .#{$prefix}-dark {
+//   @include heading-vars(true);
+// }
 
 .#{$theme-name} {
   h1 {

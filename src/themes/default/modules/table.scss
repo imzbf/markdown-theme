@@ -28,16 +28,12 @@
       td {
         word-wrap: break-word;
         padding: 8px 14px;
-        border: 1px solid var(--md-theme-border-color);
+        // border: 1px solid var(--md-theme-border-color);
       }
     }
 
     tbody {
       tr {
-        &:nth-child(2n) {
-          background-color: var(--md-theme-table-stripe-color);
-        }
-
         &:hover {
           background-color: var(--md-theme-color-hover);
         }

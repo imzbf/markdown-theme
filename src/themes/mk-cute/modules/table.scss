@@ -25,22 +25,23 @@
     max-width: 100%;
     overflow: auto;
     border: solid 1px var(--md-theme-table-border-color);
-  }
-  thead {
-    background-color: var(--md-theme-table-thead-bg-color);
-    color: var(--md-theme-table-color);
-    text-align: left;
-  }
-  tr:nth-child(2n) {
-    background-color: var(--md-theme-table-stripe-color);
-  }
-  th,
-  td {
-    padding: 12px 7px;
-    line-height: 24px;
-  }
-  td {
-    min-width: 120px;
+
+    thead {
+      background-color: var(--md-theme-table-thead-bg-color);
+      color: var(--md-theme-table-color);
+      text-align: left;
+    }
+    tr {
+      th,
+      td {
+        padding: 12px 7px;
+        line-height: 24px;
+        border: none;
+      }
+      td {
+        min-width: 120px;
+      }
+    }
   }
 
   // 引用中的表格

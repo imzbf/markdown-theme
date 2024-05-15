@@ -14,15 +14,6 @@
 
 .#{$theme-name} {
   img {
-    max-width: 100%;
-    box-sizing: content-box;
     background-color: var(--md-theme-heading-bg-color);
   }
-
-  // // 引用中的表格
-  // blockquote {
-  //   img {
-  //     // border-color: var(--md-theme-border-color-inset);
-  //   }
-  // }
 }

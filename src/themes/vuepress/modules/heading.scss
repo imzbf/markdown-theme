@@ -1,6 +1,7 @@
 @mixin heading-vars($isDark) {
   div.#{$theme-name} {
     --md-theme-heading-color: #{if($isDark, #999, #273849)};
+    --md-theme-heading-2-border: 1px solid var(--md-theme-border-color);
   }
 }
 
@@ -20,7 +21,6 @@
   h5,
   h6 {
     font-weight: 600;
-    color: var(--md-theme-heading-color);
     line-height: 1.45;
     position: relative;
     margin-top: 1em;
@@ -34,7 +34,6 @@
   h2 {
     font-size: 1.65em;
     padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--md-theme-border-color);
   }
 
   h3 {

@@ -1,9 +1,9 @@
 @mixin table-vars($isDark) {
   div.#{$theme-name} {
     // 边框
-    --md-theme-table-border-color: #{if($isDark, #2d2d2d, #dfe2e5)};
+    --md-theme-table-td-border-color: #{if($isDark, #2d2d2d, #dfe2e5)};
     // 斑马条纹
-    --md-theme-table-bg-color: #{if($isDark, #0c0c0c, #f6f8fa)};
+    --md-theme-table-stripe-color: #{if($isDark, #0c0c0c, #f6f8fa)};
   }
 }
 
@@ -23,16 +23,9 @@
     overflow-x: auto;
 
     tr {
-      border-top: 1px solid var(--md-theme-table-border-color);
-
       th,
       td {
-        border: 1px solid var(--md-theme-table-border-color);
         padding: 0.6em 1em;
-      }
-
-      &:nth-child(2n) {
-        background-color: var(--md-theme-table-bg-color);
       }
     }
   }

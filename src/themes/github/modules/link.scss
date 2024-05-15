@@ -1,7 +1,16 @@
+@mixin heading-vars($isDark) {
+  div.#{$theme-name} {
+    --md-theme-link-color: #539bf5;
+    --md-theme-link-hover-color: #539bf5;
+  }
+}
+
+.#{$prefix} {
+  @include heading-vars(false);
+}
+
 .#{$theme-name} {
   a {
-    color: #539bf5;
-
     &:hover {
       text-decoration: underline;
     }

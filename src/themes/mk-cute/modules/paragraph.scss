@@ -3,9 +3,5 @@
     line-height: inherit;
     margin-top: $line-space;
     margin-bottom: $line-space;
-
-    &:empty {
-      display: none;
-    }
   }
 }

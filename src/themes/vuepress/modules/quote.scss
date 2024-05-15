@@ -1,8 +1,21 @@
+@mixin quote-vars($isDark) {
+  div.#{$theme-name} {
+    --md-theme-quote-border: 4px solid #42b983;
+  }
+}
+
+.#{$prefix} {
+  @include quote-vars(false);
+}
+
+// .#{$prefix}-dark {
+//   @include quote-vars(true);
+// }
+
 .#{$theme-name} {
   blockquote {
     margin: 2em 0;
     padding-left: 20px;
-    border-left: 4px solid #42b983;
 
     p {
       margin-left: 0;

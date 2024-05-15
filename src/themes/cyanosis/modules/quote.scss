@@ -1,8 +1,21 @@
+@mixin heading-vars($isDark) {
+  div.#{$theme-name} {
+    --md-theme-quote-color: var(--md-theme-blockquote-color);
+    --md-theme-quote-border: 4px solid var(--md-theme-strong-color);
+    --md-theme-quote-bg-color: var(--md-theme-blockquote-bg-color);
+  }
+}
+
+.#{$prefix} {
+  @include heading-vars(false);
+}
+
+// .#{$prefix}-dark {
+//   @include heading-vars(true);
+// }
+
 .#{$theme-name} {
   blockquote {
-    color: var(--md-theme-blockquote-color);
-    border-left: 4px solid var(--md-theme-strong-color);
-    background-color: var(--md-theme-blockquote-bg-color);
     padding: 1px 20px;
     margin: 22px 0;
     @include transitionColor();

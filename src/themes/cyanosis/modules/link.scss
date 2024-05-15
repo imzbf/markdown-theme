@@ -1,13 +1,22 @@
+@mixin heading-vars($isDark) {
+  div.#{$theme-name} {
+    --md-theme-link-color: var(--md-theme-link-color);
+    --md-theme-link-hover-color: var(--md-theme-linkh-color);
+  }
+}
+
+.#{$prefix} {
+  @include heading-vars(false);
+}
+
 .#{$theme-name} {
   a {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: var(--md-theme-link-color);
     border-bottom: 1px solid var(--md-theme-border-color);
 
     &:hover {
-      color: var(--md-theme-linkh-color);
       border-bottom-color: var(--md-theme-linkh-color);
     }
 
