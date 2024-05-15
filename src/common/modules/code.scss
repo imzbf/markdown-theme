@@ -58,7 +58,8 @@
     }
 
     .#{$prefix}-code-head {
-      display: flex;
+      display: grid;
+      grid-template: '1rf 1rf';
       justify-content: space-between;
       height: 32px;
       width: 100%;
@@ -68,6 +69,12 @@
       margin-bottom: 0;
       border-top-left-radius: var(--md-theme-code-block-radius);
       border-top-right-radius: var(--md-theme-code-block-radius);
+
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none; /* 隐藏Webkit内核浏览器的箭头 */
+      }
 
       .#{$prefix}-code-flag {
         margin-left: 12px;
