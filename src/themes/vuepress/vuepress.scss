@@ -25,7 +25,7 @@
   @include theme-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   font-size: 16px;
   color: var(--md-theme-color);
 

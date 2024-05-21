@@ -23,7 +23,7 @@
   @include code-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   code {
     padding: 3px 5px;
     margin: 0 2px;

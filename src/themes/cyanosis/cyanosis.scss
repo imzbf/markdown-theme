@@ -19,7 +19,7 @@
   @include theme-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   word-break: break-word;
   line-height: 1.75;
   font-weight: 400;

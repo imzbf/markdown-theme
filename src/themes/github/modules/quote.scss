@@ -13,7 +13,7 @@
   @include quote-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   blockquote {
     padding: 0 1em;
   }

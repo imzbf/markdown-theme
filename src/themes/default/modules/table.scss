@@ -13,7 +13,7 @@
   @include table-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   table {
     // width: 100%;
     // table-layout: fixed;

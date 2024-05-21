@@ -21,7 +21,7 @@
   @include code-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   code {
     font-family: $monospace-font;
     overflow-x: auto;

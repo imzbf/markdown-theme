@@ -9,7 +9,7 @@
   @include heading-vars(false);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   a {
     position: relative;
     display: inline-block;

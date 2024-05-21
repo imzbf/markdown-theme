@@ -9,7 +9,7 @@
   @include heading-vars(false);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   a {
     &:hover {
       text-decoration: underline;

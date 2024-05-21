@@ -12,7 +12,7 @@
   @include link-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   a {
     font-weight: 400;
   }

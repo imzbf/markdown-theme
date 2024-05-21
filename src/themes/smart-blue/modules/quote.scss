@@ -14,7 +14,7 @@
   @include quote-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   blockquote {
     background-color: var(--md-theme-quote-bg-color);
     margin: 2em 0;

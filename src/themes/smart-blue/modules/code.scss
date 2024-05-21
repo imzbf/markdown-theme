@@ -21,7 +21,7 @@
   @include code-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   code {
     overflow-x: auto;
     padding: 0.065em 0.4em;

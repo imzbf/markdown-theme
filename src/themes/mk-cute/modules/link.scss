@@ -9,7 +9,7 @@
   @include heading-vars(false);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   a {
     display: inline-block;
     border-bottom: 1px solid $link-color;

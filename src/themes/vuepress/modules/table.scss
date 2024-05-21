@@ -15,7 +15,7 @@
   @include table-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   table {
     border-collapse: collapse;
     margin: 1rem 0;

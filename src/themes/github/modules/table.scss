@@ -16,7 +16,7 @@
   @include table-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   table {
     display: block;
     max-width: 100%;

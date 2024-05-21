@@ -15,7 +15,7 @@
   @include quote-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   blockquote {
     position: relative;
     padding: 8px 26px;

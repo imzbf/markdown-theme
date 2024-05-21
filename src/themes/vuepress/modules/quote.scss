@@ -12,7 +12,7 @@
 //   @include quote-vars(true);
 // }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   blockquote {
     margin: 2em 0;
     padding-left: 20px;

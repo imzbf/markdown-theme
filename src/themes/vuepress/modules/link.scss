@@ -8,7 +8,7 @@
   @include link-vars(false);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   a {
     font-weight: 600;
   }

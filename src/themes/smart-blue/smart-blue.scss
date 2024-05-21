@@ -43,7 +43,7 @@
   @include theme-mix(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   // padding: 16px;
   color: var(--md-theme-color);
   // font-size: 15px;

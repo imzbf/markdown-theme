@@ -63,7 +63,7 @@ $d-selectionCodeBgColor: $d-borderColor2;
 $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
 
 @mixin theme-vars($isDark: false) {
-  .#{$theme-name} {
+  div.#{$theme-name} {
     #{$id}-base-color: if($isDark, $d-baseColor, $l-baseColor);
     #{$id}-title-color: if($isDark, $d-titleColor, $l-titleColor);
     #{$id}-strong-color: if($isDark, $d-strongColor, $l-strongColor);

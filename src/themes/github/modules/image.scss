@@ -12,7 +12,7 @@
   @include image-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   img {
     background-color: var(--md-theme-heading-bg-color);
   }

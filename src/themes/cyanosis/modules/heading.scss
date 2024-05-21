@@ -12,7 +12,7 @@
 //   @include heading-vars(true);
 // }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   h1 {
     @include headTitle(4px, 30px);
     @include transitionColor();

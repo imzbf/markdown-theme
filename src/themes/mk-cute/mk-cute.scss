@@ -30,7 +30,7 @@
 
 // 亮模式
 .#{$prefix} {
-  .#{$theme-name} {
+  div.#{$theme-name} {
     --md-theme-color: #{$theme-color};
     @include theme-mix(false);
   }
@@ -38,14 +38,14 @@
 
 // 暗模式
 .#{$prefix}-dark {
-  .#{$theme-name} {
+  div.#{$theme-name} {
     @include theme-mix(true);
 
     --md-theme-bg-color-scrollbar-thumb: #4d4d4d;
   }
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   word-break: break-word;
   line-height: 1.75;
   font-weight: 400;

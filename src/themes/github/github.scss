@@ -10,7 +10,7 @@
 @import './modules/table.scss';
 
 @mixin theme-vars($isDark) {
-  .#{$theme-name} {
+  div.#{$theme-name} {
     --md-theme-color: #{if($isDark, #c9d1d9, #222)};
   }
 }
@@ -26,7 +26,7 @@
 }
 
 // 从github上copy的部分样式
-.#{$theme-name} {
+div.#{$theme-name} {
   line-height: 1.5;
   color: var(--md-theme-color);
 
