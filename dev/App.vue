@@ -41,10 +41,10 @@ watch(
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-}
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
 
 .dark {
   background-color: #000;
