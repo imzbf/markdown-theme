@@ -4,7 +4,8 @@
     display: none;
     text-align: center;
     // 覆盖图的外部样式，否则字体会受p定义的行高下沉
-    line-height: 1;
+    // 中文字体会上浮
+    line-height: normal;
   }
 
   [class='#{$prefix}-mermaid'][data-processed] {
