@@ -1,5 +1,5 @@
 @mixin code-vars($isDark) {
-  .#{$prefix}-preview {
+  div.#{$theme-name} {
     --md-theme-code-copy-tips-color: #{if($isDark, inherit, #141414)};
   }
 }
@@ -12,7 +12,7 @@
   @include code-vars(true);
 }
 
-.#{$theme-name} {
+div.#{$theme-name} {
   .#{$prefix}-code {
     pre {
       code {
