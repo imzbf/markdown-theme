@@ -14,6 +14,7 @@
         v-model="state.text"
         :theme="state.theme"
         :previewTheme="state.previewTheme"
+        :customIcon="state.customIcon"
         showCodeRowNumber
         previewOnly
       />
@@ -22,12 +23,16 @@
 </template>
 <script setup>
 import { reactive, watch } from 'vue';
-import { MdPreview } from 'md-editor-v3';
+import { MdPreview, StrIcon } from 'md-editor-v3';
 import mdAll from './md-all.md';
+
 const state = reactive({
   theme: 'light',
   previewTheme: localStorage.getItem('preview-theme') || 'default',
-  text: mdAll
+  text: mdAll,
+  customIcon: {
+    copy: StrIcon('copy', {})
+  }
 });
 
 const changeTheme = () => (state.theme = state.theme === 'dark' ? 'light' : 'dark');

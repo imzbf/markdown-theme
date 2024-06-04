@@ -149,16 +149,96 @@
         }
       }
 
+      .#{$prefix}-code-action {
+        > * {
+          margin-right: 10px;
+        }
+      }
+
       .#{$prefix}-code-lang {
-        margin-right: 12px;
         line-height: 32px;
       }
 
-      .#{$prefix}-copy-button {
+      .#{$prefix}-copy-button:not(data-is-icon) {
         cursor: pointer;
         line-height: 32px;
-        margin-right: 12px;
         position: initial;
+
+        .#{$prefix}-icon {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          vertical-align: sub;
+        }
+      }
+
+      .#{$prefix}-copy-button[data-is-icon] {
+        cursor: pointer;
+        line-height: 1;
+        position: relative;
+
+        .#{$prefix}-icon {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          vertical-align: sub;
+        }
+
+        &::before {
+          content: attr(data-tips);
+          color: var(--md-theme-code-copy-tips-color);
+          background-color: var(--md-theme-code-copy-tips-bg-color);
+          position: absolute;
+          font-size: 12px;
+          font-family: sans-serif;
+          width: max-content;
+          text-align: center;
+          padding: 4px;
+          border-radius: 2px;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+          left: -10px;
+          top: 50%;
+          transform: translate(-100%, -50%);
+        }
+
+        &::after {
+          content: '';
+          color: var(--md-theme-code-copy-tips-bg-color);
+          position: absolute;
+          width: 0;
+          height: 0;
+          border: 5px solid transparent;
+          border-right-width: 0;
+          border-left-color: currentColor;
+          left: -10px;
+          top: 50%;
+          transform: translate(0, -50%);
+          filter: drop-shadow(4px 0 2px rgba(0, 0, 0, 0.2));
+        }
+
+        &::before,
+        &::after {
+          visibility: hidden;
+          transition: 0.3s;
+        }
+
+        &:hover::before,
+        &:hover::after {
+          visibility: visible;
+        }
+      }
+
+      .#{$prefix}-collapse-tips {
+        margin-right: 12px;
+
+        .#{$prefix}-icon {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          vertical-align: sub;
+          transform: rotate(0);
+          transition: transform 0.1s;
+        }
       }
     }
 
@@ -211,6 +291,12 @@
       .#{$prefix}-code-head {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+
+        .#{$prefix}-collapse-tips {
+          .#{$prefix}-icon {
+            transform: rotate(-90deg);
+          }
+        }
       }
     }
   }

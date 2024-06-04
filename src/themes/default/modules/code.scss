@@ -1,3 +1,17 @@
+@mixin code-vars($isDark) {
+  .#{$prefix}-preview {
+    --md-theme-code-copy-tips-color: #{if($isDark, inherit, #141414)};
+  }
+}
+
+.#{$prefix} {
+  @include code-vars(false);
+}
+
+.#{$prefix}-dark {
+  @include code-vars(true);
+}
+
 .#{$theme-name} {
   .#{$prefix}-code {
     pre {
