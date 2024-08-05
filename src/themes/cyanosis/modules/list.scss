@@ -57,7 +57,7 @@
         z-index: 1;
       }
 
-      &::after {
+      &[checked]::after {
         content: '✓';
         position: absolute;
         top: -12px;

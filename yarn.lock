@@ -650,10 +650,10 @@
   resolved "https://registry.npmjs.org/@types/mdurl/-/mdurl-2.0.0.tgz#d43878b5b20222682163ae6f897b20447233bdfd"
   integrity sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==
 
-"@vavt/util@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.npmjs.org/@vavt/util/-/util-1.5.1.tgz#e75b1e26571453037384585acedd2eba70f42780"
-  integrity sha512-/q/ilzRwZZJlnDAl6DGZ8pinOSAjR91dcck79bi1ujrqYlPaFVHnbmkDeGPuLub6A821rXvtPXVRXULrfMN03Q==
+"@vavt/util@^1.6.2":
+  version "1.7.0"
+  resolved "https://registry.npmjs.org/@vavt/util/-/util-1.7.0.tgz#99efd5528e5d178876ac70c164d6668a97d0ecea"
+  integrity sha512-EAwplP/2Lm79KCFj5umtU/HKgFUi8Ec6a1clK2Za4MErkAkY8+mdOSnAFJdltceWzmnauZrEc+By+u0ZvX6u6g==
 
 "@vavt/vite-plugin-import-markdown@^1.0.0":
   version "1.0.0"
@@ -964,18 +964,6 @@ markdown-it-image-figures@^2.1.1:
   resolved "https://registry.npmjs.org/markdown-it-image-figures/-/markdown-it-image-figures-2.1.1.tgz#fd32a2d0cec60ed8c3916d74fea70d5f9b56e4c7"
   integrity sha512-mwXSQ2nPeVUzCMIE3HlLvjRioopiqyJLNph0pyx38yf9mpqFDhNGnMpAXF9/A2Xv0oiF2cVyg9xwfF0HNAz05g==
 
-markdown-it-task-lists@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/markdown-it-task-lists/-/markdown-it-task-lists-2.1.1.tgz#f68f4d2ac2bad5a2c373ba93081a1a6848417088"
-  integrity sha512-TxFAc76Jnhb2OUu+n3yz9RMu4CwGfaT788br6HhEDlvWfdeJcLUsxk1Hgw2yJio0OXsxv7pyIPmvECY7bMbluA==
-
-markdown-it-xss@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/markdown-it-xss/-/markdown-it-xss-1.0.2.tgz#b4daacca642d5a70be0fc6c76ad36e3401422631"
-  integrity sha512-D52im1+e394EckqhK0AuyqxQ/WCuo09wJWInuCh6j1O2d6LqImJOu36lA6KZqImhWJeYIQnGeryaH3wXcro5MQ==
-  dependencies:
-    xss "^1.0.6"
-
 markdown-it@^14.0.0:
   version "14.1.0"
   resolved "https://registry.npmjs.org/markdown-it/-/markdown-it-14.1.0.tgz#3c3c5992883c633db4714ccb4d7b5935d98b7d45"
@@ -988,24 +976,23 @@ markdown-it@^14.0.0:
     punycode.js "^2.3.1"
     uc.micro "^2.1.0"
 
-md-editor-v3@^4.15.0-0-0:
-  version "4.15.0-0-0"
-  resolved "https://registry.npmjs.org/md-editor-v3/-/md-editor-v3-4.15.0-0-0.tgz#e101f0637bee9aecece244a2e9aa6c22820fff4f"
-  integrity sha512-CI30WrzrF0chKyXDtDoYhpQ1dgXp6ff+Zn+UsTbrSxbMXdOQHca0+GRAlo7Sv+m0J4P4FFvMopRbBZ1KbKKtMw==
+md-editor-v3@^4.18.0-4:
+  version "4.18.0-4"
+  resolved "https://registry.npmjs.org/md-editor-v3/-/md-editor-v3-4.18.0-4.tgz#b7085941b6b6bbb977973e0a3e83a718f0adf4f7"
+  integrity sha512-sgHx/dPHr9zdeGxcxiuGW8xB1PJhbK2t1l3RRN7iimQHPSikW2aEM2xgM98vM2RD0EnD3FmVxh8ue8Sq6AXiyg==
   dependencies:
     "@codemirror/lang-markdown" "^6.2.5"
     "@codemirror/language-data" "^6.5.1"
     "@types/markdown-it" "^14.0.1"
-    "@vavt/util" "^1.5.1"
+    "@vavt/util" "^1.6.2"
     codemirror "^6.0.1"
     copy-to-clipboard "^3.3.3"
     lru-cache "^10.2.0"
     markdown-it "^14.0.0"
     markdown-it-image-figures "^2.1.1"
-    markdown-it-task-lists "^2.1.1"
-    markdown-it-xss "^1.0.2"
     medium-zoom "^1.1.0"
     punycode "^2.3.1"
+    xss "^1.0.15"
 
 mdurl@^2.0.0:
   version "2.0.0"
@@ -1168,7 +1155,7 @@ w3c-keyname@^2.2.4:
   resolved "https://registry.npmjs.org/w3c-keyname/-/w3c-keyname-2.2.6.tgz#8412046116bc16c5d73d4e612053ea10a189c85f"
   integrity sha512-f+fciywl1SJEniZHD6H+kUO8gOnwIr7f4ijKA6+ZvJFjeGi1r4PDLl53Ayud9O/rk64RqgoQine0feoeOU0kXg==
 
-xss@^1.0.6:
+xss@^1.0.15:
   version "1.0.15"
   resolved "https://registry.npmjs.org/xss/-/xss-1.0.15.tgz#96a0e13886f0661063028b410ed1b18670f4e59a"
   integrity sha512-FVdlVVC67WOIPvfOwhoMETV72f6GbW7aOabBC3WxN/oUdoEMDyLz4OgRv5/gck2ZeNqEQu+Tb0kloovXOfpYVg==
