@@ -231,7 +231,8 @@
       .#{$prefix}-collapse-tips {
         margin-right: 12px;
 
-        .#{$prefix}-icon {
+        .#{$prefix}-icon,
+        .#{$prefix}-iconfont {
           width: 15px;
           height: 15px;
           display: inline-block;
