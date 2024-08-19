@@ -49,7 +49,7 @@
 
     input:checked + pre,
     input:checked + span.#{$prefix}-code-lang {
-      display: initial;
+      display: block;
     }
 
     input:checked + label {
@@ -150,6 +150,9 @@
       }
 
       .#{$prefix}-code-action {
+        display: flex;
+        align-items: center;
+
         > * {
           margin-right: 10px;
         }
@@ -257,6 +260,7 @@
         line-height: 1.6;
         overflow: auto;
         padding: 1em;
+        position: relative;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-left-radius: var(--md-theme-code-block-radius);
