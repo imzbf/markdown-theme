@@ -1,6 +1,6 @@
 .#{$prefix}-preview {
   .#{$prefix}-mermaid {
-    overflow-x: auto;
+    overflow: hidden;
     display: none;
     text-align: center;
     // 覆盖图的外部样式，否则字体会受p定义的行高下沉
