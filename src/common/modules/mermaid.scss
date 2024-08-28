@@ -2,13 +2,24 @@
   .#{$prefix}-mermaid {
     overflow: hidden;
     display: none;
-    text-align: center;
+    // text-align: center;
     // 覆盖图的外部样式，否则字体会受p定义的行高下沉
     // 中文字体会上浮
     line-height: normal;
   }
 
   [class='#{$prefix}-mermaid'][data-processed] {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    svg {
+      transform-origin: top left;
+    }
   }
 }
