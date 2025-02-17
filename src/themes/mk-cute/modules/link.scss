@@ -1,7 +1,7 @@
 @mixin heading-vars($isDark) {
   div.#{$theme-name} {
-    --md-theme-link-color: $link-color;
-    --md-theme-link-hover-color: $link-active-color;
+    --md-theme-link-color: #{$link-color};
+    --md-theme-link-hover-color: #{$link-active-color};
   }
 }
 

@@ -1,6 +1,6 @@
 @mixin code-vars($isDark) {
   div.#{$theme-name} {
-    --md-theme-heading-color: $theme-color;
+    --md-theme-heading-color: #{$theme-color};
   }
 }
 
