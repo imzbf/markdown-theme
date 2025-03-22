@@ -45,4 +45,8 @@
   ::-webkit-scrollbar-thumb:vertical:active {
     background-color: var(--md-theme-bg-color-scrollbar-thumb-active);
   }
+
+  :last-child {
+    margin-bottom: 0;
+  }
 }
