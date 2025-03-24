@@ -1,4 +1,6 @@
-div.#{$theme-name} {
+@use '../scss-vars' as sv;
+
+div.#{sv.$theme-name} {
   p {
     line-height: 1.6;
     margin: 0.5rem 0;

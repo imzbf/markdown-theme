@@ -1,4 +1,6 @@
-.#{$prefix}-preview {
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-preview {
   hr {
     height: 1px;
     margin: 10px 0;

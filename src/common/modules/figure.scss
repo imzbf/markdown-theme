@@ -1,4 +1,6 @@
-.#{$prefix}-preview {
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-preview {
   figure {
     margin: 0 0 1em 0;
     display: inline-flex;

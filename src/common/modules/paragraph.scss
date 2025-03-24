@@ -1,4 +1,6 @@
-.#{$prefix}-preview {
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-preview {
   p {
     &:empty {
       display: none;

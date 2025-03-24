@@ -1,4 +1,6 @@
-div.#{$theme-name} {
+@use '../scss-vars' as sv;
+
+div.#{sv.$theme-name} {
   ol,
   ul {
     margin: 0.6em 0;

@@ -1,4 +1,6 @@
-div.#{$theme-name} {
+@use '../scss-vars' as sv;
+
+div.#{sv.$theme-name} {
   img {
     margin: 0 auto;
     box-sizing: border-box;

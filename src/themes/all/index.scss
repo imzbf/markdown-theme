@@ -1,8 +1,8 @@
-@import '../../common/index.scss';
+@use '../../common/index.scss';
 
-@import '../default/default.scss';
-@import '../vuepress/vuepress.scss';
-@import '../github/github.scss';
-@import '../cyanosis/cyanosis.scss';
-@import '../mk-cute/mk-cute.scss';
-@import '../smart-blue/smart-blue.scss';
+@use '../default/default.scss';
+// @use '../vuepress/vuepress.scss';
+// @use '../github/github.scss';
+// @use '../cyanosis/cyanosis.scss';
+// @use '../mk-cute/mk-cute.scss';
+// @use '../smart-blue/smart-blue.scss';

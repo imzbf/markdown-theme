@@ -1,17 +1,19 @@
-.#{prefix}-katex-block {
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-katex-block {
   text-align: center;
   margin: 20px;
 }
 
-.#{prefix}-katex-inline,
-.#{prefix}-katex-block {
+.#{csv.$prefix}-katex-inline,
+.#{csv.$prefix}-katex-block {
   display: none;
 }
 
-.#{prefix}-katex-inline[data-processed] {
+.#{csv.$prefix}-katex-inline[data-processed] {
   display: initial;
 }
 
-.#{prefix}-katex-block[data-processed] {
+.#{csv.$prefix}-katex-block[data-processed] {
   display: block;
 }

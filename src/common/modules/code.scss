@@ -1,5 +1,7 @@
+@use '../scss-vars' as csv;
+
 @mixin code-vars($isDark) {
-  .#{$prefix}-preview {
+  .#{csv.$prefix}-preview {
     --md-theme-code-inline-color: #3594f7;
     --md-theme-code-inline-bg-color: rgba(59, 170, 250, 0.1);
     // 圆角
@@ -15,15 +17,15 @@
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include code-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include code-vars(true);
 }
 
-.#{$prefix}-preview {
+.#{csv.$prefix}-preview {
   // 行内
   code {
     color: var(--md-theme-code-inline-color);
@@ -34,7 +36,7 @@
   }
 
   // 块级
-  .#{$prefix}-code {
+  .#{csv.$prefix}-code {
     color: var(--md-theme-code-block-color);
     font-size: 12px;
     line-height: 1;
@@ -43,12 +45,12 @@
 
     input[type='radio'],
     input[type='radio'] + pre,
-    input[type='radio'] + span.#{$prefix}-code-lang {
+    input[type='radio'] + span.#{csv.$prefix}-code-lang {
       display: none;
     }
 
     input:checked + pre,
-    input:checked + span.#{$prefix}-code-lang {
+    input:checked + span.#{csv.$prefix}-code-lang {
       display: block;
     }
 
@@ -57,7 +59,7 @@
       color: var(--md-theme-code-active-color);
     }
 
-    .#{$prefix}-code-head {
+    .#{csv.$prefix}-code-head {
       display: grid;
       grid-template: '1rf 1rf';
       justify-content: space-between;
@@ -77,7 +79,7 @@
         display: none; /* 隐藏Webkit内核浏览器的箭头 */
       }
 
-      .#{$prefix}-code-flag {
+      .#{csv.$prefix}-code-flag {
         margin-left: 12px;
 
         span {
@@ -102,7 +104,7 @@
           margin-left: 4px;
         }
 
-        ul.#{$prefix}-codetab-label {
+        ul.#{csv.$prefix}-codetab-label {
           // font-size: 0;
           box-sizing: border-box;
           white-space: nowrap;
@@ -149,7 +151,7 @@
         }
       }
 
-      .#{$prefix}-code-action {
+      .#{csv.$prefix}-code-action {
         display: flex;
         align-items: center;
 
@@ -158,16 +160,16 @@
         }
       }
 
-      .#{$prefix}-code-lang {
+      .#{csv.$prefix}-code-lang {
         line-height: 32px;
       }
 
-      .#{$prefix}-copy-button:not(data-is-icon) {
+      .#{csv.$prefix}-copy-button:not(data-is-icon) {
         cursor: pointer;
         line-height: 32px;
         position: initial;
 
-        .#{$prefix}-icon {
+        .#{csv.$prefix}-icon {
           width: 15px;
           height: 15px;
           display: inline-block;
@@ -175,12 +177,12 @@
         }
       }
 
-      .#{$prefix}-copy-button[data-is-icon] {
+      .#{csv.$prefix}-copy-button[data-is-icon] {
         cursor: pointer;
         line-height: 1;
         position: relative;
 
-        .#{$prefix}-icon {
+        .#{csv.$prefix}-icon {
           width: 15px;
           height: 15px;
           display: inline-block;
@@ -231,11 +233,11 @@
         }
       }
 
-      .#{$prefix}-collapse-tips {
+      .#{csv.$prefix}-collapse-tips {
         margin-right: 12px;
 
-        .#{$prefix}-icon,
-        .#{$prefix}-iconfont {
+        .#{csv.$prefix}-icon,
+        .#{csv.$prefix}-iconfont {
           width: 16px;
           height: 16px;
           font-size: 16px;
@@ -266,7 +268,7 @@
         border-bottom-left-radius: var(--md-theme-code-block-radius);
         border-bottom-right-radius: var(--md-theme-code-block-radius);
 
-        .#{$prefix}-code-block {
+        .#{csv.$prefix}-code-block {
           display: inline-block;
           width: 100%;
           overflow: auto;
@@ -278,12 +280,12 @@
   }
 
   // 展开收起模块
-  details.#{$prefix}-code {
-    .#{$prefix}-code-head {
+  details.#{csv.$prefix}-code {
+    .#{csv.$prefix}-code-head {
       cursor: pointer;
     }
     &:not(open) {
-      .#{$prefix}-code-head {
+      .#{csv.$prefix}-code-head {
         border-bottom-left-radius: var(--md-theme-code-block-radius);
         border-bottom-right-radius: var(--md-theme-code-block-radius);
       }
@@ -294,13 +296,13 @@
     }
 
     &[open] {
-      .#{$prefix}-code-head {
+      .#{csv.$prefix}-code-head {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
 
-        .#{$prefix}-collapse-tips {
-          .#{$prefix}-icon,
-          .#{$prefix}-iconfont {
+        .#{csv.$prefix}-collapse-tips {
+          .#{csv.$prefix}-icon,
+          .#{csv.$prefix}-iconfont {
             transform: rotate(-90deg);
           }
         }
@@ -310,7 +312,7 @@
 }
 
 // show code row numer，显示代码行号
-.#{$prefix}-scrn {
+.#{csv.$prefix}-scrn {
   span[rn-wrapper] {
     position: absolute;
     pointer-events: none;

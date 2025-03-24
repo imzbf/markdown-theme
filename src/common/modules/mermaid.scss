@@ -1,5 +1,7 @@
-.#{$prefix}-preview {
-  .#{$prefix}-mermaid {
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-preview {
+  .#{csv.$prefix}-mermaid {
     overflow: hidden;
     display: none;
     // text-align: center;
@@ -8,14 +10,14 @@
     line-height: normal;
   }
 
-  [class='#{$prefix}-mermaid'][data-grab] {
+  [class='#{csv.$prefix}-mermaid'][data-grab] {
     cursor: grab;
     &:active {
       cursor: grabbing;
     }
   }
 
-  [class='#{$prefix}-mermaid'][data-processed] {
+  [class='#{csv.$prefix}-mermaid'][data-processed] {
     position: relative;
     display: flex;
     justify-content: center;
@@ -25,7 +27,7 @@
       transform-origin: top left;
     }
 
-    .#{$prefix}-mermaid-action {
+    .#{csv.$prefix}-mermaid-action {
       position: absolute;
       top: 10px;
       right: 10px;
@@ -40,7 +42,7 @@
       }
     }
 
-    &:hover .#{$prefix}-mermaid-action {
+    &:hover .#{csv.$prefix}-mermaid-action {
       opacity: 1;
     }
   }

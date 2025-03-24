@@ -1,5 +1,7 @@
-@mixin code-vars($isDark) {
-  .#{$prefix}-preview {
+@use '../scss-vars' as csv;
+
+@mixin heading-vars($isDark) {
+  .#{csv.$prefix}-preview {
     --md-theme-heading-color: var(--md-theme-color);
     --md-theme-heading-border: none;
 
@@ -10,15 +12,11 @@
   }
 }
 
-.#{$prefix} {
-  @include code-vars(false);
+.#{csv.$prefix} {
+  @include heading-vars(false);
 }
 
-.#{$prefix}-dark {
-  @include code-vars(true);
-}
-
-.#{$prefix}-preview {
+.#{csv.$prefix}-preview {
   h1,
   h2,
   h3,

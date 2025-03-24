@@ -1,19 +1,22 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin code-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-code-copy-tips-color: #{if($isDark, inherit, #141414)};
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include code-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include code-vars(true);
 }
 
-div.#{$theme-name} {
-  .#{$prefix}-code {
+div.#{sv.$theme-name} {
+  .#{csv.$prefix}-code {
     pre {
       code {
         box-shadow: #00000055 0px 2px 2px;
