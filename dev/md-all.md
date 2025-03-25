@@ -53,7 +53,7 @@ Markdown 编辑器，vue3 版本，使用 jsx 模板 和 typescript 开发，支
 
 ## 基本演示
 
-段落中文字**加粗**，<u>下划线</u>， _斜体_ ，~删除线~，上标<sup>26</sup>，下标<sub>26</sub>，`inline code`，[超链接](https://imzbf.github.io/markdown-theme)
+段落中文字**加粗**，<u>下划线</u>， _斜体_ ，~删除线~，上标<sup>26</sup>，下标<sub>26</sub>，`inline code`，[超链接](https://imzbf.github.io/markdown-theme)，<a href="https://imzbf.github.io/markdown-theme" target="_blank">外部链接</a>
 
 > 引用：这是一段引用，引用中的文字**加粗**，<u>下划线</u>， _斜体_ ，~删除线~，上标<sup>26</sup>，下标<sub>26</sub>，`inline code`，[超链接](https://imzbf.github.io/markdown-theme)。
 
