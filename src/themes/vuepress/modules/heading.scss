@@ -1,19 +1,22 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin heading-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-heading-color: #{if($isDark, #999, #273849)};
     --md-theme-heading-2-border: 1px solid var(--md-theme-border-color);
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include heading-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include heading-vars(true);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   h1,
   h2,
   h3,

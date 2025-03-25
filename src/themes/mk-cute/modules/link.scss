@@ -1,22 +1,25 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin heading-vars($isDark) {
-  div.#{$theme-name} {
-    --md-theme-link-color: #{$link-color};
-    --md-theme-link-hover-color: #{$link-active-color};
+  div.#{sv.$theme-name} {
+    --md-theme-link-color: #{sv.$link-color};
+    --md-theme-link-hover-color: #{sv.$link-active-color};
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include heading-vars(false);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   a {
     display: inline-block;
-    border-bottom: 1px solid $link-color;
+    border-bottom: 1px solid sv.$link-color;
 
     &:hover,
     &:active {
-      border-bottom: 1px solid $link-active-color;
+      border-bottom: 1px solid sv.$link-active-color;
     }
   }
 }

@@ -1,5 +1,8 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin code-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-code-inline-color: var(--md-theme-code-color);
     --md-theme-code-inline-bg-color: var(--md-theme-code-bg-color);
     --md-theme-code-block-color: var(--md-theme-base-color);
@@ -8,18 +11,18 @@
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include code-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include code-vars(true);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   code {
     padding: 0.065em 0.4em;
-    font-family: $monospace-font;
+    font-family: sv.$monospace-font;
     overflow-x: auto;
 
     &::selection {
@@ -27,9 +30,9 @@ div.#{$theme-name} {
     }
   }
 
-  .#{$prefix}-code {
+  .#{csv.$prefix}-code {
     pre {
-      font-family: $monospace-font;
+      font-family: sv.$monospace-font;
 
       code {
         padding: 11px 12px 22px;

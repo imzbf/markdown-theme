@@ -1,13 +1,14 @@
-@import './scss-vars.scss';
+@use '../../common/scss-vars' as csv;
+@use './scss-vars' as sv;
 
-@import './modules/code.scss';
-@import './modules/heading.scss';
-@import './modules/image.scss';
-@import './modules/link.scss';
-@import './modules/list.scss';
-@import './modules/paragraph.scss';
-@import './modules/quote.scss';
-@import './modules/table.scss';
+@use './modules/code';
+@use './modules/heading';
+@use './modules/image';
+@use './modules/link';
+@use './modules/list';
+@use './modules/paragraph';
+@use './modules/quote';
+@use './modules/table';
 
 @keyframes spin {
   0% {
@@ -29,29 +30,29 @@
 }
 
 // 亮模式
-.#{$prefix} {
-  div.#{$theme-name} {
-    --md-theme-color: #{$theme-color};
+.#{csv.$prefix} {
+  div.#{sv.$theme-name} {
+    --md-theme-color: #{sv.$theme-color};
     @include theme-mix(false);
   }
 }
 
 // 暗模式
-.#{$prefix}-dark {
-  div.#{$theme-name} {
+.#{csv.$prefix}-dark {
+  div.#{sv.$theme-name} {
     @include theme-mix(true);
 
     --md-theme-bg-color-scrollbar-thumb: #4d4d4d;
   }
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   word-break: break-word;
   line-height: 1.75;
   font-weight: 400;
   // font-size: 15px;
   overflow-x: hidden;
-  // color: $theme-color;
+  // color: sv.$theme-color;
   background-size: 20px 20px;
   background-position: center center;
 
@@ -62,11 +63,11 @@ div.#{$theme-name} {
     border: none;
     margin-top: 32px;
     margin-bottom: 32px;
-    background-image: linear-gradient(to right, $theme-color, #dff0fe, $theme-color);
+    background-image: linear-gradient(to right, sv.$theme-color, #dff0fe, sv.$theme-color);
     overflow: visible;
   }
 
   del {
-    color: $theme-color;
+    color: sv.$theme-color;
   }
 }

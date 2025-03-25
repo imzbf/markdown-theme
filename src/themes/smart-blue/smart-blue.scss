@@ -1,22 +1,23 @@
-@import './scss-vars.scss';
+@use '../../common/scss-vars' as csv;
+@use './scss-vars' as sv;
 
-@import './modules/code.scss';
-@import './modules/heading.scss';
-@import './modules/image.scss';
-@import './modules/link.scss';
-@import './modules/list.scss';
-@import './modules/paragraph.scss';
-@import './modules/quote.scss';
-@import './modules/table.scss';
+@use './modules/code';
+@use './modules/heading';
+@use './modules/image';
+@use './modules/link';
+@use './modules/list';
+@use './modules/paragraph';
+@use './modules/quote';
+@use './modules/table';
 
 @mixin theme-vars($isDark) {
-  .#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-color: #{if($isDark, #999, #595959)};
   }
 }
 
 @mixin theme-mix($isDark) {
-  .#{$theme-name} {
+  div.#{sv.$theme-name} {
     @if $isDark {
       background-image: linear-gradient(
           90deg,
@@ -32,18 +33,18 @@
 }
 
 // 亮模式
-.#{$prefix} {
+.#{csv.$prefix} {
   @include theme-vars(false);
   @include theme-mix(false);
 }
 
 // 暗模式
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include theme-vars(true);
   @include theme-mix(true);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   // padding: 16px;
   color: var(--md-theme-color);
   // font-size: 15px;

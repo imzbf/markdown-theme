@@ -1,4 +1,7 @@
-.#{$theme-name} {
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
+div.#{sv.$theme-name} {
   img {
     margin: 0 auto;
   }

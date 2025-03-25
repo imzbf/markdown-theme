@@ -1,14 +1,17 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin link-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-link-color: #42b983;
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include link-vars(false);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   a {
     font-weight: 600;
   }

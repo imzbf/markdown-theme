@@ -1,12 +1,15 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin heading-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-quote-color: var(--md-theme-blockquote-color);
     --md-theme-quote-border: 4px solid var(--md-theme-strong-color);
     --md-theme-quote-bg-color: var(--md-theme-blockquote-bg-color);
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include heading-vars(false);
 }
 
@@ -14,11 +17,11 @@
 //   @include heading-vars(true);
 // }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   blockquote {
     padding: 1px 20px;
     margin: 22px 0;
-    @include transitionColor();
+    @include sv.transitionColor();
 
     &::after {
       display: block;

@@ -1,5 +1,8 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin table-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     // 边框
     --md-theme-table-td-border-color: #{if($isDark, #2d2d2d, #dfe2e5)};
     // 斑马条纹
@@ -7,15 +10,15 @@
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include table-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include table-vars(true);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   table {
     border-collapse: collapse;
     margin: 1rem 0;

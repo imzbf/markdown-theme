@@ -1,18 +1,21 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin quote-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-quote-border: 4px solid #42b983;
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include quote-vars(false);
 }
 
-// .#{$prefix}-dark {
+// .#{csv.$prefix}-dark {
 //   @include quote-vars(true);
 // }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   blockquote {
     margin: 2em 0;
     padding-left: 20px;

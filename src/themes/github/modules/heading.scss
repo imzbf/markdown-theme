@@ -1,5 +1,8 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin heading-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-heading-color: #{if($isDark, #c9d1d9, inherit)};
     --md-theme-heading-6-color: #{if($isDark, #768390, #2d3339)};
     --md-theme-heading-1-border: 1px solid #{if($isDark, #373e47, #d9dee4)};
@@ -7,15 +10,15 @@
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include heading-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include heading-vars(true);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   h1,
   h2,
   h3,

@@ -1,32 +1,33 @@
-@import './scss-vars.scss';
+@use '../../common/scss-vars' as csv;
+@use './scss-vars' as sv;
 
-@import './modules/code.scss';
-@import './modules/heading.scss';
-@import './modules/image.scss';
-@import './modules/link.scss';
-@import './modules/list.scss';
-@import './modules/paragraph.scss';
-@import './modules/quote.scss';
-@import './modules/table.scss';
+@use './modules/code';
+@use './modules/heading';
+@use './modules/image';
+@use './modules/link';
+@use './modules/list';
+@use './modules/paragraph';
+@use './modules/quote';
+@use './modules/table';
 
 @mixin theme-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-color: #{if($isDark, #c9d1d9, #222)};
   }
 }
 
 // 亮模式
-.#{$prefix} {
+.#{csv.$prefix} {
   @include theme-vars(false);
 }
 
 // 暗模式
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include theme-vars(true);
 }
 
 // 从github上copy的部分样式
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   line-height: 1.5;
   color: var(--md-theme-color);
 

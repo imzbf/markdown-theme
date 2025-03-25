@@ -1,5 +1,8 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin code-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     // 行内
     --md-theme-code-inline-color: #{if($isDark, #e06c75, #d63200)};
     --md-theme-code-inline-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
@@ -15,21 +18,21 @@
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include code-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include code-vars(true);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   code {
     padding: 3px 5px;
     margin: 0 2px;
   }
 
-  .#{$prefix}-code {
+  .#{csv.$prefix}-code {
     pre {
       font-size: 0.875em;
       margin: 0 0 1em;

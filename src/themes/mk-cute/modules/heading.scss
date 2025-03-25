@@ -1,10 +1,13 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin code-vars($isDark) {
-  div.#{$theme-name} {
-    --md-theme-heading-color: #{$theme-color};
+  div.#{sv.$theme-name} {
+    --md-theme-heading-color: #{sv.$theme-color};
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include code-vars(false);
 }
 
@@ -12,7 +15,7 @@
 //   @include code-vars(true);
 // }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   h1,
   h2,
   h3,
@@ -27,7 +30,7 @@ div.#{$theme-name} {
       top: 0;
       bottom: 0;
       margin: auto;
-      background-image: $spin-icon;
+      background-image: sv.$spin-icon;
       animation: spin 2s linear 0s infinite;
     }
   }

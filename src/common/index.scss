@@ -46,7 +46,11 @@
     background-color: var(--md-theme-bg-color-scrollbar-thumb-active);
   }
 
-  :last-child {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
     margin-bottom: 0;
   }
 }

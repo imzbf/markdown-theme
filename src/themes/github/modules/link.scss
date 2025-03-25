@@ -1,15 +1,18 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin heading-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-link-color: #539bf5;
     --md-theme-link-hover-color: #539bf5;
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include heading-vars(false);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   a {
     &:hover {
       text-decoration: underline;

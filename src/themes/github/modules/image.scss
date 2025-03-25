@@ -1,18 +1,21 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin image-vars($isDark) {
-  div.#{$theme-name} {
+  div.#{sv.$theme-name} {
     --md-theme-heading-bg-color: #{if($isDark, #22272e, #fff)};
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include image-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}-dark {
   @include image-vars(true);
 }
 
-div.#{$theme-name} {
+div.#{sv.$theme-name} {
   img {
     background-color: var(--md-theme-heading-bg-color);
   }
