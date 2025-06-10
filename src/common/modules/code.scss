@@ -72,8 +72,10 @@
       border-top-left-radius: var(--md-theme-code-block-radius);
       border-top-right-radius: var(--md-theme-code-block-radius);
       -webkit-tap-highlight-color: transparent;
-
       list-style: none;
+      position: sticky;
+      top: 0;
+      z-index: 10000;
 
       &::-webkit-details-marker {
         display: none; /* 隐藏Webkit内核浏览器的箭头 */
