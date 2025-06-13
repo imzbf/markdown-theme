@@ -21,7 +21,6 @@ div.#{sv.$theme-name} {
     margin: 20px 0;
     padding: 0 1.2em;
     line-height: 2em;
-    display: block;
-    overflow: auto;
+    display: flow-root;
   }
 }

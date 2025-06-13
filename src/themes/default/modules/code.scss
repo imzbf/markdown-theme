@@ -15,12 +15,12 @@
   @include code-vars(true);
 }
 
-div.#{sv.$theme-name} {
-  .#{csv.$prefix}-code {
-    pre {
-      code {
-        box-shadow: #00000055 0px 2px 2px;
-      }
-    }
-  }
-}
+// div.#{sv.$theme-name} {
+//   .#{csv.$prefix}-code {
+//     pre {
+//       code {
+//         box-shadow: #00000055 0px 2px 2px;
+//       }
+//     }
+//   }
+// }

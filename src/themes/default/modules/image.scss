@@ -4,14 +4,14 @@ div.#{sv.$theme-name} {
   img {
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 5px;
-    border: 1px solid var(--md-theme-border-color);
-    border-radius: 3px;
+    // padding: 5px;
+    // border: 1px solid var(--md-theme-border-color);
+    // border-radius: 3px;
   }
 
-  blockquote {
-    img {
-      border-color: var(--md-theme-border-color-inset);
-    }
-  }
+  // blockquote {
+  // img {
+  // border-color: var(--md-theme-border-color-inset);
+  // }
+  // }
 }
