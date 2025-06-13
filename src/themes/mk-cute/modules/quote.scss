@@ -23,7 +23,7 @@ div.#{sv.$theme-name} {
     position: relative;
     padding: 8px 26px;
     margin: 16px 0;
-    border-radius: 5px;
+    border-radius: var(--md-theme-radius-m);
 
     &::before {
       content: '❝';

@@ -40,24 +40,6 @@ div.#{sv.$theme-name} {
         word-break: normal;
         line-height: 1.75;
 
-        &::selection {
-          background-color: var(--md-theme-slct-prebg-color);
-        }
-
-        &::-webkit-scrollbar {
-          width: 4px;
-          height: 4px;
-        }
-
-        &::-webkit-scrollbar-track {
-          background-color: var(--md-theme-border-color);
-        }
-
-        &::-webkit-scrollbar-thumb {
-          background-color: var(--md-theme-strong-color);
-          border-radius: 10px;
-        }
-
         span[rn-wrapper] {
           top: 11px;
         }

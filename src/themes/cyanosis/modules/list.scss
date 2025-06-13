@@ -54,7 +54,7 @@ div.#{sv.$theme-name} {
         height: inherit;
         background: #f0f8ff;
         border: 1px solid #add6ff;
-        border-radius: 2px;
+        border-radius: var(--md-theme-radius-s);
         box-sizing: border-box;
         z-index: 1;
       }

@@ -5,7 +5,7 @@
     --md-theme-code-inline-color: #3594f7;
     --md-theme-code-inline-bg-color: rgba(59, 170, 250, 0.1);
     // 圆角
-    --md-theme-code-inline-radius: 2px;
+    --md-theme-code-inline-radius: var(--md-theme-radius-s);
 
     --md-theme-code-block-color: #a9b7c6;
     // 代码背景
@@ -13,7 +13,7 @@
     // 顶部背景
     --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
     // 圆角
-    --md-theme-code-block-radius: 5px;
+    --md-theme-code-block-radius: var(--md-theme-radius-m);
   }
 }
 
@@ -201,7 +201,7 @@
           width: max-content;
           text-align: center;
           padding: 4px;
-          border-radius: 2px;
+          border-radius: var(--md-theme-radius-s);
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
           left: -10px;
           top: 50%;

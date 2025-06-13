@@ -77,11 +77,14 @@ watch(
   padding: 50px 0;
 }
 
-.md-editor-icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+svg.md-editor-icon {
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+  fill: none;
   overflow: hidden;
+  display: block;
+  box-sizing: content-box;
 }
 </style>
 
