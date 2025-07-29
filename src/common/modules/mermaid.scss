@@ -3,11 +3,15 @@
 .#{csv.$prefix}-preview {
   .#{csv.$prefix}-mermaid {
     overflow: hidden;
-    display: none;
+    // display: none;
     // text-align: center;
     // 覆盖图的外部样式，否则字体会受p定义的行高下沉
     // 中文字体会上浮
     line-height: normal;
+
+    &:not([data-processed]) {
+      white-space: pre;
+    }
   }
 
   [class='#{csv.$prefix}-mermaid'][data-grab] {
