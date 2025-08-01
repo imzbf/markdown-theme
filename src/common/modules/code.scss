@@ -61,7 +61,7 @@
 
     .#{csv.$prefix}-code-head {
       display: grid;
-      grid-template: '1rf 1rf';
+      grid-template: '1fr 1fr';
       justify-content: space-between;
       height: 32px;
       width: 100%;
