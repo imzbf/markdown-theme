@@ -17,10 +17,10 @@ div.#{sv.$theme-name} {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid var(--md-theme-border-color);
+    border-block-end: 1px solid var(--md-theme-border-color);
 
     &:hover {
-      border-bottom-color: var(--md-theme-linkh-color);
+      border-block-end-color: var(--md-theme-linkh-color);
     }
 
     &:active {
@@ -30,11 +30,11 @@ div.#{sv.$theme-name} {
     &::after {
       position: absolute;
       content: '';
-      top: 100%;
-      left: 0;
+      inset-block-start: 100%;
+      inset-inline-start: 0;
       width: 100%;
       opacity: 0;
-      border-bottom: 1px solid var(--md-theme-border-color);
+      border-block-end: 1px solid var(--md-theme-border-color);
       transition: top 0.3s, opacity 0.3s;
       transform: translate3d(0, 0, 0);
     }
@@ -42,7 +42,7 @@ div.#{sv.$theme-name} {
     &:hover::after {
       top: 0;
       opacity: 1;
-      border-bottom-color: var(--md-theme-linkh-color);
+      border-block-end-color: var(--md-theme-linkh-color);
     }
   }
 }

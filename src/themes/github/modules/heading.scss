@@ -25,19 +25,19 @@ div.#{sv.$theme-name} {
   h4,
   h5,
   h6 {
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-block-start: 24px;
+    margin-block-end: 16px;
     font-weight: 600;
     line-height: 1.25;
   }
 
   h1 {
-    padding-bottom: 0.3em;
+    padding-block-end: 0.3em;
     font-size: 2em;
   }
 
   h2 {
-    padding-bottom: 0.3em;
+    padding-block-end: 0.3em;
     font-size: 1.5em;
   }
 

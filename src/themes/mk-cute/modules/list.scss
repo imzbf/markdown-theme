@@ -4,23 +4,23 @@ div.#{sv.$theme-name} {
   ol,
   ul {
     li {
-      margin-bottom: 0;
+      margin-block-end: 0;
       list-style: inherit;
       & .task-list-item {
         list-style: none;
         ul,
         ol {
-          margin-top: 0;
+          margin-block-start: 0;
         }
       }
     }
 
     ul,
     ol {
-      margin-top: 3px;
+      margin-block-start: 3px;
     }
   }
   ol li {
-    padding-left: 6px;
+    padding-inline-start: 6px;
   }
 }

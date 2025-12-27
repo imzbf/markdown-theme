@@ -26,7 +26,7 @@ div.#{sv.$theme-name} {
     font-weight: 600;
     line-height: 1.45;
     position: relative;
-    margin-top: 1em;
+    margin-block-start: 1em;
   }
 
   h1 {
@@ -36,7 +36,7 @@ div.#{sv.$theme-name} {
 
   h2 {
     font-size: 1.65em;
-    padding-bottom: 0.3em;
+    padding-block-end: 0.3em;
   }
 
   h3 {

@@ -26,9 +26,9 @@ div.#{sv.$theme-name} {
       content: '';
       display: block;
       position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
       margin: auto;
       background-image: sv.$spin-icon;
       animation: spin 2s linear 0s infinite;

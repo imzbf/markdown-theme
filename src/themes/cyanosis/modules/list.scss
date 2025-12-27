@@ -6,7 +6,7 @@ div.#{sv.$theme-name} {
     margin: 0;
 
     li {
-      margin-bottom: 0;
+      margin-block-end: 0;
       list-style: inherit;
 
       & .task-list-item {
@@ -14,19 +14,19 @@ div.#{sv.$theme-name} {
 
         ul,
         ol {
-          margin-top: 0;
+          margin-block-start: 0;
         }
       }
     }
 
     ul,
     ol {
-      margin-top: 4px;
+      margin-block-start: 4px;
     }
   }
 
   ol li {
-    padding-left: 6px;
+    padding-inline-start: 6px;
   }
 
   ol li,
@@ -46,10 +46,10 @@ div.#{sv.$theme-name} {
       &::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        inset-block-end: 0;
         width: inherit;
         height: inherit;
         background: #f0f8ff;
@@ -62,10 +62,10 @@ div.#{sv.$theme-name} {
       &[checked]::after {
         content: '✓';
         position: absolute;
-        top: -12px;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset-block-start: -12px;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        inset-block-end: 0;
         width: 0;
         height: 0;
         color: #f55;

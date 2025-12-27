@@ -4,7 +4,7 @@
 div.#{sv.$theme-name} {
   ul,
   ol {
-    margin-top: 1em;
+    margin-block-start: 1em;
   }
 
   // ul {
@@ -13,7 +13,7 @@ div.#{sv.$theme-name} {
 
   li {
     line-height: 2;
-    margin-bottom: 0;
+    margin-block-end: 0;
     list-style: inherit;
   }
 }

@@ -39,7 +39,7 @@ div.#{sv.$theme-name} {
   table,
   pre,
   details {
-    margin-top: 0;
-    margin-bottom: 16px;
+    margin-block-start: 0;
+    margin-block-end: 16px;
   }
 }

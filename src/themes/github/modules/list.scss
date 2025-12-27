@@ -4,7 +4,7 @@ div.#{sv.$theme-name} {
   ol,
   ul {
     li + li {
-      margin-top: 0.25em;
+      margin-block-start: 0.25em;
     }
   }
 }

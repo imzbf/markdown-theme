@@ -2,6 +2,8 @@
   <div :class="state.theme">
     <ul class="dev-tools">
       <li><button @click="changeTheme">切换</button></li>
+      <li><button @click="loadMdContent('default')">默认内容</button></li>
+      <li><button @click="loadMdContent('arabic')">阿拉伯语</button></li>
       <li><button @click="state.previewTheme = 'default'">默认</button></li>
       <li><button @click="state.previewTheme = 'github'">github</button></li>
       <li><button @click="state.previewTheme = 'vuepress'">vuepress</button></li>
@@ -25,6 +27,7 @@
 import { reactive, watch } from 'vue';
 import { MdPreview, StrIcon } from 'md-editor-v3';
 import mdAll from './md-all.md';
+import mdArabic from './md-arabic.md';
 
 const state = reactive({
   theme: 'light',
@@ -36,6 +39,16 @@ const state = reactive({
 });
 
 const changeTheme = () => (state.theme = state.theme === 'dark' ? 'light' : 'dark');
+
+const loadMdContent = (type) => {
+  if (type === 'arabic') {
+    state.text = mdArabic;
+    document.documentElement.setAttribute('dir', 'rtl');
+  } else {
+    document.documentElement.setAttribute('dir', 'ltr');
+    state.text = mdAll;
+  }
+};
 
 watch(
   () => state.previewTheme,
@@ -62,8 +75,8 @@ watch(
 .dev-tools {
   position: fixed;
   width: 200px;
-  left: 20px;
-  top: 20px;
+  inset-inline-start: 20px;
+  inset-block-start: 20px;
   list-style: none;
 
   li {

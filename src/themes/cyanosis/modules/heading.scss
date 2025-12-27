@@ -23,55 +23,55 @@ div.#{sv.$theme-name} {
 
   h2 {
     position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
     @include sv.headTitle(10px, 24px);
-    border-bottom: 1px solid var(--md-theme-border-color-2);
+    border-block-end: 1px solid var(--md-theme-border-color-2);
     @include sv.transitionColor();
 
     &::before {
       content: '「';
       position: absolute;
-      top: -6px;
-      left: -14px;
+      inset-block-start: -6px;
+      inset-inline-start: -14px;
     }
 
     &::after {
       content: '」';
       position: relative;
-      top: 6px;
-      right: auto;
+      inset-block-start: 6px;
+      inset-inline-end: auto;
     }
   }
 
   h3 {
     position: relative;
     @include sv.headTitle(0, 20px, 30px);
-    padding-left: 6px;
+    padding-inline-start: 6px;
     @include sv.transitionColor();
 
     &::before {
       content: '»';
-      padding-right: 6px;
+      padding-inline-end: 6px;
       color: var(--md-theme-strong-color);
     }
   }
 
   h4 {
     @include sv.headTitle(0, 16px, 24px);
-    padding-left: 6px;
+    padding-inline-start: 6px;
     @include sv.transitionColor();
   }
 
   h5 {
     @include sv.headTitle(0, 14px, 18px);
-    padding-left: 6px;
+    padding-inline-start: 6px;
     @include sv.transitionColor();
   }
 
   h6 {
     @include sv.headTitle(0, 12px, 12px);
-    padding-left: 6px;
+    padding-inline-start: 6px;
     @include sv.transitionColor();
   }
 

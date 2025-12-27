@@ -3,7 +3,7 @@
 div.#{sv.$theme-name} {
   p {
     line-height: inherit;
-    margin-top: sv.$line-space;
-    margin-bottom: sv.$line-space;
+    margin-block-start: sv.$line-space;
+    margin-block-end: sv.$line-space;
   }
 }

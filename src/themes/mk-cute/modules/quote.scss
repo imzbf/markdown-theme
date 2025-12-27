@@ -27,8 +27,8 @@ div.#{sv.$theme-name} {
 
     &::before {
       content: '❝';
-      top: 10px;
-      left: 8px;
+      inset-block-start: 10px;
+      inset-inline-start: 8px;
       color: sv.$secondary-color;
       font-size: 20px;
       line-height: 1;
@@ -40,8 +40,8 @@ div.#{sv.$theme-name} {
       content: '❞';
       font-size: 20px;
       position: absolute;
-      right: 8px;
-      bottom: 0;
+      inset-inline-end: 8px;
+      inset-block-end: 0;
       color: sv.$secondary-color;
       opacity: 0.7;
     }

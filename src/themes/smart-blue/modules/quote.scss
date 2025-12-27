@@ -22,7 +22,7 @@ div.#{sv.$theme-name} {
     background-color: var(--md-theme-quote-bg-color);
     margin: 2em 0;
     padding: 2px 20px;
-    border-left: 4px solid var(--md-theme-quote-border-color);
+    border-inline-start: 4px solid var(--md-theme-quote-border-color);
     p {
       color: var(--md-theme-quote-color);
       line-height: 2;

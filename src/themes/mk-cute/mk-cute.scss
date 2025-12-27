@@ -61,8 +61,8 @@ div.#{sv.$theme-name} {
     width: 98%;
     height: 1px;
     border: none;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-block-start: 32px;
+    margin-block-end: 32px;
     background-image: linear-gradient(to right, sv.$theme-color, #dff0fe, sv.$theme-color);
     overflow: visible;
   }
