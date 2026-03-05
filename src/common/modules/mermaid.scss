@@ -8,6 +8,9 @@
     // 覆盖图的外部样式，否则字体会受p定义的行高下沉
     // 中文字体会上浮
     line-height: normal;
+    p {
+      line-height: normal;
+    }
 
     &:not([data-processed]) {
       white-space: pre;
