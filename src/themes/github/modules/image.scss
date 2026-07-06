@@ -11,7 +11,7 @@
   @include image-vars(false);
 }
 
-.#{csv.$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'] {
   @include image-vars(true);
 }
 

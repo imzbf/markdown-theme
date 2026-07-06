@@ -118,7 +118,7 @@ svg.md-editor-icon {
   --md-scrollbar-thumb-active-color: #00000061;
 }
 
-.md-editor-dark {
+.md-editor[data-theme='dark'] {
   --md-color: #999;
   --md-hover-color: #bbb;
   --md-bk-color: #000;

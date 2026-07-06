@@ -12,7 +12,7 @@
   @include heading-vars(false);
 }
 
-.#{csv.$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'] {
   @include heading-vars(true);
 }
 

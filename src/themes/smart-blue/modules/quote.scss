@@ -13,7 +13,7 @@
   @include quote-vars(false);
 }
 
-.#{csv.$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'] {
   @include quote-vars(true);
 }
 

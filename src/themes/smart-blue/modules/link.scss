@@ -11,7 +11,7 @@
   @include link-vars(false);
 }
 
-.#{csv.$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'] {
   @include link-vars(true);
 }
 

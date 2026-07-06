@@ -16,7 +16,7 @@
 }
 
 // 暗模式
-.#{csv.$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'] {
   @include sv.theme-vars(true);
 }
 

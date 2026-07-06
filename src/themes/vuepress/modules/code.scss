@@ -22,7 +22,7 @@
   @include code-vars(false);
 }
 
-.#{csv.$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'] {
   @include code-vars(true);
 }
 
