@@ -38,11 +38,6 @@ div.#{sv.$theme-name} {
         padding: 22px 12px;
         margin: 0;
         word-break: normal;
-
-        // 带行号的代码
-        span[rn-wrapper] {
-          top: 22px;
-        }
       }
     }
   }
