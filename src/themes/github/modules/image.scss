@@ -3,7 +3,7 @@
 
 @mixin image-vars($isDark) {
   div.#{sv.$theme-name} {
-    --md-theme-heading-bg-color: #{if($isDark, #0d1117, #fff)};
+    --md-theme-image-bg-color: #{if($isDark, #0d1117, #fff)};
   }
 }
 
@@ -18,6 +18,6 @@
 
 div.#{sv.$theme-name} {
   img {
-    background-color: var(--md-theme-heading-bg-color);
+    background-color: var(--md-theme-image-bg-color);
   }
 }

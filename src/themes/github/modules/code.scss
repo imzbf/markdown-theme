@@ -18,6 +18,18 @@
     --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
     // 圆角
     --md-theme-code-block-radius: 6px;
+
+    // 行号，fgColor-muted
+    --md-theme-code-line-number-color: #{if($isDark, #9198a1, #59636e)};
+    // 高亮行，bgColor-attention-muted / borderColor-attention-emphasis
+    // 公共样式的蓝调是配深色代码块的，github 亮色块底为 #f6f8fa，压不出层次
+    --md-theme-code-line-highlight-bg-color: #{if($isDark, rgba(187, 128, 9, 0.15), #fff8c5)};
+    --md-theme-code-line-highlight-border-color: #{if($isDark, #9e6a03, #9a6700)};
+
+    // 顶部选中的 codetab，fgColor-accent
+    --md-theme-code-active-color: #{if($isDark, #4493f8, #0969da)};
+    // 复制提示气泡，bgColor-default，与 muted 的顶部背景区分开
+    --md-theme-code-copy-tips-bg-color: #{if($isDark, #0d1117, #fff)};
   }
 }
 
