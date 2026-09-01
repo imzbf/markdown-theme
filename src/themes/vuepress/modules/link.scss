@@ -3,7 +3,7 @@
 
 @mixin link-vars($isDark) {
   div.#{sv.$theme-name} {
-    --md-theme-link-color: #42b983;
+    --md-theme-link-color: #3eaf7c;
   }
 }
 
@@ -13,6 +13,6 @@
 
 div.#{sv.$theme-name} {
   a {
-    font-weight: 600;
+    font-weight: 400;
   }
 }

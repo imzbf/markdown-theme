@@ -3,8 +3,8 @@
 
 @mixin quote-vars($isDark) {
   div.#{sv.$theme-name} {
-    --md-theme-quote-color: #{if($isDark, #8b949e, #57606a)};
-    --md-theme-quote-border: 0.25em solid #{if($isDark, #444c56, #d0d7de)};
+    --md-theme-quote-color: #{if($isDark, #9198a1, #59636e)};
+    --md-theme-quote-border: 0.25em solid #{if($isDark, #3d444d, #d1d9e0)};
   }
 }
 
@@ -12,7 +12,8 @@
   @include quote-vars(false);
 }
 
-.#{csv.$prefix}[data-theme='dark'] {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include quote-vars(true);
 }
 

@@ -12,7 +12,7 @@
 
 @mixin theme-vars($isDark) {
   div.#{sv.$theme-name} {
-    --md-theme-color: #{if($isDark, #999, #304455)};
+    --md-theme-color: #{if($isDark, #999, #2c3e50)};
   }
 }
 
@@ -22,7 +22,8 @@
 }
 
 // 暗模式
-.#{csv.$prefix}[data-theme='dark'] {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include theme-vars(true);
 }
 
@@ -31,7 +32,7 @@ div.#{sv.$theme-name} {
   color: var(--md-theme-color);
 
   em {
-    color: #4f5959;
+    color: var(--md-theme-color);
     padding: 0 6px 0 4px;
   }
 }

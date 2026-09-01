@@ -4,17 +4,17 @@
 @mixin code-vars($isDark) {
   div.#{sv.$theme-name} {
     // 行内
-    --md-theme-code-inline-color: #{if($isDark, #e06c75, #d63200)};
-    --md-theme-code-inline-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
+    --md-theme-code-inline-color: #{if($isDark, #e06c75, #476582)};
+    --md-theme-code-inline-bg-color: #{if($isDark, #1a1a1a, rgba(27, 31, 35, 0.05))};
 
     // 块
-    --md-theme-code-block-color: #{if($isDark, #999, #747384)};
+    --md-theme-code-block-color: #{if($isDark, #999, #fff)};
     // 背景
-    --md-theme-code-block-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
+    --md-theme-code-block-bg-color: #{if($isDark, #1a1a1a, #282c34)};
     // 顶部背景
     --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
     // 圆角
-    --md-theme-code-block-radius: 2px;
+    --md-theme-code-block-radius: 6px;
   }
 }
 
@@ -22,13 +22,14 @@
   @include code-vars(false);
 }
 
-.#{csv.$prefix}[data-theme='dark'] {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include code-vars(true);
 }
 
 div.#{sv.$theme-name} {
   code {
-    padding: 3px 5px;
+    padding: 4px 8px;
     margin: 0 2px;
   }
 

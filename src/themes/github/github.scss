@@ -12,7 +12,7 @@
 
 @mixin theme-vars($isDark) {
   div.#{sv.$theme-name} {
-    --md-theme-color: #{if($isDark, #c9d1d9, #222)};
+    --md-theme-color: #{if($isDark, #f0f6fc, #1f2328)};
   }
 }
 
@@ -22,7 +22,8 @@
 }
 
 // 暗模式
-.#{csv.$prefix}[data-theme='dark'] {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include theme-vars(true);
 }
 

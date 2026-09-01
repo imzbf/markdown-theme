@@ -3,7 +3,7 @@
 
 @mixin image-vars($isDark) {
   div.#{sv.$theme-name} {
-    --md-theme-heading-bg-color: #{if($isDark, #22272e, #fff)};
+    --md-theme-heading-bg-color: #{if($isDark, #0d1117, #fff)};
   }
 }
 
@@ -11,7 +11,8 @@
   @include image-vars(false);
 }
 
-.#{csv.$prefix}[data-theme='dark'] {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include image-vars(true);
 }
 

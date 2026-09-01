@@ -4,10 +4,10 @@
 @mixin table-vars($isDark) {
   div.#{sv.$theme-name} {
     // 斑马条纹
-    --md-theme-table-stripe-color: #{if($isDark, #161b22, #f7f8fa)};
+    --md-theme-table-stripe-color: #{if($isDark, #151b23, #f6f8fa)};
 
     --md-theme-table-tr-bg-color: #{if($isDark, transparent, #fff)};
-    --md-theme-table-td-border-color: #{if($isDark, #30363d, #d0d7de)};
+    --md-theme-table-td-border-color: #{if($isDark, #3d444d, #d1d9e0)};
   }
 }
 
@@ -15,7 +15,8 @@
   @include table-vars(false);
 }
 
-.#{csv.$prefix}[data-theme='dark'] {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include table-vars(true);
 }
 

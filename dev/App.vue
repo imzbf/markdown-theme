@@ -74,18 +74,28 @@ watch(
 
 .dev-tools {
   position: fixed;
-  width: 200px;
+  // The preview code header is sticky and uses a high stacking level; keep
+  // the theme controls above it so every control remains reachable during QA.
+  z-index: 11000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: calc(100% - 40px);
   inset-inline-start: 20px;
   inset-block-start: 20px;
   list-style: none;
+  margin: 0;
+  padding: 8px;
+  background-color: var(--md-bk-color);
+  border: 1px solid var(--md-border-color);
 
   li {
-    padding: 4px;
+    padding: 0;
   }
 }
 
 .container {
-  width: 1170px;
+  width: min(1170px, calc(100% - 40px));
   margin: 0 auto;
   padding: 50px 0;
 }

@@ -14,7 +14,8 @@
   @include table-vars(false);
 }
 
-.#{csv.$prefix}[data-theme='dark'] {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include table-vars(true);
 }
 

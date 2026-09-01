@@ -12,7 +12,8 @@
   @include heading-vars(false);
 }
 
-.#{csv.$prefix}[data-theme='dark'] {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include heading-vars(true);
 }
 
@@ -24,7 +25,7 @@ div.#{sv.$theme-name} {
   h5,
   h6 {
     font-weight: 600;
-    line-height: 1.45;
+    line-height: 1.25;
     position: relative;
     margin-block-start: 1em;
   }
@@ -40,6 +41,6 @@ div.#{sv.$theme-name} {
   }
 
   h3 {
-    line-height: 1.35em;
+    line-height: 1.25em;
   }
 }

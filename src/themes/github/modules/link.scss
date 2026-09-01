@@ -1,15 +1,20 @@
 @use '../../../common/scss-vars' as csv;
 @use '../scss-vars' as sv;
 
-@mixin heading-vars($isDark) {
+@mixin link-vars($isDark) {
   div.#{sv.$theme-name} {
-    --md-theme-link-color: #539bf5;
-    --md-theme-link-hover-color: #539bf5;
+    --md-theme-link-color: #{if($isDark, #4493f8, #0969da)};
+    --md-theme-link-hover-color: var(--md-theme-link-color);
   }
 }
 
 .#{csv.$prefix} {
-  @include heading-vars(false);
+  @include link-vars(false);
+}
+
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
+  @include link-vars(true);
 }
 
 div.#{sv.$theme-name} {
