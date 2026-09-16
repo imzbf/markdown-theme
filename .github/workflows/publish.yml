@@ -1,0 +1,48 @@
+name: Npm Publish
+
+on:
+  push:
+    branches: [beta]
+    tags:
+      - v*
+  pull_request:
+    branches: [beta]
+
+# npm trusted publishing 使用此工作流的 OIDC 身份换取短期发布凭证，
+# 不再需要长期有效的 NPM_TOKEN。
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Build and publish npm package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          registry-url: https://registry.npmjs.org/
+          # 发布任务始终依据 lockfile 安装依赖，不复用其他工作流产生的缓存，
+          # 避免缓存中的构建产物影响发布结果。
+          package-manager-cache: false
+
+      - name: Checkout Code
+        uses: actions/checkout@v7
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # npm trust 为每个包限制一个受信任工作流，因此将两个发布渠道放在这里，
+      # 再根据触发来源的标签或分支决定 npm 发布标签。
+      - name: Publish latest
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+        run: npm publish --access public
+
+      - name: Publish beta
+        if: github.event_name == 'push' && github.ref == 'refs/heads/beta'
+        run: npm publish --access public --tag beta

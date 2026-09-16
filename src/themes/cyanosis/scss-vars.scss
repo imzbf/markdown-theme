@@ -63,7 +63,7 @@ $d-selectionCodeBgColor: $d-borderColor2;
 $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
 
 @mixin theme-vars($isDark: false) {
-  .#{$theme-name} {
+  div.#{$theme-name} {
     #{$id}-base-color: if($isDark, $d-baseColor, $l-baseColor);
     #{$id}-title-color: if($isDark, $d-titleColor, $l-titleColor);
     #{$id}-strong-color: if($isDark, $d-strongColor, $l-strongColor);
@@ -100,12 +100,11 @@ $d-selectionPreCodeBgColor: rgba(160, 200, 255, 0.25);
 }
 
 @mixin headTitle($padb: 4px, $fontSize: 24px, $mtop: 36px) {
-  padding-bottom: $padb;
-  margin-top: $mtop;
-  margin-bottom: 10px;
+  padding-block-end: $padb;
+  margin-block-start: $mtop;
+  margin-block-end: 10px;
   font-size: $fontSize;
   line-height: 1.5;
-  color: var(--#{$theme-name}-title-color);
 }
 
 @mixin selectionColor($bgColor: '', $txtColor: '') {

@@ -1,7 +1,8 @@
-.#{$theme-name} {
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
+div.#{sv.$theme-name} {
   img {
-    max-width: 100%;
     margin: 0 auto;
-    display: block;
   }
 }

@@ -1,14 +1,8 @@
-@import './scss-vars.scss';
-
-@import './modules/code.scss';
-@import './modules/heading.scss';
-@import './modules/image.scss';
-@import './modules/link.scss';
-@import './modules/list.scss';
-@import './modules/paragraph.scss';
-@import './modules/quote.scss';
-@import './modules/table.scss';
-
-.#{$theme-name} {
-  @include common-style;
-}
+@use './modules/code';
+@use './modules/heading';
+@use './modules/image';
+@use './modules/link';
+@use './modules/list';
+@use './modules/paragraph';
+@use './modules/quote';
+@use './modules/table';

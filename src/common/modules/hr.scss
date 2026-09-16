@@ -1,0 +1,10 @@
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-preview {
+  hr {
+    height: 1px;
+    margin: 10px 0;
+    border: none;
+    border-block-start: 1px solid var(--md-theme-border-color);
+  }
+}

@@ -1,23 +1,40 @@
-.#{$theme-name} {
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
+@mixin code-vars($isDark) {
+  div.#{sv.$theme-name} {
+    --md-theme-heading-color: #{sv.$theme-color};
+  }
+}
+
+.#{csv.$prefix} {
+  @include code-vars(false);
+}
+
+// .#{$prefix}[data-theme='dark'] {
+//   @include code-vars(true);
+// }
+
+div.#{sv.$theme-name} {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: $theme-color;
     &::before {
       content: '';
       display: block;
       position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
       margin: auto;
-      background-image: $spin-icon;
-      animation: spin 2s linear 1s infinite;
+      background-image: sv.$spin-icon;
+      animation: spin 2s linear 0s infinite;
     }
   }
+
   h1 {
     position: relative;
     font-size: 30px;

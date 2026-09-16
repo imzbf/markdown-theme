@@ -1,0 +1,36 @@
+@use '../scss-vars' as csv;
+
+@mixin table-vars($isDark) {
+  .#{csv.$prefix}-preview {
+    // 斑马条纹
+    --md-theme-table-stripe-color: #{if($isDark, #0c0c0c, #fafafa)};
+    --md-theme-table-tr-bg-color: inherit;
+    // --md-theme-table-tr-border-color: var(--md-theme-border-color);
+    --md-theme-table-td-border-color: var(--md-theme-border-color);
+  }
+}
+
+.#{csv.$prefix} {
+  @include table-vars(false);
+}
+
+.#{csv.$prefix}[data-theme='dark'] {
+  @include table-vars(true);
+}
+
+.#{csv.$prefix}-preview {
+  table {
+    tr {
+      background-color: var(--md-theme-table-tr-bg-color);
+
+      th,
+      td {
+        border: 1px solid var(--md-theme-table-td-border-color);
+      }
+
+      &:nth-child(2n) {
+        background-color: var(--md-theme-table-stripe-color);
+      }
+    }
+  }
+}

@@ -1,56 +1,47 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin code-vars($isDark) {
-  article.#{$theme-name} {
+  div.#{sv.$theme-name} {
     // 行内
-    --md-theme-code-inline-color: #{if($isDark, #e06c75, #d63200)};
-    --md-theme-code-inline-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
+    --md-theme-code-inline-color: #{if($isDark, #e06c75, #476582)};
+    --md-theme-code-inline-bg-color: #{if($isDark, #1a1a1a, rgba(27, 31, 35, 0.05))};
 
     // 块
-    --md-theme-code-block-color: #{if($isDark, #999, #747384)};
+    --md-theme-code-block-color: #{if($isDark, #999, #fff)};
     // 背景
-    --md-theme-code-block-bg-color: #{if($isDark, #1a1a1a, #f8f8f8)};
+    --md-theme-code-block-bg-color: #{if($isDark, #1a1a1a, #282c34)};
+    // 顶部背景
+    --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
+    // 圆角
+    --md-theme-code-block-radius: 6px;
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include code-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include code-vars(true);
 }
 
-.#{$theme-name} {
+div.#{sv.$theme-name} {
   code {
-    color: var(--md-theme-code-inline-color);
-    padding: 3px 5px;
+    padding: 4px 8px;
     margin: 0 2px;
-    border-radius: 2px;
-    background-color: var(--md-theme-code-inline-bg-color);
-    // white-space: nowrap;
   }
 
-  pre {
-    border-radius: 2px;
-    position: relative;
-    font-size: 0.875em;
-    margin: 1em 0;
-    background-color: var(--md-theme-code-block-bg-color);
+  .#{csv.$prefix}-code {
+    pre {
+      font-size: 0.875em;
+      margin: 0 0 1em;
 
-    code {
-      overflow-x: auto;
-      color: var(--md-theme-code-block-color);
-      white-space: pre;
-      padding: 22px 1em;
-      // font-size: 0.85rem;
-      background-color: var(--md-theme-code-block-bg-color);
-
-      > * {
-        line-height: 1.6;
-      }
-
-      // 带行号的代码
-      span[rn-wrapper] {
-        top: 22px;
+      code {
+        white-space: pre;
+        padding: 22px 1em;
+        margin: 0;
       }
     }
   }

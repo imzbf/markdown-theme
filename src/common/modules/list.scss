@@ -1,0 +1,17 @@
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-preview {
+  ol,
+  ul {
+    padding-inline-start: 2em;
+
+    .task-list-item {
+      list-style-type: none;
+
+      input {
+        margin-inline-start: -1.5em;
+        margin-inline-end: 0.1em;
+      }
+    }
+  }
+}

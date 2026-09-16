@@ -1,61 +1,78 @@
-.#{$theme-name} {
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
+@mixin heading-vars($isDark) {
+  div.#{sv.$theme-name} {
+    --md-theme-heading-color: var(#{sv.$id}-title-color);
+  }
+}
+
+.#{csv.$prefix} {
+  @include heading-vars(false);
+}
+
+// .#{csv.$prefix}[data-theme='dark'] {
+//   @include heading-vars(true);
+// }
+
+div.#{sv.$theme-name} {
   h1 {
-    @include headTitle(4px, 30px);
-    @include transitionColor();
+    @include sv.headTitle(4px, 30px);
+    @include sv.transitionColor();
   }
 
   h2 {
     position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    @include headTitle(10px, 24px);
-    border-bottom: 1px solid var(--md-theme-border-color-2);
-    @include transitionColor();
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    @include sv.headTitle(10px, 24px);
+    border-block-end: 1px solid var(--md-theme-border-color-2);
+    @include sv.transitionColor();
 
     &::before {
       content: '「';
       position: absolute;
-      top: -6px;
-      left: -14px;
+      inset-block-start: -6px;
+      inset-inline-start: -14px;
     }
 
     &::after {
       content: '」';
       position: relative;
-      top: 6px;
-      right: auto;
+      inset-block-start: 6px;
+      inset-inline-end: auto;
     }
   }
 
   h3 {
     position: relative;
-    @include headTitle(0, 20px, 30px);
-    padding-left: 6px;
-    @include transitionColor();
+    @include sv.headTitle(0, 20px, 30px);
+    padding-inline-start: 6px;
+    @include sv.transitionColor();
 
     &::before {
       content: '»';
-      padding-right: 6px;
+      padding-inline-end: 6px;
       color: var(--md-theme-strong-color);
     }
   }
 
   h4 {
-    @include headTitle(0, 16px, 24px);
-    padding-left: 6px;
-    @include transitionColor();
+    @include sv.headTitle(0, 16px, 24px);
+    padding-inline-start: 6px;
+    @include sv.transitionColor();
   }
 
   h5 {
-    @include headTitle(0, 14px, 18px);
-    padding-left: 6px;
-    @include transitionColor();
+    @include sv.headTitle(0, 14px, 18px);
+    padding-inline-start: 6px;
+    @include sv.transitionColor();
   }
 
   h6 {
-    @include headTitle(0, 12px, 12px);
-    padding-left: 6px;
-    @include transitionColor();
+    @include sv.headTitle(0, 12px, 12px);
+    padding-inline-start: 6px;
+    @include sv.transitionColor();
   }
 
   // selection
@@ -66,7 +83,7 @@
   h5,
   h6 {
     &::selection {
-      @include selectionColor();
+      @include sv.selectionColor();
       color: var(--md-theme-slct-title-color);
       background-color: var(--md-theme-slct-titlebg-color);
     }

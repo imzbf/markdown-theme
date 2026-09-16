@@ -1,43 +1,42 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin table-vars($isDark) {
-  #{$theme-name} {
+  #{sv.$theme-name} {
     // 斑马条纹
     --md-theme-table-stripe-color: #{if($isDark, #0c0c0c, #fafafa)};
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include table-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'] {
   @include table-vars(true);
 }
 
-.#{$theme-name} {
+div.#{sv.$theme-name} {
   table {
     // width: 100%;
     // table-layout: fixed;
     overflow: auto;
     border-spacing: 0;
     border-collapse: collapse;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
 
     tr {
       th,
       td {
         word-wrap: break-word;
         padding: 8px 14px;
-        border: 1px solid var(--md-theme-border-color);
+        // border: 1px solid var(--md-theme-border-color);
       }
     }
 
     tbody {
       tr {
-        &:nth-child(2n) {
-          background-color: var(--md-theme-table-stripe-color);
-        }
-
         &:hover {
           background-color: var(--md-theme-color-hover);
         }

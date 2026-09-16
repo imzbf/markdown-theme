@@ -1,50 +1,59 @@
-@mixin code-vars($isDark) {
-  article.#{$theme-name} {
-    --md-theme-code-inline-color: #{if($isDark, #c9d1d9, inherit)};
-    --md-theme-code-inline-bg-color: #{if($isDark, #2d3339, #eff1f2)};
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
 
-    --md-theme-code-block-color: #{if($isDark, #a9b7c6, inherit)};
-    --md-theme-code-block-bg-color: #{if($isDark, #161b22, #f6f8fa)};
+@mixin code-vars($isDark) {
+  div.#{sv.$theme-name} {
+    --md-theme-code-inline-color: inherit;
+    --md-theme-code-inline-bg-color: #{if(
+        $isDark,
+        rgba(101, 108, 118, 0.2),
+        rgba(175, 184, 193, 0.2)
+      )};
+    // 圆角
+    --md-theme-code-inline-radius: 6px;
+
+    --md-theme-code-block-color: inherit;
+    --md-theme-code-block-bg-color: #{if($isDark, #151b23, #f6f8fa)};
+    // 顶部背景
+    --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
+    // 圆角
+    --md-theme-code-block-radius: 6px;
+
+    // 行号，fgColor-muted
+    --md-theme-code-line-number-color: #{if($isDark, #9198a1, #59636e)};
+    // 高亮行，bgColor-attention-muted / borderColor-attention-emphasis
+    // 公共样式的蓝调是配深色代码块的，github 亮色块底为 #f6f8fa，压不出层次
+    --md-theme-code-line-highlight-bg-color: #{if($isDark, rgba(187, 128, 9, 0.15), #fff8c5)};
+    --md-theme-code-line-highlight-border-color: #{if($isDark, #9e6a03, #9a6700)};
+
+    // 顶部选中的 codetab，fgColor-accent
+    --md-theme-code-active-color: #{if($isDark, #4493f8, #0969da)};
+    // 复制提示气泡，bgColor-default，与 muted 的顶部背景区分开
+    --md-theme-code-copy-tips-bg-color: #{if($isDark, #0d1117, #fff)};
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include code-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include code-vars(true);
 }
 
-.#{$theme-name} {
+div.#{sv.$theme-name} {
   code {
     padding: 0.2em 0.4em;
     margin: 0;
-    color: var(--md-theme-code-inline-color);
-    background-color: var(--md-theme-code-inline-bg-color);
-    border-radius: 6px;
   }
 
   pre {
-    border-radius: 6px;
-    position: relative;
-
     code {
       padding: 22px 1em;
-      margin-bottom: 0;
+      margin-block-end: 0;
       word-break: normal;
       letter-spacing: 1px;
-      color: var(--md-theme-code-block-color);
-      background-color: var(--md-theme-code-block-bg-color);
-
-      > * {
-        line-height: 1.6;
-      }
-
-      // 带行号的代码
-      span[rn-wrapper] {
-        top: 22px;
-      }
     }
   }
 }

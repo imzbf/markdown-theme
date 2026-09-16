@@ -1,61 +1,45 @@
-.#{$theme-name} {
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
+@mixin code-vars($isDark) {
+  div.#{sv.$theme-name} {
+    --md-theme-code-inline-color: var(--md-theme-code-color);
+    --md-theme-code-inline-bg-color: var(--md-theme-code-bg-color);
+    --md-theme-code-block-color: var(--md-theme-base-color);
+    // 顶部背景
+    --md-theme-code-before-bg-color: var(--md-theme-code-block-bg-color);
+  }
+}
+
+.#{csv.$prefix} {
+  @include code-vars(false);
+}
+
+.#{csv.$prefix}[data-theme='dark'] {
+  @include code-vars(true);
+}
+
+div.#{sv.$theme-name} {
   code {
     padding: 0.065em 0.4em;
-    font-family: $monospace-font;
-    // font-size: 0.87em;
-    color: var(--md-theme-code-color);
-    // word-break: break-word;
+    font-family: sv.$monospace-font;
     overflow-x: auto;
-    background-color: var(--md-theme-code-bg-color);
-    border-radius: 2px;
 
     &::selection {
       background-color: var(--md-theme-slct-codebg-color);
     }
   }
 
-  pre {
-    font-family: $monospace-font;
-    position: relative;
+  .#{csv.$prefix}-code {
+    pre {
+      font-family: sv.$monospace-font;
 
-    code {
-      padding: 22px 12px;
-      margin: 0;
-      // font-size: 12px;
-      color: var(--md-theme-base-color);
-      word-break: normal;
-      overflow-x: auto;
-      background: var(--md-theme-code-block-bg-color);
-
-      &::selection {
-        background-color: var(--md-theme-slct-prebg-color);
-      }
-
-      > * {
+      code {
+        padding: 11px 12px 22px;
+        margin: 0;
+        word-break: normal;
         line-height: 1.75;
       }
-
-      &::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background-color: var(--md-theme-border-color);
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: var(--md-theme-strong-color);
-        border-radius: 10px;
-      }
-
-      span[rn-wrapper] {
-        top: 22px;
-      }
-    }
-
-    .copy-button {
-      color: var(--md-theme-base-color);
     }
   }
 }

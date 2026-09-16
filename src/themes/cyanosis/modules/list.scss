@@ -1,10 +1,12 @@
-.#{$theme-name} {
+@use '../scss-vars' as sv;
+
+div.#{sv.$theme-name} {
   ol,
   ul {
-    padding-left: 28px;
+    margin: 0;
 
     li {
-      margin-bottom: 0;
+      margin-block-end: 0;
       list-style: inherit;
 
       & .task-list-item {
@@ -12,19 +14,19 @@
 
         ul,
         ol {
-          margin-top: 0;
+          margin-block-start: 0;
         }
       }
     }
 
     ul,
     ol {
-      margin-top: 4px;
+      margin-block-start: 4px;
     }
   }
 
   ol li {
-    padding-left: 6px;
+    padding-inline-start: 6px;
   }
 
   ol li,
@@ -32,6 +34,45 @@
     &::selection {
       color: var(--md-theme-slct-text-color);
       background-color: var(--md-theme-slct-bg-color);
+    }
+  }
+
+  .task-list-item-checkbox {
+    position: relative;
+  }
+
+  .contains-task-list {
+    input[type='checkbox'] {
+      &::before {
+        content: '';
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        inset-block-end: 0;
+        width: inherit;
+        height: inherit;
+        background: #f0f8ff;
+        border: 1px solid #add6ff;
+        border-radius: var(--md-theme-radius-s);
+        box-sizing: border-box;
+        z-index: 1;
+      }
+
+      &[checked]::after {
+        content: '✓';
+        position: absolute;
+        inset-block-start: -12px;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        inset-block-end: 0;
+        width: 0;
+        height: 0;
+        color: #f55;
+        font-size: 20px;
+        font-weight: 700;
+        z-index: 2;
+      }
     }
   }
 }

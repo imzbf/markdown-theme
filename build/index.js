@@ -15,16 +15,22 @@ if (fs.existsSync(targetDir)) {
 }
 
 themeEntryList.forEach((themeName) => {
+  const themePath = path.resolve(__dirname, `${themeFolder}/${themeName}`);
+
   // 目标主题目录不是目录是文件，退出
-  if (fs.lstatSync(path.resolve(__dirname, `${themeFolder}/${themeName}`)).isFile()) {
+  if (fs.lstatSync(themePath).isFile()) {
     return false;
   }
 
-  const scssCode = fs.readFileSync(
-    path.resolve(__dirname, `${themeFolder}/${themeName}/index.scss`)
-  );
+  const entryPath = path.resolve(themePath, 'index.scss');
 
-  const result = sass.compile(path.resolve(__dirname, `${themeFolder}/${themeName}/index.scss`), {
+  // 没有入口文件，说明是未完成的主题目录，跳过
+  if (!fs.existsSync(entryPath)) {
+    console.warn(`skip ${themeName}: index.scss not found`);
+    return false;
+  }
+
+  const result = sass.compile(entryPath, {
     charset: false,
     style: 'compressed'
   });

@@ -1,0 +1,30 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
+@mixin hr-vars($isDark) {
+  div.#{sv.$theme-name} {
+    // borderColor-default
+    --md-theme-border-color: #{if($isDark, #3d444d, #d1d9e0)};
+  }
+}
+
+.#{csv.$prefix} {
+  @include hr-vars(false);
+}
+
+.#{csv.$prefix}[data-theme='dark'] {
+  @include hr-vars(true);
+}
+
+div.#{sv.$theme-name} {
+  // github 的分割线是 0.25em 的实心色块，而非 1px 边框
+  hr {
+    box-sizing: content-box;
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    overflow: hidden;
+    background-color: var(--md-theme-border-color);
+    border: 0;
+  }
+}

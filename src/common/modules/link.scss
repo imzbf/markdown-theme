@@ -1,0 +1,17 @@
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-preview {
+  a {
+    color: var(--md-theme-link-color);
+    text-decoration: none;
+    transition: color 0.1s;
+
+    &:hover {
+      color: var(--md-theme-link-hover-color);
+    }
+
+    &:empty::before {
+      content: attr(href);
+    }
+  }
+}

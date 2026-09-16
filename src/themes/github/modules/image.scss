@@ -1,28 +1,23 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin image-vars($isDark) {
-  article.#{$theme-name} {
-    --md-theme-heading-bg-color: #{if($isDark, #22272e, #fff)};
+  div.#{sv.$theme-name} {
+    --md-theme-image-bg-color: #{if($isDark, #0d1117, #fff)};
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include image-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include image-vars(true);
 }
 
-.#{$theme-name} {
+div.#{sv.$theme-name} {
   img {
-    max-width: 100%;
-    box-sizing: content-box;
-    background-color: var(--md-theme-heading-bg-color);
+    background-color: var(--md-theme-image-bg-color);
   }
-
-  // // 引用中的表格
-  // blockquote {
-  //   img {
-  //     // border-color: var(--md-theme-border-color-inset);
-  //   }
-  // }
 }

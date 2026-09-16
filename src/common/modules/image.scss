@@ -1,0 +1,7 @@
+@use '../scss-vars' as csv;
+
+.#{csv.$prefix}-preview {
+  img {
+    max-width: 100%;
+  }
+}

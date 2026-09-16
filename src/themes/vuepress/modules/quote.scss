@@ -1,13 +1,30 @@
-.#{$theme-name} {
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
+@mixin quote-vars($isDark) {
+  div.#{sv.$theme-name} {
+    --md-theme-quote-border: 4px solid #{if($isDark, #4c566a, #eaecef)};
+  }
+}
+
+.#{csv.$prefix} {
+  @include quote-vars(false);
+}
+
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
+  @include quote-vars(true);
+}
+
+div.#{sv.$theme-name} {
   blockquote {
     margin: 2em 0;
-    padding-left: 20px;
-    border-left: 4px solid #42b983;
+    padding-inline-start: 20px;
 
     p {
-      margin-left: 0;
-      margin-top: 1.2em;
-      margin-bottom: 0;
+      margin-inline-start: 0;
+      margin-block-start: 1.2em;
+      margin-block-end: 0;
       padding: 0;
     }
   }

@@ -1,43 +1,45 @@
+@use '../../../common/scss-vars' as csv;
+@use '../scss-vars' as sv;
+
 @mixin heading-vars($isDark) {
-  article.#{$theme-name} {
-    --md-theme-heading-color: #{if($isDark, #c9d1d9, inherit)};
-    --md-theme-heading-6-color: #{if($isDark, #768390, #2d3339)};
-    --md-theme-heading-border-color: #{if($isDark, #373e47, #d9dee4)};
+  div.#{sv.$theme-name} {
+    --md-theme-heading-color: inherit;
+    --md-theme-heading-6-color: #{if($isDark, #9198a1, #59636e)};
+    --md-theme-heading-1-border: 1px solid #{if($isDark, #3d444d, #d1d9e0)};
+    --md-theme-heading-2-border: 1px solid #{if($isDark, #3d444d, #d1d9e0)};
   }
 }
 
-.#{$prefix} {
+.#{csv.$prefix} {
   @include heading-vars(false);
 }
 
-.#{$prefix}-dark {
+.#{csv.$prefix}[data-theme='dark'],
+.#{csv.$prefix}.#{csv.$prefix}-dark {
   @include heading-vars(true);
 }
 
-.#{$theme-name} {
+div.#{sv.$theme-name} {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-block-start: 24px;
+    margin-block-end: 16px;
     font-weight: 600;
     line-height: 1.25;
-    color: var(--md-theme-heading-color);
   }
 
   h1 {
-    padding-bottom: 0.3em;
+    padding-block-end: 0.3em;
     font-size: 2em;
-    border-bottom: 1px solid var(--md-theme-heading-border-color);
   }
 
   h2 {
-    padding-bottom: 0.3em;
+    padding-block-end: 0.3em;
     font-size: 1.5em;
-    border-bottom: 1px solid var(--md-theme-heading-border-color);
   }
 
   h3 {
@@ -54,6 +56,5 @@
 
   h6 {
     font-size: 0.85em;
-    color: var(--md-theme-heading-6-color);
   }
 }
