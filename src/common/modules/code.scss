@@ -21,7 +21,6 @@
         rgba(59, 170, 250, 0.18),
         rgba(59, 170, 250, 0.14)
       )};
-    --md-theme-code-line-highlight-border-color: #{if($isDark, #3baafa, #1f7ed8)};
   }
 }
 
@@ -305,7 +304,6 @@
           &.#{csv.$prefix}-code-line-highlight,
           &.highlighted-line {
             background-color: var(--md-theme-code-line-highlight-bg-color);
-            box-shadow: inset 3px 0 0 var(--md-theme-code-line-highlight-border-color);
           }
         }
 
